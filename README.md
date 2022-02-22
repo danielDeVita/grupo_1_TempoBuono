@@ -1,5 +1,3 @@
-USAR MARKDOWN FORMAT
-
 Tempo-Buono es un sitio de e-commerce que se especializa en café y alfajores. La idea es poder brindar un 'buen rato' a cada cliente que compre su café y alfajor. La particularidad del sitio es que brinda la posibilidad de comprar "combos" entre café y alfajores, teniendo dos opciones: una bolsa de café + una caja de alfajores o si se lo desea un café individual ya preparado más un alfajor. Dejándole al usuario la capacidad de elegir qué cafe y cuál alfajor comprar en función de sus gustos y estados de ánimo.
 
 Integrantes:
