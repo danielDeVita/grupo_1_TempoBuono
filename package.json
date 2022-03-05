@@ -1,0 +1,23 @@
+{
+  "name": "tempobuono",
+  "version": "1.0.0",
+  "description": "<h1>Tempo-Buono</h1> <em>Tempo-Buono</em> es un sitio de e-commerce que se especializa en café y alfajores. La idea es poder brindar un 'buen rato' a cada cliente que compre su café y alfajor. La particularidad del sitio es que brinda la posibilidad de comprar \"combos\" entre café y alfajores, teniendo dos opciones: una bolsa de café + una caja de alfajores o si se lo desea un café individual ya preparado más un alfajor. Dejándole al usuario la capacidad de elegir qué cafe y cuál alfajor comprar en función de sus gustos y estados de ánimo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielDeVita/grupo_1_TempoBuono.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielDeVita/grupo_1_TempoBuono/issues"
+  },
+  "homepage": "https://github.com/danielDeVita/grupo_1_TempoBuono#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

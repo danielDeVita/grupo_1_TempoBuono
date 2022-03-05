@@ -1,1 +1,0 @@
-console.log('La vamos a sacar del estadio!!');
