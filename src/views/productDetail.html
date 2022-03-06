@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/home style.css">
+  <link rel="stylesheet" href="css/productDetail.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -49,10 +49,11 @@
 
     <div class="miga-de-pan">
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>/
         <li><a href="#">Producto</a></li>
       </ul>
     </div>
+
 
     <div class="fichaDeProducto">
 
@@ -60,62 +61,68 @@
         <img src="img/Ilu_alfajor.png" alt="Imagen de alfajor">
       </div>
 
+
       <div class="descripcion">
 
         <h2>Alfajores de Mar del Plata</h2>
 
         <!-- Hay que estilizar el contador de las líneas 68 y 69, está feo. -->
-
+        <div class="cantidad">
         <label for="cantProd">Cantidad:</label>
         <input type="number" id="cantProd" name="cantidadDeProducto" min="1" max="10">
+        
+        <button class="anadircar" type="button">Añadir al carrito</button>
+        <div class="descripcion-total">
+        </div>
+          <h4>Descripción del producto</h4>
 
-        <button type="button">Añadir al carrito</button>
-
-        <h3>Descripción del producto</h3>
-
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo itaque impedit soluta ad alias, velit dolorum
-          molestiae consequatur assumenda fugiat quibusdam numquam provident similique cupiditate, sed fugit! Facere,
-          est harum.</p>
-
-        <h3>Categoría
-          <p>Café Veloz</p>
-        </h3>
-
-        <h3>Compartir
-          <a href="#"><i class="fa-brands fa-facebook-square"></a></i>
-          <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
-        </h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo itaque impedit soluta ad alias, velit dolorum
+            molestiae consequatur assumenda fugiat quibusdam numquam provident similique cupiditate, sed fugit! Facere,
+            est harum.</p>
+          
+          <div class="categoria">
+          <h4>Categoría:</h4>
+            <p>Café Veloz</p>
+          </div>
+          
+          <div class="compartir">
+          <h4>Compartir:</h4>
+            <a href="#"><i class="fa-brands fa-facebook-square"></a></i>
+            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+          </div>
+        </div>
 
       </div>
 
-      <div class="Productos relacionados"></div>
-
-      <h2>Productos relacionados</h2>
-
-      <article>
-        <img src="img/Ilu_alfajor.png" alt="producto relacionado 1">
-        <h3>Mar del Plata</h3>
-        <p>Alfajores</p>
-        <p class="Precio">$ 20.00 USD</p>
-      </article>
-
-      <article>
-        <img src="img/Ilu_alfajor.png" alt="producto relacionado 2">
-        <h3>Cordobés</h3>
-        <p>Alfajores</p>
-        <p class="Precio">$ 30.00 USD</p>
-      </article>
-
-      <article>
-        <img src="img/Ilu_alfajor.png" alt="producto relacionado 3">
-        <h3>Mendocino</h3>
-        <p>Alfajores</p>
-        <p class="Precio">$ 25.00 USD</p>
-      </article>
-
-
     </div>
 
+
+
+
+    <h2 id="tit-relacionados">Productos relacionados</h2>
+
+    <div class="ProductosRelacionados">
+        <article>
+          <img src="img/Ilu_alfajor.png" alt="producto relacionado 1">
+          <h3>Mar del Plata</h3>
+          <p>Alfajores</p>
+          <p class="Precio">$ 20.00 USD</p>
+        </article>
+
+        <article>
+          <img src="img/Ilu_alfajor.png" alt="producto relacionado 2">
+          <h3>Cordobés</h3>
+          <p>Alfajores</p>
+          <p class="Precio">$ 30.00 USD</p>
+        </article>
+
+        <article>
+          <img src="img/Ilu_alfajor.png" alt="producto relacionado 3">
+          <h3>Mendocino</h3>
+          <p>Alfajores</p>
+          <p class="Precio">$ 25.00 USD</p>
+        </article>
+    </div>
   </main>
 
   <footer>
