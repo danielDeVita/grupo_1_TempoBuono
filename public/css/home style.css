@@ -18,9 +18,19 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-family: 'Work Sans', sans-serif;
+  color: var(--cafe-oscuro);
 }
 
-h4 { font-family: 'Work Sans', sans-serif; font-weight: 800; font-size: 20px; }
+h2 { font-family: 'Work Sans', sans-serif;
+     font-weight: 800;
+     font-size: 30px;
+}
+
+
+h4 { font-family: 'Work Sans', sans-serif; 
+     font-weight: 800; 
+     font-size: 20px; 
+}
 
 
 p {
@@ -122,9 +132,119 @@ nav a {
 
 /*************************  ESTILOS MAIN ***********************/
 
+.miga-de-pan ul {
+  padding: 5px 10px;
+  list-style: none;
+  font-size: 14px;
+}
+
 main {
-  background: var(--crema);
-  height: 70vh;
+  background: white;
+}
+
+.categorias {
+  background-image: url("/img/fondo_productos.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.carrousel {
+  margin: auto; 
+}
+
+/* este .carrousel img es solo demostrativo */
+.carrousel img {
+  width: 100%; 
+  height: 120px;
+  margin: auto;
+}
+
+.slogan h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.categorias h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.slogan p {
+  font-family: 'Work Sans';
+  font-size: 20px;
+  padding: 20px 40px 0px 40px;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.productos {
+  display: flex;
+  gap: 10px;
+  padding: 30px;
+  margin-top: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px red solid;
+}
+
+.producto {
+  border-radius: 25px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.producto img{
+  width:100%;
+}
+
+.producto-sin-imagen {
+  background-color: rgba(46, 46, 85, 0.25);
+  padding: 10px;
+  border-radius: 25px;
+}
+
+article button {
+  width: 60%;
+  padding: 6px;
+  border-radius: 20px;
+  background-color: var(--cafe-oscuro);
+  border: solid 1px var(--cafe-oscuro);
+  color: white;
+}
+
+#cafe {
+  background-color: var(--verde-acento);
+}
+
+#alfajor {
+  background-color: var(--salmon-acento);
+}
+
+#combo {
+  background-color: var(--aguamar-acento);
+}
+
+section .spotify h2 {
+  display: block;
+}
+
+.spotify {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px blue solid;
+}
+
+iframe {
+  height: min-content;
+  width: 80%;
+  padding: 3%;
 }
 
 /*************************  ESTILOS FOOTER ***********************/
@@ -187,7 +307,6 @@ footer .slogan p {
 
 footer .mapa-sitio {
   display: grid;
-  /* align-content: center; */
   padding: 30px;
 
 }
@@ -215,6 +334,7 @@ footer .copyright {
   background: var(--cafe-oscuro);
   color: var(--crema);
   justify-content: center;
+  text-align: center;
 }
 
 footer .copyrigth p {
@@ -229,7 +349,7 @@ footer .copyrigth p {
   /***************** ESTILOS MENÚ DE NAVEGACIÓN RESPONSIVE *****************/
 
   nav {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     height: 100px;
     width: 100%;
@@ -240,16 +360,16 @@ footer .copyrigth p {
 /* Se fijan el logo y el menu-btn (hamburguesa) */
 
   nav .logo {
-    width: 80px;
+    width: 70px;
     display: block;
     margin: 10px 0 0 40px;
-    position: fixed;
-    top: 0px;
-    left: 0px;
+    position: absolute;
+    top: 1%;
+    left: 1%;
   }
 
   .menu-btn {
-    position: fixed;
+    position: absolute;
     top: 40px;
     right: 40px;
     display: block;
@@ -378,6 +498,6 @@ footer .copyrigth p{
 
 
 
-/* RECURSOS */
+/* RECURSO */
 
 /* https://www.youtube.com/watch?v=nKnrdABs7Zs&list=RDCMUCBlr2jG1onljL-gUy9bbhJw&start_radio=1&rv=nKnrdABs7Zs&t=54 */
