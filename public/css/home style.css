@@ -143,10 +143,11 @@ main {
 }
 
 .categorias {
-  background-image: url("/img/fondo_productos.png");
+  /* background-image: url("/img/fondo_productos.png"); */
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: bottom;
+  background-image: none;
 }
 
 .carrousel {
@@ -158,6 +159,10 @@ main {
   width: 100%; 
   height: 120px;
   margin: auto;
+}
+
+.slogan {
+  border-bottom: 1px solid var(--cafe-claro-second);
 }
 
 .slogan h2 {
@@ -186,7 +191,7 @@ main {
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  border: 1px red solid;
+  
 }
 
 .producto {
@@ -246,6 +251,11 @@ section .spotify h2 {
   padding: 20px;
   margin-top: 20px;
   border: 1px blue solid;
+}
+
+.spotify h2 {
+  width: 100%;
+  text-align: center;
 }
 
 iframe {
@@ -351,7 +361,10 @@ footer .copyrigth p {
 
 @media (min-width:576px){
   .producto {
-    width: 20%;
+    width: 30%;
+  }
+  .categorias {
+    background-image: url("/img/fondo_productos.png");
   }
 }
 
