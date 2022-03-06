@@ -1,150 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@200;300;400;500&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <title>Detalle de producto</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/home style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@200;300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <title>Detalle de producto</title>
 </head>
 
 <body>
-    
-    <nav>
-        <div class="logo"><a href="#"><img src="img/Tempo_Buono_Logo.svg" alt="Logo-Tempo-Buono"></a></div>
-    
-        <!-- input para dar click a burger menu (en responsive) -->
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn">
-          <i class="fa-solid fa-bars"></i>
-        </label>
-    
-        <div class="contenedor-menus">
-          <ul class="menu">
-            <li><a class="active" href="#">HOME</a></li>
-            <li><a href="#">PRODUCTOS</a></li>
-            <li><a href="#">CONTACTO</a></li>
-          </ul>
-    
-          <ul class="user">
-            <li><a href="#"><i class="fa-solid fa-magnifying-glass lupa"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-user-astronaut"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-          </ul>
-    
-          <!-- esto se ve solo en el menu responsive post click en burger -->
-          <p id="hechopor">Hecho con &#10084; <br> THE <img src="img/icon_monkey.svg" alt="icon monkey group"> GROUP </p>
+
+  <nav>
+    <div class="logo"><a href="#"><img src="img/Tempo_Buono_Logo.svg" alt="Logo-Tempo-Buono"></a></div>
+
+    <!-- input para dar click a burger menu (en responsive) -->
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <div class="contenedor-menus">
+      <ul class="menu">
+        <li><a class="active" href="#">HOME</a></li>
+        <li><a href="#">PRODUCTOS</a></li>
+        <li><a href="#">CONTACTO</a></li>
+      </ul>
+
+      <ul class="user">
+        <li><a href="#"><i class="fa-solid fa-magnifying-glass lupa"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-user-astronaut"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+
+      <!-- esto se ve solo en el menu responsive post click en burger -->
+      <p id="hechopor">Hecho con &#10084; <br> THE <img src="img/icon_monkey.svg" alt="icon monkey group"> GROUP </p>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="miga-de-pan">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Producto</a></li>
+      </ul>
+    </div>
+
+    <div class="fichaDeProducto">
+
+      <div class="imagen">
+        <img src="img/Ilu_alfajor.png" alt="Imagen de alfajor">
+      </div>
+
+      <div class="descripcion">
+
+        <h2>Alfajores de Mar del Plata</h2>
+
+        <!-- Hay que estilizar el contador de las líneas 68 y 69, está feo. -->
+
+        <label for="cantProd">Cantidad:</label>
+        <input type="number" id="cantProd" name="cantidadDeProducto" min="1" max="10">
+
+        <button type="button">Añadir al carrito</button>
+
+        <h3>Descripción del producto</h3>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo itaque impedit soluta ad alias, velit dolorum
+          molestiae consequatur assumenda fugiat quibusdam numquam provident similique cupiditate, sed fugit! Facere,
+          est harum.</p>
+
+        <h3>Categoría
+          <p>Café Veloz</p>
+        </h3>
+
+        <h3>Compartir
+          <a href="#"><i class="fa-brands fa-facebook-square"></a></i>
+          <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+        </h3>
+
+      </div>
+
+      <div class="Productos relacionados"></div>
+
+      <h2>Productos relacionados</h2>
+
+      <article>
+        <img src="img/Ilu_alfajor.png" alt="producto relacionado 1">
+        <h3>Mar del Plata</h3>
+        <p>Alfajores</p>
+        <p class="Precio">$ 20.00 USD</p>
+      </article>
+
+      <article>
+        <img src="img/Ilu_alfajor.png" alt="producto relacionado 2">
+        <h3>Cordobés</h3>
+        <p>Alfajores</p>
+        <p class="Precio">$ 30.00 USD</p>
+      </article>
+
+      <article>
+        <img src="img/Ilu_alfajor.png" alt="producto relacionado 3">
+        <h3>Mendocino</h3>
+        <p>Alfajores</p>
+        <p class="Precio">$ 25.00 USD</p>
+      </article>
+
+
+    </div>
+
+  </main>
+
+  <footer>
+
+    <div class="footer">
+      <div class="contacto">
+        <img src="img/Tempo_Buono_Logo.svg" alt="Logo_Tempo_Buono">
+        <h4>CONTÁCTANOS</h4>
+        <div><a href="#"><i class="fa-brands fa-facebook-square"></a></i>
+          <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
         </div>
-      </nav>
+      </div>
 
-      <main>
+      <div class="slogan">
+        <p>Alfajor + Café <br>"Combinación perfecta"</p>
+      </div>
 
-        <div class="miga-de-pan">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Producto</a></li>
-            </ul>
-        </div>
+      <div class="mapa-sitio">
+        <ul>
+          <li id="nombreCo"><a href="#">TEMPO BUONO</a></li>
+          <li><a href="#">Mapa del sitio</a></li>
+          <li><a href="#">Políticas de privacidad</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+    </div>
 
-        <div class="fichaDeProducto">
-
-            <div class="imagen">
-                <img src="img/Ilu_alfajor.png" alt="Imagen de alfajor">
-            </div>
-
-            <div class="descripcion">
-
-                <h2>Alfajores de Mar del Plata</h2>
-
-                <!-- Hay que estilizar el contador de las líneas 68 y 69, está feo. -->
-
-                <label for="cantProd">Cantidad:</label>
-                <input type="number" id="cantProd" name="cantidadDeProducto" min="1" max="10">
-
-                <button type="button">Añadir al carrito</button> 
-
-                <h3>Descripción del producto</h3>
-
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo itaque impedit soluta ad alias, velit dolorum molestiae consequatur assumenda fugiat quibusdam numquam provident similique cupiditate, sed fugit! Facere, est harum.</p>
-
-                <h3>Categoría
-                    <p>Café Veloz</p>
-                </h3>
-
-                <h3>Compartir
-                    <a href="#"><i class="fa-brands fa-facebook-square"></a></i>
-                    <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
-                </h3>
-
-            </div>
-
-        <div class="Productos relacionados"></div>
-
-        <h2>Productos relacionados</h2>
-
-        <article>
-            <img src="img/Ilu_alfajor.png" alt="producto relacionado 1">
-            <h3>Mar del Plata</h3>
-            <p>Alfajores</p>
-            <p class="Precio">$ 20.00 USD</p>
-        </article>
-
-        <article>
-            <img src="img/Ilu_alfajor.png" alt="producto relacionado 2">
-            <h3>Cordobés</h3>
-            <p>Alfajores</p>
-            <p class="Precio">$ 30.00 USD</p>
-        </article>
-
-        <article>
-            <img src="img/Ilu_alfajor.png" alt="producto relacionado 3">
-            <h3>Mendocino</h3>
-            <p>Alfajores</p>
-            <p class="Precio">$ 25.00 USD</p>
-        </article>
-
-
-        </div>
-
-      </main>
-
-      <footer>
-
-        <div class="footer">
-          <div class="contacto">
-            <img src="img/Tempo_Buono_Logo.svg" alt="Logo_Tempo_Buono">
-            <h4>CONTÁCTANOS</h4>
-            <div><a href="#"><i class="fa-brands fa-facebook-square"></a></i>
-              <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
-            </div>
-          </div>
-    
-          <div class="slogan">
-            <p>Alfajor + Café <br>"Combinación perfecta"</p>
-          </div>
-    
-          <div class="mapa-sitio">
-            <ul>
-              <li id="nombreCo"><a href="#">TEMPO BUONO</a></li>
-              <li><a href="#">Mapa del sitio</a></li>
-              <li><a href="#">Políticas de privacidad</a></li>
-              <li><a href="#">Términos y condiciones</a></li>
-            </ul>
-          </div>
-        </div>
-    
-        <div class="copyright">
-          <p>Copyright &#169; 2022 | Todos los derechos reservados | THE <img src="img/icon_monkey.svg"
-              alt="icon monkey group" height="20px"> GROUP </p>
-        </div>
-      </footer>
+    <div class="copyright">
+      <p>Copyright &#169; 2022 | Todos los derechos reservados | THE <img src="img/icon_monkey.svg"
+          alt="icon monkey group" height="20px"> GROUP </p>
+    </div>
+  </footer>
 
 </body>
+
 </html>
