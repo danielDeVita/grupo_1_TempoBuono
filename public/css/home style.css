@@ -57,7 +57,7 @@ a:hover {
 nav {
   font-family: 'Work Sans', sans-serif;
   font-size: 18px;
-  height: 80px;
+  height: 100px;
   background: white;
   color: var(--cafe-oscuro);
   display: flex;
@@ -97,8 +97,9 @@ nav a {
 }
 
 .logo {
-  width: 60px;
+  width: 70px;
   margin-left: 15px;
+  padding-top: 10px;
 }
 
 .user a{
@@ -191,7 +192,7 @@ main {
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  /* border: 1px red solid; */
+  border-bottom: 1px solid var(--cafe-claro-second);
 }
 
 .producto {
@@ -250,7 +251,7 @@ section .spotify h2 {
   justify-content: center;
   padding: 20px;
   margin-top: 20px;
-  /* border: 1px blue solid; */
+  border-bottom: 1px solid var(--cafe-claro-second);
 }
 
 .spotify h2 {
@@ -375,7 +376,7 @@ footer .copyrigth p {
 
 @media (min-width:992px){
   .producto {
-    width: 30%;
+    width: 25%;
   }
   /* .categorias {
     background-image: url("/img/fondo_productos.png");
@@ -405,6 +406,7 @@ footer .copyrigth p {
     position: absolute;
     top: 1%;
     left: 1%;
+    padding: 0px;
   }
 
   .menu-btn {
