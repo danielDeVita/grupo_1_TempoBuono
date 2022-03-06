@@ -342,6 +342,11 @@ footer .copyrigth p {
 }
 
 
+@media (min-width:576px){
+  .producto {
+    width: 20%;
+  }
+}
 
 
 @media (max-width:940px){
