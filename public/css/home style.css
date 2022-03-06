@@ -151,7 +151,7 @@ main {
 }
 
 .carrousel {
-  margin: auto; 
+  margin: auto;
 }
 
 /* este .carrousel img es solo demostrativo */
@@ -170,17 +170,17 @@ main {
   margin-top: 50px;
 }
 
-.categorias h2 {
-  text-align: center;
-  margin-top: 50px;
-}
-
 .slogan p {
   font-family: 'Work Sans';
   font-size: 20px;
   padding: 20px 40px 0px 40px;
   text-align: center;
   line-height: 2.5rem;
+}
+
+.categorias h2 {
+  text-align: center;
+  margin-top: 50px;
 }
 
 .productos {
@@ -191,7 +191,7 @@ main {
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  
+  /* border: 1px red solid; */
 }
 
 .producto {
@@ -250,7 +250,12 @@ section .spotify h2 {
   justify-content: center;
   padding: 20px;
   margin-top: 20px;
-  border: 1px blue solid;
+  /* border: 1px blue solid; */
+}
+
+.spotify h2 {
+  width: 100%;
+  text-align: center;
 }
 
 .spotify h2 {
@@ -363,9 +368,18 @@ footer .copyrigth p {
   .producto {
     width: 30%;
   }
-  .categorias {
+  /* .categorias {
     background-image: url("/img/fondo_productos.png");
+  } */
+}
+
+@media (min-width:992px){
+  .producto {
+    width: 30%;
   }
+  /* .categorias {
+    background-image: url("/img/fondo_productos.png");
+  } */
 }
 
 
