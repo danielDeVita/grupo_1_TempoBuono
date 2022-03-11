@@ -18,3 +18,17 @@
 <li>https://www.evolveclothinggallery.com (me agrada la tipografía)</li>
 <li>https://williamabraham.com (paleta de colores, le faltan tonos "café" quizás)</li>
 </ul>
+
+## Repository Structure
+    The directory structure of the web project is as follows:
+
+    (root)
+    +- src                     # Web Page (Root)
+    |   +- public              # Public folders 
+    |   |   +- css             # Site Style Folder
+    |   |   +- img             # Site Images Folder
+    |   +- views               # Site Views to Render
+    |   +- app.src             # Main code of the app
+    +- design                  # Design of the site
+    +- wireframes              # how the site should look 
+
