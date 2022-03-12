@@ -39,7 +39,6 @@
     +- design                  # Design of the site
     +- wireframes              # how the site should look 
 
-
 ## Init the website
 ```shell
 npm start
