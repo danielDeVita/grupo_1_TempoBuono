@@ -259,6 +259,9 @@ form {
 
 .register-form {
   width: 330px;
+  background-image: url("/img/bg_form.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 label {

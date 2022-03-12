@@ -259,6 +259,7 @@ form {
 
 .login-form {
   width: 330px;
+  background-image: url("/img/bg_form.jpg");
 }
 
 label {
@@ -347,6 +348,11 @@ input:invalid+.feedback {
   font-size: 14px;
   margin-top: 10px;
   padding-bottom: 40px;
+}
+
+.recuerdame {
+  padding: 10px;
+  font-size: 14px;
 }
 
 #olvido {
