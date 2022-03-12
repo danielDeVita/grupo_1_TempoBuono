@@ -17,7 +17,7 @@
 </head>
 
 <body>
-
+  <header>
     <nav>
         <div class="logo"><a href="#"><img src="img/Tempo_Buono_Logo.svg" alt="Logo-Tempo-Buono"></a></div>
 
@@ -45,36 +45,56 @@
             </p>
         </div>
     </nav>
+  </header>
 
-    <main>
+  <div class="container">
+    <main class="register">
 
-        <div class="register">
+        <h2>Registro</h2>
 
-            <h2>Registro</h2>
+        <form action="/register.html" method="post" class="register-form">
 
-            <form>
+            <div class="inputs">
 
-                <div class="inputs">
+                <label for="usuario">
                     <h3>Usuario</h3>
-                    <i class="fa-solid fa-user-astronaut"></i>
-                    <input type="text" name="" placeholder="">
+                    <div class="icono-caja">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                        <input type="text" name="usuario" id="usuario" placeholder="Usuario" minlength="2">
+                        <span class="feedback">Ingresa tu nombre de usuario</span>
+                    </div>
+
+                </label>
+
+                <label for="email">
                     <h3>Email</h3>
-                    <i class="fa-solid fa-envelope"></i>
-                    <input type="text" name="" placeholder="">
-                    <h3> Password</h3>
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="password" name="" placeholder="">
-                </div>
+                    <div class="icono-caja">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <span class="feedback">Ingresa un email válido</span>
+                    </div>
 
-                <div class="botonYpregunta">
-                    <input id="boton-registro" type="submit" name="" value="Registrarme">
+                </label>
 
-                    <a href="/login.html ">Ya tienes cuenta?</a>
-                </div>
-            </form>
 
-        </div>
+                <label for="password">
+                    <h3>Password</h3>
+                    <div class="icono-caja">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password" id="password" placeholder="Password" minlength="2">
+                        <span class="feedback">Ingresa un password válido</span>
+                    </div>
+
+                </label>
+            </div>
+
+            <div class="botonYpregunta">
+                <input id="boton-registro" type="submit" name="" value="Registrarme">
+                <a href="/login.html ">Ya tienes cuenta?</a>
+            </div>
+        </form>
     </main>
+
     <footer>
 
         <div class="footer">
@@ -106,6 +126,8 @@
         </div>
     </footer>
 
+  </div>
+  
 </body>
 
 </html>

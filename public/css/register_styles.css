@@ -115,7 +115,7 @@ nav a {
   color: var(--cafe);
 }
 
-.menu-btn{
+.menu-btn i{
   color:bisque;
   font-size: 24px;
   cursor: pointer;
@@ -255,14 +255,66 @@ form {
  
 }
 
+/* FORM */
+
+.register-form {
+  width: 330px;
+  background-image: url("/img/bg_form.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+label {
+  width: 100%;
+}
+
+label h3 {
+  width: 100%;
+  padding: 20px 0px 10px 0px;
+}
+
+
+label i {
+  height: fit-content;
+  width: 10%;
+  display: inline;
+}
+
+label input {
+  width: 220px;
+  padding: 4px;
+}
+
+.icono-caja {
+  gap: 10px;
+  margin: auto;
+}
+
+.feedback {
+  display: none;
+  width: 100%;
+  padding: 0 0 0 35px;
+  margin-top: 10px;
+}
+
+input:invalid+.feedback {
+display: block;
+}
+
 .inputs {
   padding: 30px;
   width: 100%;
 }
 
-.inputs h3 {
+/* .inputs h3 {
   margin-top: 20px;
   margin-bottom: 10px;
+} */
+
+.feedback {
+  /* display: none; */
+  color: red;
+  font-size: 0.8rem;
 }
 
 #boton-registro {
@@ -328,15 +380,14 @@ main {
   nav .logo {
     width: 70px;
     display: block;
-    margin: 10px 0 0 40px;
-    position: absolute;
-    top: 1%;
-    left: 1%;
-    padding: 0px;
+    margin: 8px 0 0 45px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
   }
 
-  .menu-btn {
-    position: absolute;
+  .menu-btn i {
+    position: fixed;
     top: 40px;
     right: 40px;
     display: block;
@@ -370,7 +421,7 @@ main {
   .menu {
     width: 100%;
     flex-direction: column;
-    padding: 100px 0;
+    padding: 50px 0;
   }
 
   .menu li {
@@ -405,7 +456,7 @@ main {
     display: block;
     color: var(--crema);
     text-align: center;
-    margin-top: 150px;
+    margin-top: 100px;
     font-weight: 200;
     line-height: 20px;
     padding-top: 20px;

@@ -19,6 +19,13 @@
 <li>https://williamabraham.com (paleta de colores, le faltan tonos "café" quizás)</li>
 </ul>
 
+
+<h3>Link a Trello</h3>
+<a href= "https://trello.com/b/VNwKT7Bx/tempobuono">Tempo-Buono</a>
+
+<h3>Link a Figma</h3>
+<a href= "https://www.figma.com/file/mG0GaR2AD4m3HHTT4DiFjd/TempoBuono?node-id=0%3A1">Figma Wireframes</a>
+
 ## Repository Structure
     The directory structure of the web project is as follows:
 
@@ -36,3 +43,5 @@
 ```shell
 npm start
 ```
+
+
