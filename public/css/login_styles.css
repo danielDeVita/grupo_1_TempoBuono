@@ -54,6 +54,12 @@ a:hover {
 
 /***************** ESTILOS MENÚ DE NAVEGACIÓN *****************/
 
+header{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
 nav {
   font-family: 'Work Sans', sans-serif;
   font-size: 18px;
@@ -78,6 +84,12 @@ nav a {
   color: var(--cafe-oscuro);
 }
 
+.container {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+}
+
 .contenedor-menus {
   display: flex;
   align-items: center; /* centrar los dos menús <ul>*/
@@ -97,9 +109,9 @@ nav a {
 }
 
 .logo {
-  width: 70px;
+  width: 80px;
   margin-left: 15px;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 
 .user a{
@@ -115,7 +127,7 @@ nav a {
   color: var(--cafe);
 }
 
-.menu-btn{
+.menu-btn i{
   color:bisque;
   font-size: 24px;
   cursor: pointer;
@@ -260,6 +272,8 @@ form {
 .login-form {
   width: 330px;
   background-image: url("/img/bg_form.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 label {
@@ -377,8 +391,13 @@ main {
 
   /***************** ESTILOS MENÚ DE NAVEGACIÓN RESPONSIVE *****************/
 
+  /* .container {
+    position: absolute;
+    top: 100px;
+  } */
+
   nav {
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     height: 100px;
     width: 100%;
@@ -389,17 +408,16 @@ main {
 /* Se fijan el logo y el menu-btn (hamburguesa) */
 
   nav .logo {
-    width: 70px;
+    width: 80px;
     display: block;
-    margin: 10px 0 0 40px;
-    position: absolute;
-    top: 1%;
-    left: 1%;
-    padding: 0px;
+    margin: 8px 0 0 45px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
   }
 
-  .menu-btn {
-    position: absolute;
+  .menu-btn i {
+    position: fixed;
     top: 40px;
     right: 40px;
     display: block;
@@ -433,7 +451,7 @@ main {
   .menu {
     width: 100%;
     flex-direction: column;
-    padding: 100px 0;
+    padding: 50px 0;
   }
 
   .menu li {
