@@ -23,12 +23,16 @@
     The directory structure of the web project is as follows:
 
     (root)
+    +- public              # Public folders
+    |   +- css             # Site Style Folder
+    |   +- img             # Site Images Folder
     +- src                     # Web Page (Root)
-    |   +- public              # Public folders 
-    |   |   +- css             # Site Style Folder
-    |   |   +- img             # Site Images Folder
     |   +- views               # Site Views to Render
     |   +- app.src             # Main code of the app
     +- design                  # Design of the site
     +- wireframes              # how the site should look 
 
+## Init the website
+```shell
+npm start
+```
