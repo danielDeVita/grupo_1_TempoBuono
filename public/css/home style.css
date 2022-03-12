@@ -590,6 +590,10 @@ footer .copyrigth p {
     top: 12px;
   }
 
+  .carrousel {
+    height: 200px;
+  }
+
 /***************** ESTILOS FOOTER RESPONSIVE *****************/
 
 .footer{
