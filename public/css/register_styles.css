@@ -255,14 +255,63 @@ form {
  
 }
 
+/* FORM */
+
+.register-form {
+  width: 330px;
+}
+
+label {
+  width: 100%;
+}
+
+label h3 {
+  width: 100%;
+  padding: 20px 0px 10px 0px;
+}
+
+
+label i {
+  height: fit-content;
+  width: 10%;
+  display: inline;
+}
+
+label input {
+  width: 220px;
+  padding: 4px;
+}
+
+.icono-caja {
+  gap: 10px;
+  margin: auto;
+}
+
+.feedback {
+  display: none;
+  width: 100%;
+  padding: 0 0 0 35px;
+  margin-top: 10px;
+}
+
+input:invalid+.feedback {
+display: block;
+}
+
 .inputs {
   padding: 30px;
   width: 100%;
 }
 
-.inputs h3 {
+/* .inputs h3 {
   margin-top: 20px;
   margin-bottom: 10px;
+} */
+
+.feedback {
+  /* display: none; */
+  color: red;
+  font-size: 0.8rem;
 }
 
 #boton-registro {

@@ -46,33 +46,43 @@
         </div>
     </nav>
 
-    <main>
+    <main class="login">
 
-        <div class="login">
+        <h2>Login</h2>
 
-            <h2>Login</h2>
+        <form action="/login.html" method="post" class="login-form">
 
-            <form>
+            <div class="login-inputs">
 
-                <div class="login-inputs">
+                <label for="usuario">
                     <h3>Email</h3>
-                    <i class="fa-solid fa-envelope"></i>
-                    <input type="text" name="" placeholder="">
+                    <div class="icono-caja">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="usuario" id="usuario" placeholder="Usuario">
+                        <span class="feedback">Ingresa tu nombre de usuario</span>
+                    </div>
+                </label>
+
+
+                <label for="password">
                     <h3> Password</h3>
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="password" name="" placeholder="">
-                </div>
+                    <div class="icono-caja">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password" id="password" placeholder="Password" minlength="2">
+                        <span class="feedback">Ingresa de nuevo tu password</span>
+                    </div>
+                </label>
+            </div>
 
-                <div class="botonYcontrasena">
-                    <input id="boton-login" type="submit" name="" value="Iniciar sesión">
+            <div class="botonYcontrasena">
+                <input id="boton-login" type="submit" name="" value="Iniciar sesión">
+                <!-- AUN NO SABEMOS RESOLVER ESTO -->
+                <a id="olvido" href="#">Olvidó su contraseña?</a>
 
-                    <a id="olvido" href="#">Olvidó su contraseña?</a>
+                <a href="/register.html ">No tienes una cuenta?</a>
+            </div>
+        </form>
 
-                    <a href="/register.html ">No tienes una cuenta?</a>
-                </div>
-            </form>
-
-        </div>
     </main>
     <footer>
 
