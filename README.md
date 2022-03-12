@@ -19,8 +19,29 @@
 <li>https://williamabraham.com (paleta de colores, le faltan tonos "café" quizás)</li>
 </ul>
 
+
 <h3>Link a Trello</h3>
 <a href= "https://trello.com/b/VNwKT7Bx/tempobuono">Tempo-Buono</a>
 
 <h3>Link a Figma</h3>
 <a href= "https://www.figma.com/file/mG0GaR2AD4m3HHTT4DiFjd/TempoBuono?node-id=0%3A1">Figma Wireframes</a>
+
+## Repository Structure
+    The directory structure of the web project is as follows:
+
+    (root)
+    +- public              # Public folders
+    |   +- css             # Site Style Folder
+    |   +- img             # Site Images Folder
+    +- src                     # Web Page (Root)
+    |   +- views               # Site Views to Render
+    |   +- app.src             # Main code of the app
+    +- design                  # Design of the site
+    +- wireframes              # how the site should look 
+
+## Init the website
+```shell
+npm start
+```
+
+
