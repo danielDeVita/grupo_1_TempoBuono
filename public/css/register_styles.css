@@ -97,9 +97,9 @@ nav a {
 }
 
 .logo {
-  width: 70px;
+  width: 80px;
   margin-left: 15px;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 
 .user a{
@@ -378,7 +378,7 @@ main {
 /* Se fijan el logo y el menu-btn (hamburguesa) */
 
   nav .logo {
-    width: 70px;
+    width: 80px;
     display: block;
     margin: 8px 0 0 45px;
     position: fixed;
