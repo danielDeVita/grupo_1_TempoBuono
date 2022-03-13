@@ -149,10 +149,25 @@ main {
   font-size: 14px;
 }
 
+.contenedor-produ {
+  display:flex;
+  flex-wrap: wrap;
+}
+
 .fichaDeProducto {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
+
+.fichaDeProducto h2 {
+  margin-top: 30px;
+}
+
+.fichaDeProducto label {
+  width: 80%;
+}
+
 .imagen {
   margin-top: 30px;
   width: 100%;
@@ -166,10 +181,10 @@ main {
 .descripcion {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 20px;
   padding-bottom: 30px;
   justify-content: center;
-  border-bottom: 1px solid var(--cafe-claro-second);
+  /* border-bottom: 1px solid var(--cafe-claro-second); */
 }
 
 .descripcion h2 {
@@ -179,6 +194,13 @@ main {
 
 .cantidad {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cantidad input{
+  margin-top: 10px;
 }
 
 .anadircar {
@@ -193,7 +215,7 @@ main {
 }
 
 .descripcion h4 {
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -208,8 +230,14 @@ main {
   justify-content: center;
   padding-top: 20px;
   align-items: center;
-  
 }
+
+.compartir {
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--cafe-claro-second);
+  /* border: 1px solid green; */
+}
+
 
 .categoria h4 {
   margin-top: 0;
@@ -238,13 +266,15 @@ main {
 }
 
 #tit-relacionados {
-  margin: 50px 0px 20px 0px;
+  margin: 0px 0px 20px 0px;
+  padding-top: 30px;
   width: 100%;
   text-align: center;
+  /* border: 1px red solid; */
 }
 
 article {
-  width: 50%;
+  width: 80%;
   padding: 15px;
   background-color: var(--salmon-acento);
   border-radius: 25px;
@@ -355,13 +385,9 @@ footer .copyrigth p {
 
 
 @media (min-width:576px){
-  .imagen{
-    width: 40%;
-    height: 40%
-  }
-  .descripcion {
-    width: 60%;
-    padding: 30px;
+
+  .cantidad input {
+    margin-left: 15px;
   }
   
   .cantidad {
@@ -371,7 +397,7 @@ footer .copyrigth p {
 
   .descripcion-total {
     display: block;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
 
@@ -379,12 +405,16 @@ footer .copyrigth p {
 
 @media (min-width:992px){
 
-  .imagen{
+  .fichaDeProducto {
+    flex-wrap: nowrap;
+  }
+  /* .imagen{
     width: 50%; 
   }
   .descripcion {
     width: 50%;
-  }
+  } */
+
 
 }
 
