@@ -133,6 +133,10 @@ nav a {
 
 /*************************  ESTILOS MAIN ***********************/
 
+main {
+  background-color: rgba(255, 233, 205, 0.301);
+} 
+
 .miga-de-pan ul {
   padding: 5px 10px;
   list-style: none;
@@ -221,8 +225,9 @@ nav a {
   display: flex;
   flex-direction: row;
   justify-content: right;
+  margin-top: 15px;
+  margin-bottom: 15px;
   align-items: center;
-  margin: 15px;
   width: 100%;
 }
 
@@ -264,16 +269,27 @@ nav a {
   text-align: center;
 }
 
+.check-out {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .resumen input {
-  width: 90%;
+  padding: 6px;
+  border-radius: 20px;
   margin-bottom: 30px;
-  background-color: darkblue;
-  color: white;
+  background-color: var(--cafe-oscuro);
+  border: none;
+  color: var(--crema);
+  cursor: pointer;
+  width: 90%;
 }
 
 .resumen input:hover {
-  background-color: white;
-  color: darkblue;
+  color: var(--cafe-oscuro);
+  background-color: var(--crema);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
 }
 /*************************  ESTILOS FOOTER ***********************/
 
