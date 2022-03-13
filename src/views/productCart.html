@@ -1,2 +1,155 @@
-<H1>productCart</H1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/productCart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@200;300;400;500&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Carrito de compras</title>
+</head>
+
+<body>
+    
+    <header>
+        
+        <nav>
+
+          <div class="logo"><a href="index.html"><img src="img/Tempo_Buono_Logo.svg" alt="Logo-Tempo-Buono"></a></div>
+    
+          <!-- input para dar click a burger menu (en responsive) -->
+          <input type="checkbox" id="click">
+          <label for="click" class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+    
+            <div class="contenedor-menus">
+            <ul class="menu">
+              <li><a class="active" href="index.html">HOME</a></li>
+              <li><a href="productDetail.html">PRODUCTOS</a></li>
+              <li><a href="#">CONTACTO</a></li>
+            </ul>
+    
+            <ul class="user">
+              <li><a href="#"><i class="fa-solid fa-magnifying-glass lupa"></i></a></li>
+              <li><a href="login.html"><i class="fa-solid fa-user-astronaut"></i></a></li>
+              <li><a href="productCart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+    
+            <!-- esto se ve solo en el menu responsive post click en burger -->
+            <p id="hechopor">Hecho con &#10084; <br> THE <img src="img/icon_monkey.svg" alt="icon monkey group"> GROUP </p>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <div class="container">
+        
+        <main>
+            <div class="miga-de-pan">
+                <ul>
+                  <li><a href="#">Home</a></li>/
+                  <li><a href="#">Carrito</a></li>
+                </ul>
+            </div>
+
+            <div class="carrito">
+
+                <h2>Su Carrito</h2>
+                <a href="index.html">Continuar comprando</a>
+            
+            </div>
+    
+        <article class="producto-carrito">
+            
+            <div class="producto-detalle">
+        
+                <img src="img/Ilu_alfajor.png" alt="Detalle Producto">
+                <div>
+                    <h4>Descripción Producto</h4>
+                    <p>Peso x bolsa: 1000g.</p>
+                </div>
+            </div>
+
+            <div class="unidadesYTacho">
+
+                <!-- <label for="prodDetalle"></label> -->
+                <input type="number" id="prodDetalle" name="prodDetalle" value="1"
+                min="1" max="10">
+
+                <i class="fa-solid fa-trash-can"></i>
+
+            </div>
+
+            <div class="precio">
+
+                <h4>Precio</h4>
+                <p>$250,00</p>
+
+            </div>
+
+        </article>
+
+        <div class="resumen">
+
+            <h3>Notas de envío:</h3>
+
+            <textarea id="notas"></textarea>
+
+            <h2>Subtotal $500,00</h2>
+
+            <p>Impuestos incluidos. Costo de envío calculado en Check Out.</p>
+            
+            <div class="check-out">
+
+                <input id="check-out" type="submit" name="" href="" value="Check Out">
+            
+            </div>
+
+        </div>
+
+        <footer>
+
+            <div class="footer">
+              <div class="contacto">
+                <img src="img/Tempo_Buono_Logo.svg" alt="Logo_Tempo_Buono">
+                <h4>CONTÁCTANOS</h4>
+                <div><a href="#"><i class="fa-brands fa-facebook-square"></a></i>
+                  <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                </div>
+              </div>
+    
+              <div class="slogan">
+                <p>Alfajor + Café <br>"Combinación perfecta"</p>
+              </div>
+    
+              <div class="mapa-sitio">
+                <ul>
+                  <li id="nombreCo"><a href="#">TEMPO BUONO</a></li>
+                  <li><a href="#">Mapa del sitio</a></li>
+                  <li><a href="#">Políticas de privacidad</a></li>
+                  <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="copyright">
+              <p>Copyright &#169; 2022 | Todos los derechos reservados | THE <img src="img/icon_monkey.svg"
+                  alt="icon monkey group" height="20px"> GROUP </p>
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
 
