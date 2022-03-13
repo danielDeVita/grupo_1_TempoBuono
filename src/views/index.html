@@ -29,7 +29,7 @@
 
       <div class="contenedor-menus">
         <ul class="menu">
-          <li><a class="active" href="index.html">HOME</a></li>
+          <li><a href="index.html">HOME</a></li>
           <li><a href="productDetail.html">PRODUCTOS</a></li>
           <li><a href="#">CONTACTO</a></li>
         </ul>
@@ -55,7 +55,43 @@
           </ul>
         </div>
 
-        <section class="carrousel"> <img src="img/carrousel.png" alt="1 foto de carrousel"> </section>
+        <section class="carrousel">
+
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="img/img_tempobuono_carrusel.png" style="width:100%" alt="banner_tempobuono" />
+              <!-- <div class="text">Caption Uno</div> -->
+            </div>
+
+            <div class="mySlides fade">
+              <img src="img/img_manana_carrusel.png" style="width:100%" alt="banner_manana_cafe" />
+              <!-- <div class="text">Caption Two</div> -->
+            </div>
+
+            <div class="mySlides fade">
+              <img src="img/img_alfajores_carrusel.png" style="width:100%" alt="banner_alfajores" />
+              <!-- <div class="text">Caption Three</div> -->
+            </div>
+
+            <div class="mySlides fade">
+              <img src="img/img_cafe_carrusel.png" style="width:100%" alt="banner_cafe" />
+              <!-- <div class="text">Caption Cuatro</div> -->
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">❯&#10095;</a>
+
+          </div>
+
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+        
+        </section>
 
         <section class="slogan">
 
@@ -143,7 +179,10 @@
               alt="icon monkey group" height="20px"> GROUP </p>
         </div>
       </footer>
-  </div>     
+  </div>
+  
+  <script src="js/carousel.js" defer></script>
+
 </body>
 
 </html>
