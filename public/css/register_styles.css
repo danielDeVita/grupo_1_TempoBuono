@@ -109,10 +109,10 @@ nav a {
   padding: 15px;
 }
 
-
 .logo a img{
   width: 80px;
   margin-left: 15px;
+}
 
 .user a{
   color: var(--cafe-oscuro);
@@ -388,7 +388,6 @@ main {
     background: var(--cafe-claro-second);
   }
 /* Se fijan el logo y el menu-btn (hamburguesa) */
-
 
   nav .logo a{
     width: 80px;
