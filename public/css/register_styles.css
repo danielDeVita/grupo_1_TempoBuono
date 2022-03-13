@@ -54,9 +54,15 @@ a:hover {
 
 /***************** ESTILOS MENÚ DE NAVEGACIÓN *****************/
 
+header{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
 nav {
   font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   height: 100px;
   background: white;
   color: var(--cafe-oscuro);
@@ -78,6 +84,13 @@ nav a {
   color: var(--cafe-oscuro);
 }
 
+.container {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+}
+
+
 .contenedor-menus {
   display: flex;
   align-items: center; /* centrar los dos menús <ul>*/
@@ -96,10 +109,16 @@ nav a {
   padding: 15px;
 }
 
+<<<<<<< HEAD
 .logo {
   width: 80px;
   margin-left: 15px;
   /* padding-top: 10px; */
+=======
+.logo a img{
+  width: 80px;
+  margin-left: 15px;
+>>>>>>> d84665c (Arreglé lo que rompiste Dani!. Chicos: Arreglo width logo/ cambio tamaño texto hecho con amor/cambio de imagenes carrousel.)
 }
 
 .user a{
@@ -377,10 +396,11 @@ main {
   }
 /* Se fijan el logo y el menu-btn (hamburguesa) */
 
-  nav .logo {
+
+  nav .logo a{
     width: 80px;
     display: block;
-    margin: 8px 0 0 45px;
+    margin: 8px 0 0 30px;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -457,14 +477,14 @@ main {
     color: var(--crema);
     text-align: center;
     margin-top: 100px;
-    font-weight: 200;
+    font-weight: 100;
     line-height: 20px;
     padding-top: 20px;
     width: auto 0;
   }
 
   #hechopor img {
-    height: 40px;
+    height: 30px;
     margin: 0 10px;
     position: relative;
     top: 12px;
