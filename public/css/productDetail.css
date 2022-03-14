@@ -210,6 +210,13 @@ main {
   justify-content: center;
 }
 
+.precio {
+  width: 100%;
+  font-weight: bolder;
+  font-size: 20px;
+  margin: auto;
+}
+
 .cantidad input{
   margin-top: 10px;
 }
