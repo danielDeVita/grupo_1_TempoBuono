@@ -87,6 +87,7 @@ nav a {
 .container {
   position: absolute;
   top: 100px;
+  width: 100%;
 }
 
 .contenedor-menus {
