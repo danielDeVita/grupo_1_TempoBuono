@@ -143,14 +143,14 @@ nav a {
 
 /*************************  ESTILOS MAIN ***********************/
 
+main {
+  background: white;
+}
+
 .miga-de-pan ul {
   padding: 5px 10px;
   list-style: none;
   font-size: 14px;
-}
-
-main {
-  background: white;
 }
 
 .categorias {
