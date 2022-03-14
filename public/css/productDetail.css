@@ -228,14 +228,14 @@ main {
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-  padding-top: 20px;
+  /* padding-top: 20px; */
   align-items: center;
 }
 
 .compartir {
   padding-bottom: 30px;
   border-bottom: 1px solid var(--cafe-claro-second);
-  /* border: 1px solid green; */
+  padding-top: 20px;
 }
 
 
@@ -397,25 +397,71 @@ footer .copyrigth p {
 
   .descripcion-total {
     display: block;
-    /* border: 1px solid red; */
   }
 
+  .ProductosRelacionados {
+    padding-top: 50px;
+  }
+
+  footer .contacto img {
+    width:30%;
+  }
+}
+
+@media (min-width:776px){
+
+.compartir {
+  border-bottom: 0px;
+}
+
+.descripcion {
+  margin-top:0px;
+}
+
+  .anadircar {
+    margin:0px;
+    width:60%;
+  }
+  
+  .fichaDeProducto h2 {
+    width:100%;
+  }
+  
+  .fichaDeProducto {
+    flex-wrap: wrap;
+  }
+
+.fichaDeProducto label {
+  margin-left: 65px;
+}
+
+  .imagen {
+    width:45%;
+    align-self: center;
+    position: relative;
+    bottom: 45px;
+  }
+  
+.descripcion {
+  width:50%;
+}
+
+.cantidad input {
+  margin-left:0px;
+}
+
+article {
+  width: 30%;
+}
 
 }
 
+
 @media (min-width:992px){
 
-  .fichaDeProducto {
-    flex-wrap: nowrap;
+   .fichaDeProducto h2 { 
+    margin-bottom: 30px;
   }
-  /* .imagen{
-    width: 50%; 
-  }
-  .descripcion {
-    width: 50%;
-  } */
-
-
 }
 
 
