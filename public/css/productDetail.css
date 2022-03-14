@@ -61,9 +61,15 @@ a:hover {
 
 /***************** ESTILOS MENÚ DE NAVEGACIÓN *****************/
 
+header{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
 nav {
   font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   height: 100px;
   background: white;
   color: var(--cafe-oscuro);
@@ -85,6 +91,11 @@ nav a {
   color: var(--cafe-oscuro);
 }
 
+.container {
+  position: absolute;
+  top: 100px;
+}
+
 .contenedor-menus {
   display: flex;
   align-items: center; /* centrar los dos menús <ul>*/
@@ -104,9 +115,9 @@ nav a {
 }
 
 .logo {
-  width: 70px;
+  width: 80px;
   margin-left: 15px;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 
 .user a{
@@ -470,7 +481,7 @@ article {
   /***************** ESTILOS MENÚ DE NAVEGACIÓN RESPONSIVE *****************/
 
   nav {
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     height: 100px;
     width: 100%;
@@ -481,17 +492,16 @@ article {
 /* Se fijan el logo y el menu-btn (hamburguesa) */
 
   nav .logo {
-    width: 70px;
+    width: 80px;
     display: block;
-    margin: 10px 0 0 40px;
-    position: absolute;
-    top: 1%;
-    left: 1%;
-    padding: 0px;
+    margin: 8px 0 0 45px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
   }
 
   .menu-btn {
-    position: absolute;
+    position: fixed;
     top: 40px;
     right: 40px;
     display: block;
@@ -525,7 +535,7 @@ article {
   .menu {
     width: 100%;
     flex-direction: column;
-    padding: 100px 0;
+    padding: 50px 0;
   }
 
   .menu li {
@@ -560,7 +570,7 @@ article {
     display: block;
     color: var(--crema);
     text-align: center;
-    margin-top: 150px;
+    margin-top: 100px;
     font-weight: 200;
     line-height: 20px;
     padding-top: 20px;
