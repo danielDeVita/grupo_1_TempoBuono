@@ -169,6 +169,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  align-content: center;
 }
 
 .fichaDeProducto h2 {
@@ -176,7 +177,12 @@ main {
 }
 
 .fichaDeProducto label {
+  display: flex;
   width: 80%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .imagen {
@@ -212,13 +218,14 @@ main {
 
 .precio {
   width: 100%;
-  font-weight: bolder;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
   font-size: 20px;
   margin: auto;
 }
 
 .cantidad input{
-  margin-top: 10px;
+  width: 50%;
 }
 
 .anadircar {
@@ -403,10 +410,11 @@ footer .copyrigth p {
 
 
 @media (min-width:576px){
+  
 
-  .cantidad input {
+  /* .cantidad input {
     margin-left: 15px;
-  }
+  } */
   
   .cantidad {
     height: 40%;
@@ -448,10 +456,10 @@ footer .copyrigth p {
   .fichaDeProducto {
     flex-wrap: wrap;
   }
-
+/* 
 .fichaDeProducto label {
   margin-left: 65px;
-}
+} */
 
   .imagen {
     width:45%;
@@ -464,9 +472,9 @@ footer .copyrigth p {
   width:50%;
 }
 
-.cantidad input {
+/* .cantidad input {
   margin-left:0px;
-}
+} */
 
 article {
   width: 30%;
