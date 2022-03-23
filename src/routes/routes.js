@@ -8,7 +8,7 @@ const productController = require(path.join(__dirname,'..','controllers','produc
 router.get('/',mainController.home);
 router.get('/login', mainController.login);
 router.get('/product', productController.productCart);
-router.get('/product/detail',productController.productDetail);
+router.get('/detail',productController.productDetail);
 router.get('/user',userController.register)
 
 
