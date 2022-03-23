@@ -9,7 +9,7 @@ router.get('/',mainController.home);
 router.get('/login', mainController.login);
 router.get('/product', productController.productCart);
 router.get('/detail',productController.productDetail);
-router.get('/user',userController.register)
+router.get('/register',userController.register)
 
 
 module.exports = router;
