@@ -2,8 +2,6 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const port = process.env.PORT || 3000;
-let mainRoutes = require(path.join(__dirname,'./routes/mainRoutes'));
-let productRoutes = require(path.join(__dirname,'./routes/productRoutes'));
 
 const routes = require(path.join(__dirname,'.','routes','routes.js'));
 const routesUser = require(path.join(__dirname,'.','routes','routesUser.js'));
