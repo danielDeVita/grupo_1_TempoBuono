@@ -6,7 +6,7 @@ const mainController = {
     },
 
     login: (req, res) =>{
-        res.render('login.ejs')
+        res.render('login')
     }
 }
 
