@@ -36,50 +36,23 @@
         
         <section class="lista-productos">
             <h2>Lista de Productos</h2>
-            <article>
-                <img class="img-article" src="img/img_alfajor_marplatense.png" alt="">
-                <h3 class="tit-article">Alfajor Marplatense</h3>
-                <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <p>300 reviews</p>
-                </div>
-                <p class="descripcion-article">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque sequi hic, assumenda voluptate doloremque vero perferendis sunt unde, inventore temporibus praesentium, quaerat aut?</p>
-                <p class="precio-article">$ 50 USD</p>
-            </article>
-
-            <article>
-                <img class="img-article" src="img/img_alfajor_marplatense.png" alt="">
-                <h3 class="tit-article">Alfajor Marplatense</h3>
-                <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <p>300 reviews</p>
-                </div>
-                <p class="descripcion-article">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque sequi hic, assumenda voluptate doloremque vero perferendis sunt unde, inventore temporibus praesentium, quaerat aut?</p>
-                <p class="precio-article">$ 50 USD</p>
-            </article>
-
-            <article>
-                <img class="img-article" src="img/img_alfajor_marplatense.png" alt="">
-                <h3 class="tit-article">Alfajor Marplatense</h3>
-                <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <p>300 reviews</p>
-                </div>
-                <p class="descripcion-article">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque sequi hic, assumenda voluptate doloremque vero perferendis sunt unde, inventore temporibus praesentium, quaerat aut?</p>
-                <p class="precio-article">$ 50 USD</p>
-            </article>
+            <% for (let i =0; i < productos.length; i ++) { %>
+                <article>
+                    <img class="img-article" src="<%= productos[i].imagen %>" alt="">
+                    <h3 class="tit-article"><%=productos[i].titulo%></h3>
+                    <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <p>300 reviews</p>
+                    </div>
+                    <p class="descripcion-article"> <%= productos[i].descripcion %></p>
+                    <p class="precio-article"> <%= productos[i].precio %></p>
+                </article>
+            <% } %>
+           
         </section>
 
     </main>
