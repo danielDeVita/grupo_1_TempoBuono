@@ -5,6 +5,7 @@ const userController = require(path.join(__dirname,'..','controllers','userContr
 
 routerUser.get('/register',userController.register);
 routerUser.get('/crear', userController.crearProducto);
+routerUser.get('/modificar', userController.modProducto)
 
 
 module.exports = routerUser;

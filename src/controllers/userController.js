@@ -6,6 +6,9 @@ const userController = {
     },
     crearProducto: (req, res)=>{
         res.render('crear')
+    },
+    modProducto: (req, res)=>{
+        res.render('modificar')
     }
 
 }
