@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/crear-producto-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@200;300;400;500&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Home</title>
+  </head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><a href="#"><img src="img/Tempo_Buono_Logo.svg" alt="Logo-Tempo-Buono"></a></div>
+
+      <!-- input para dar click a burger menu (en responsive) -->
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
+      <div class="contenedor-menus">
+        <ul class="menu">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/detail">PRODUCTOS</a></li>
+          <li><a href="#">CONTACTO</a></li>
+        </ul>
+
+        <ul class="user">
+          <li><a href="#"><i class="fa-solid fa-magnifying-glass lupa"></i></a></li>
+          <li><a href="/login"><i class="fa-solid fa-user-astronaut"></i></a></li>
+          <li><a href="/product"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+
+        <!-- esto se ve solo en el menu responsive post click en burger -->
+        <p id="hechopor">Hecho con &#10084; <br> THE <img src="img/icon_monkey.svg" alt="icon monkey group"> GROUP </p>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    
+    <main>
+      <div class="miga-de-pan">
+        <ul>
+          <li><a href="#">Home</a></li>/
+          <li><a href="#">Crear</a></li>
+        </ul>
+      </div>
+
+      <h2>Creación de producto</h2>
+
+      <form action="url" method="get/post">
+
+        <label for = "nombre_producto">
+          <h3>Nombre de producto</h3>
+          <input id="nombre_producto" type="text" placeholder="Nombre producto" name="nombre_producto">
+        </label>
+
+        <label for = "descripcion_producto">
+          <h3>Descripción del producto</h3>
+          <textarea id="descripcion_producto" name="descripcion_producto" placeholder="Descripción producto" rows="7"></textarea>
+        </label>
+
+        <label for = "imagen_producto">
+          <h3>Imagen del producto</h3>
+          <input id= "imagen_producto" type="file" name="imagen_producto" accept=".jpg, .bmp, .png">
+        </label>
+
+        <label><h3>Elige la categoría</h3></label>
+        <select class="boton-categoria" name="categoria">
+          <option value="1">Café</option>
+          <option value="2">Alfajor</option>
+          <option value="3">Combo</option>
+        </select>
+
+        <label for = "precio_producto">
+          <h3>Precio de producto</h3>
+          <input id="precio_producto" type="text" placeholder="Precio producto" name="precio_producto">
+        </label>
+
+        <input class="boton" type="submit" value="Enviar">
+
+
+    </form>
+
+    </main>
+
+    <footer>
+
+      <div class="footer">
+        <div class="contacto">
+          <img src="img/Tempo_Buono_Logo.svg" alt="Logo_Tempo_Buono">
+          <h4>CONTÁCTANOS</h4>
+          <div><a href="#"><i class="fa-brands fa-facebook-square"></a></i>
+            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+          </div>
+        </div>
+
+        <div class="slogan">
+          <p>Alfajor + Café <br>"Combinación perfecta"</p>
+        </div>
+
+        <div class="mapa-sitio">
+          <ul>
+            <li id="nombreCo"><a href="#">TEMPO BUONO</a></li>
+            <li><a href="#">Mapa del sitio</a></li>
+            <li><a href="#">Políticas de privacidad</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>Copyright &#169; 2022 | Todos los derechos reservados | THE <img src="img/icon_monkey.svg"
+            alt="icon monkey group" height="20px"> GROUP </p>
+      </div>
+    </footer>
+  </div>    
+  
+</body>
+</html>
