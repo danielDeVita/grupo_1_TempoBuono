@@ -17,34 +17,8 @@
 </head>
 
 <body>
-  <header>
-  <nav>
-    <div class="logo"><a href="/"><img src="img/Tempo_Buono_Logo.svg" alt="Logo-Tempo-Buono"></a></div>
 
-    <!-- input para dar click a burger menu (en responsive) -->
-    <input type="checkbox" id="click">
-    <label for="click" class="menu-btn">
-      <i class="fa-solid fa-bars"></i>
-    </label>
-
-    <div class="contenedor-menus">
-      <ul class="menu">
-        <li><a class="active" href="/">HOME</a></li>
-        <li><a href="/detail">PRODUCTOS</a></li>
-        <li><a href="#">CONTACTO</a></li>
-      </ul>
-
-      <ul class="user">
-        <li><a href="#"><i class="fa-solid fa-magnifying-glass lupa"></i></a></li>
-        <li><a href="/login"><i class="fa-solid fa-user-astronaut"></i></a></li>
-        <li><a href="/product"><i class="fa-solid fa-cart-shopping"></i></a></li>
-      </ul>
-
-      <!-- esto se ve solo en el menu responsive post click en burger -->
-      <p id="hechopor">Hecho con &#10084; <br> THE <img src="img/icon_monkey.svg" alt="icon monkey group"> GROUP </p>
-    </div>
-  </nav>
-  </header>
+  <%- include("./partials/header") %>
 
   <div class="container">
     <main>
@@ -121,36 +95,8 @@
 
     </main>
 
-    <footer>
-
-    <div class="footer">
-      <div class="contacto">
-        <img src="img/Tempo_Buono_Logo.svg" alt="Logo_Tempo_Buono">
-        <h4>CONTÁCTANOS</h4>
-        <div><a href="#"><i class="fa-brands fa-facebook-square"></a></i>
-          <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
-        </div>
-      </div>
-
-      <div class="slogan">
-        <p>Alfajor + Café <br>"Combinación perfecta"</p>
-      </div>
-
-      <div class="mapa-sitio">
-        <ul>
-          <li id="nombreCo"><a href="#">TEMPO BUONO</a></li>
-          <li><a href="#">Mapa del sitio</a></li>
-          <li><a href="#">Políticas de privacidad</a></li>
-          <li><a href="#">Términos y condiciones</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="copyright">
-      <p>Copyright &#169; 2022 | Todos los derechos reservados | THE <img src="./img/icon_monkey.svg"
-          alt="icon monkey group" height="20px"> GROUP </p>
-    </div>
-    </footer>
+    <%- include("./partials/footer") %>
+ 
   </div>
 </body>
 
