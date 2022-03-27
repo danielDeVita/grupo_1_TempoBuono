@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Productos</title>
+    <link rel="stylesheet" href="css/list-product-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>login</title>
 </head>
 <body>
-    <h1>Lista de Productos</h1>
+    <%- include("./partials/header") %>
+    
+    <div class="container">
+    <main>
+        <div class="miga-de-pan">
+            <ul>
+              <li><a href="#">Home</a></li>/
+              <li><a href="#">Lista de productos</a></li>
+            </ul>
+        </div>
+
+        <!-- <div class="menu-lateral">
+            <h2>Categorías</h2>
+            <a href="#news">Café</a>
+            <a href="#contact">Alfajor</a>
+            <a href="#about">Combos</a>
+        </div> -->
+        
+        <section class="lista-productos">
+            <h2>Lista de Productos</h2>
+            <article>
+                <img class="img-article" src="img/img_alfajor_marplatense.png" alt="">
+                <h3 class="tit-article">Alfajor Marplatense</h3>
+                <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>300 reviews</p>
+                </div>
+                <p class="descripcion-article">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque sequi hic, assumenda voluptate doloremque vero perferendis sunt unde, inventore temporibus praesentium, quaerat aut?</p>
+                <p class="precio-article">$ 50 USD</p>
+            </article>
+
+            <article>
+                <img class="img-article" src="img/img_alfajor_marplatense.png" alt="">
+                <h3 class="tit-article">Alfajor Marplatense</h3>
+                <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>300 reviews</p>
+                </div>
+                <p class="descripcion-article">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque sequi hic, assumenda voluptate doloremque vero perferendis sunt unde, inventore temporibus praesentium, quaerat aut?</p>
+                <p class="precio-article">$ 50 USD</p>
+            </article>
+
+            <article>
+                <img class="img-article" src="img/img_alfajor_marplatense.png" alt="">
+                <h3 class="tit-article">Alfajor Marplatense</h3>
+                <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>300 reviews</p>
+                </div>
+                <p class="descripcion-article">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque sequi hic, assumenda voluptate doloremque vero perferendis sunt unde, inventore temporibus praesentium, quaerat aut?</p>
+                <p class="precio-article">$ 50 USD</p>
+            </article>
+        </section>
+
+    </main>
+
+    <%- include("./partials/footer") %>
+
+    </div>     
 </body>
 </html>
