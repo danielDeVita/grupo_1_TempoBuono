@@ -7,6 +7,10 @@ const productController = {
 
     productDetail: (req, res) =>{
         res.render('productDetail');
+    },
+    
+    productList: (req, res)=> {
+        res.render('productList')
     }
 }
 
