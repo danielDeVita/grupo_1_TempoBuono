@@ -17,6 +17,4 @@ app.use('/',routes);
 app.use('/',routesUser);
 app.use('/',routesProduct);
 
-app.get('/crear',(req,res)=>res.sendFile(path.join(__dirname,'./views/crear-producto.html')));
-
 app.listen(port, ()=> console.log("server "+port+" ok"));
