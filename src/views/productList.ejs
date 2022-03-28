@@ -25,35 +25,38 @@
               <li><a href="#">Home</a></li>/
               <li><a href="#">Lista de productos</a></li>
             </ul>
+        <div class="menuYlistaproductos">
+            
+            <div class="menu-lateral">
+                <h2>Categorías</h2>
+                <div>
+                    <a href="#news">Café</a>
+                    <a href="#contact">Alfajor</a>
+                    <a href="#about">Combos</a>
+                </div>
+            </div>
+            
+            <section class="lista-productos">
+                <h2>Lista de Productos</h2>
+                <% for (let i =0; i < productos.length; i ++) { %>
+                    <article>
+                        <img class="img-article" src="<%= productos[i].imagen %>" alt="">
+                        <h3 class="tit-article"><%=productos[i].titulo%></h3>
+                        <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p>300 reviews</p>
+                        </div>
+                        <p class="descripcion-article"> <%= productos[i].descripcion %></p>
+                        <p class="precio-article"> <%= productos[i].precio %></p>
+                    </article>
+                <% } %>
+            
+            </section>
         </div>
-
-        <!-- <div class="menu-lateral">
-            <h2>Categorías</h2>
-            <a href="#news">Café</a>
-            <a href="#contact">Alfajor</a>
-            <a href="#about">Combos</a>
-        </div> -->
-        
-        <section class="lista-productos">
-            <h2>Lista de Productos</h2>
-            <% for (let i =0; i < productos.length; i ++) { %>
-                <article>
-                    <img class="img-article" src="<%= productos[i].imagen %>" alt="">
-                    <h3 class="tit-article"><%=productos[i].titulo%></h3>
-                    <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <p>300 reviews</p>
-                    </div>
-                    <p class="descripcion-article"> <%= productos[i].descripcion %></p>
-                    <p class="precio-article"> <%= productos[i].precio %></p>
-                </article>
-            <% } %>
-           
-        </section>
 
     </main>
 
