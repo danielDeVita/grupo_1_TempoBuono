@@ -24,14 +24,14 @@ const productController = {
                 descripcion: "Un cafê con gratas notas aromáticas dulces y afrutadas que recuerdan el caramelo y un suave chocolate oscuro, de máxima pureza.",
                 precio: "USD 300",
                 categoria: "Cafés",
-                imagen: "/img/img_alfajor_marplatense.png"
+                imagen: "/img/img_cafe_sierra.png"
             },
             {
                 titulo: "Sierra Marplatense",
                 descripcion: "Una combinación perfecta que logra reslatar el aroma del café con el toque dulce del alfajor, de máxima pureza.",
                 precio: "USD 325",
                 categoria: "Combos",
-                imagen: "/img/img_alfajor_marplatense.png"
+                imagen: "/img/img_alfajorMarPlata_CafeSierra.png"
             }
         ]
         res.render('productList', {productos:productos})
