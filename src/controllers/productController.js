@@ -39,11 +39,11 @@ const productController = {
     crearProducto: (req, res) => {
         switch (req.method) {
             case "GET":
-                render('crear');
+                res.render('crear',{styles: 'crearProducto'});
             case "POST":
             // do something;
             default:
-                render("index");
+                res.render("index");
         }
     },
     modProducto: (req, res) => {
