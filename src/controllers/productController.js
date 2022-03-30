@@ -48,6 +48,10 @@ const productController = {
     },
     modProducto: (req, res) => {
         res.render('modificar')
+        //do something
+    },
+    deleteProducto: (req, res)=>{
+        //do something
     }
 }
 
