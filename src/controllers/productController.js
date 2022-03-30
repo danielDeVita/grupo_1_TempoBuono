@@ -37,7 +37,11 @@ const productController = {
         res.render('productList', {productos:productos})
     },
     crearProducto: (req, res)=>{
+        if(req.method === 'GET'){
         res.render('crear')
+        }else {
+            console.log(req.body)
+        }
     },
     modProducto: (req, res)=>{
         res.render('modificar')
