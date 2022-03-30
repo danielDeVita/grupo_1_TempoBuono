@@ -35,6 +35,12 @@ const productController = {
             }
         ]
         res.render('productList', {productos:productos})
+    },
+    crearProducto: (req, res)=>{
+        res.render('crear')
+    },
+    modProducto: (req, res)=>{
+        res.render('modificar')
     }
 }
 
