@@ -34,16 +34,19 @@ const productController = {
                 imagen: "/img/img_alfajorMarPlata_CafeSierra.png"
             }
         ]
-        res.render('productList', {productos:productos})
+        res.render('productList', { productos: productos })
     },
-    crearProducto: (req, res)=>{
-        if(req.method === 'GET'){
-        res.render('crear')
-        }else {
-            console.log(req.body)
+    crearProducto: (req, res) => {
+        switch (req.method) {
+            case "GET":
+                render('crear');
+            case "POST":
+            // do something;
+            default:
+                render("index");
         }
     },
-    modProducto: (req, res)=>{
+    modProducto: (req, res) => {
         res.render('modificar')
     }
 }
