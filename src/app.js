@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const port = process.env.PORT || 3000;
 
-const routes = require(path.join(__dirname,'.','routes','routes.js'));
+const routes = require(path.join(__dirname,'.','routes','routesMain.js'));
 const routesUser = require(path.join(__dirname,'.','routes','routesUser.js'));
 const routesProduct = require(path.join(__dirname,'.','routes','routesProduct.js'));
 
