@@ -73,27 +73,27 @@
     },
     {
         "id": 10,
-        name: "Alfajor Mar Del Plata" ,
-        description: "Dos galletitas rellenas del mas delicioso Dulce de Leche, cubiertas con chocolate semi-amargo de máxima pureza.",
-        price: 50,
-        category: "Alfajores",
-        image: ""
+        "name": "Alfajor Mar Del Plata" ,
+        "description": "Dos galletitas rellenas del mas delicioso Dulce de Leche, cubiertas con chocolate semi-amargo de máxima pureza.",
+        "price": 50,
+        "category": "Alfajores",
+        "image": "/img/alfajor_marplatense.png"
     },
     {
         "id": 11,
-        name: "Café Sierra" ,
-        description: "Un cafê con gratas notas aromáticas dulces y afrutadas que recuerdan el caramelo y un suave chocolate oscuro, de máxima pureza.",
-        price: 300,
-        category: "Cafés",
-        image: ""
+        "name": "Café Sierra" ,
+        "description": "Un cafê con gratas notas aromáticas dulces y afrutadas que recuerdan el caramelo y un suave chocolate oscuro, de máxima pureza.",
+        "price": 300,
+        "category": "Cafés",
+        "image": "/img/img_cafe_sierra.png"
     },
     {
         "id": 12,
-        titulo: "Sierra Marplatense" ,
-        description: "Una combinación perfecta que logra reslatar el aroma del café con el toque dulce del alfajor, de máxima pureza.",
-        price: 325,
-        category: "Combos",
-        image: ""
+        "titulo": "Sierra Marplatense" ,
+        "description": "Una combinación perfecta que logra reslatar el aroma del café con el toque dulce del alfajor, de máxima pureza.",
+        "price": 325,
+        "category": "Combos",
+        "image": "/img/img_alfajorMarPlata_CafeSierra.png"
     }
 ]
 ]
