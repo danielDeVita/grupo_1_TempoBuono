@@ -42,6 +42,8 @@ const productController = {
                 res.render('crear',{styles: 'crearProducto'});
             case "POST":
             // do something;
+                /* res.send("producto creado"); */
+                res.render('crear', {styles: 'crearProducto'});
             default:
                 res.render("index");
         }

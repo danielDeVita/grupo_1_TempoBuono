@@ -6,7 +6,7 @@ const productController = require(path.join(__dirname,'..','controllers','produc
 routerProduct.get('/cart', productController.productCart);
 routerProduct.get('/product', productController.productList);
 routerProduct.get('/products/create',productController.crearProducto);
-routerProduct.post('/products',productController.crearProducto);
+routerProduct.post('/products/create',productController.crearProducto);
 routerProduct.get('/products/:id',productController.productDetail);
 routerProduct.get('/products/:id/edit',productController.modProducto);
 routerProduct.put('/products/:id/',productController.modProducto);
