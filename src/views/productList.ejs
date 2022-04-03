@@ -38,10 +38,10 @@
             
             <section class="lista-productos">
                 <h2>Lista de Productos</h2>
-                <% for (let i =0; i < productos.length; i ++) { %>
+                <% for (let i =0; i < products.length; i ++) { %>
                     <article>
-                        <img class="img-article" src="<%= productos[i].imagen %>" alt="">
-                        <h3 class="tit-article"><%=productos[i].titulo%></h3>
+                        <img class="img-article" src="<%= products[i].image %>" alt="foto del producto">
+                        <h3 class="tit-article"><%=products[i].name%></h3>
                         <div class="stars">
                         <div>
                         <i class="fa-solid fa-star"></i>
@@ -52,8 +52,8 @@
                         </div>
                         <p>300 reviews</p>
                         </div>
-                        <p class="descripcion-article"> <%= productos[i].descripcion %></p>
-                        <p class="precio-article"> <%= productos[i].precio %></p>
+                        <p class="descripcion-article"> <%= products[i].description %></p>
+                        <p class="precio-article"> <%= products[i].price %></p>
                     </article>
                 <% } %>
             
