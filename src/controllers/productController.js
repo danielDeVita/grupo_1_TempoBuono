@@ -30,7 +30,7 @@ const productController = {
         }
     },
     modProducto: (req, res) => {
-        res.render('modificar')
+        res.render('modificar', {styles: 'crearProducto'})
         /* find del productID y compararlo con el req.params.ID 
         y luego modificar cada propiedad con el req.body.propiedad
         PEEEERO HAY QUE HACER UN SWITCH CASE ENTRE GET Y PUT */
