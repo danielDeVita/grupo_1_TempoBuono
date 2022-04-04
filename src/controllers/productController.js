@@ -34,8 +34,6 @@ const productController = {
         switch(req.method){
             case "GET":
                 var product = products.find( product => product.id==req.params.id)
-                console.log(product)
-                console.log(req.params.id)
                 if(product){
                     res.render('modificar', {styles: 'crearProducto', product});
                     }
