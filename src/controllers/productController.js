@@ -30,12 +30,27 @@ const productController = {
         }
     },
     modProducto: (req, res) => {
-        res.render('modificar', {styles: 'crearProducto'})
+        //res.render('modificar', {styles: 'crearProducto'})
+        switch(req.method){
+            case "GET":
+                var product = products.find( product => product.id==req.params.id)
+                console.log(product)
+                console.log(req.params.id)
+                if(product){
+                    res.render('modificar', {styles: 'crearProducto', product});
+                    }
+                else{
+                    res.send('404 Not Found ');
+                }
+
+            }
+
+        },
         /* find del productID y compararlo con el req.params.ID 
         y luego modificar cada propiedad con el req.body.propiedad
         PEEEERO HAY QUE HACER UN SWITCH CASE ENTRE GET Y PUT */
         //do something
-    },
+
     deleteProducto: (req, res)=>{
         //do something
         res.send("producto borrado")

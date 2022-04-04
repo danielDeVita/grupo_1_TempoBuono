@@ -89,8 +89,8 @@
     },
     {
         "id": 12,
-        "titulo": "Sierra Marplatense" ,
-        "description": "Una combinación perfecta que logra reslatar el aroma del café con el toque dulce del alfajor, de máxima pureza.",
+        "name": "Sierra Marplatense" ,
+        "description": "Una combinación perfecta que logra resaltar el aroma del café con el toque dulce del alfajor, de máxima pureza.",
         "price": 325,
         "category": "Combos",
         "image": "/img/img_alfajorMarPlata_CafeSierra.png"

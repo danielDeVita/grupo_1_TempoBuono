@@ -19,12 +19,12 @@
 
         <label for = "nombre_producto">
           <h3>Nombre de producto</h3>
-          <input id="nombre_producto" type="text" placeholder="Nombre producto" name="nombre_producto">
+          <input id="nombre_producto" name="nombre_producto" type="text" <%= "placeholder=" %>"<%=product.name%>">
         </label>
 
         <label for = "descripcion_producto">
           <h3>Descripción del producto</h3>
-          <textarea id="descripcion_producto" name="descripcion_producto" placeholder="Descripción producto" rows="7"></textarea>
+          <textarea id="descripcion_producto" name="descripcion_producto" <%= "placeholder=" %>"<%=product.description%>" rows="7"></textarea>
         </label>
 
         <label for = "imagen_producto">
@@ -41,7 +41,7 @@
 
         <label for = "precio_producto">
           <h3>Precio de producto</h3>
-          <input id="precio_producto" type="text" placeholder="Precio producto" name="precio_producto">
+          <input id="precio_producto" type="text" <%= "placeholder=" %>"<%=product.price%>" name="precio_producto">
         </label>
 
         <input class="boton" type="submit" value="Enviar">
