@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const port = process.env.PORT || 3000;
+const methodOverride = require("method-override");
 
 const routes = require(path.join(__dirname,'.','routes','routesMain.js'));
 const routesUser = require(path.join(__dirname,'.','routes','routesUser.js'));
@@ -13,6 +14,7 @@ app.set("view engine", "ejs");
 app.set("views","./src/views");
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+app.use(methodOverride("_method"));
 
 
 app.use('/',routes);
