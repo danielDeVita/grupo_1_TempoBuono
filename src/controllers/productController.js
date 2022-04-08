@@ -42,7 +42,7 @@ const productController = {
         },
 
     modProducto: (req, res) => {
-        products = products.map( product=> {
+        product = products.map( product=> {
                 if (product.id == req.params.id) {
                         product.name = req.body.name,
                         product.price = req.body.price,
