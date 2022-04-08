@@ -31,10 +31,7 @@ const productController = {
 		fs.writeFileSync(path.join(__dirname, '../data/products.json'), (JSON.stringify(arrayProductos, null, 2)));
 		return res.redirect('/products');
     },
-    modProducto: (req, res) => {
-        //res.render('modificar', {styles: 'crearProducto'})
-        switch(req.method){
-            case "GET":
+    modProductoForm: (req, res) => {
                 var product = products.find( product => product.id==req.params.id)
                 if(product){
                     res.render('modificar', {styles: 'crearProducto', product});
@@ -42,14 +39,23 @@ const productController = {
                 else{
                     res.send('404 Not Found ');
                 }
-
-            }
-
         },
-        /* find del productID y compararlo con el req.params.ID 
-        y luego modificar cada propiedad con el req.body.propiedad
-        PEEEERO HAY QUE HACER UN SWITCH CASE ENTRE GET Y PUT */
-        //do something
+
+    modProducto: (req, res) => {
+        products = products.map(product=> {
+			if(product.id==req.params.id){
+				product.name = req.body.name,
+				product.price = req.body.price,
+				product.discount = req.body.discount,
+				product.category = req.body.category,
+				product.description = req.body.description,
+				product.image = req.file?.filename ?? "default-image.png"
+			}
+			return product
+        
+    },
+
+
 
     deleteProducto: (req, res)=>{
         //do something

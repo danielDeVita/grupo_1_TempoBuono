@@ -20,7 +20,7 @@ routerProduct.get('/products', productController.productList);
 routerProduct.get('/products/create',productController.crearProducto);
 routerProduct.post('/products/create', uploadFile.single("imagen_producto"),productController.crearProducto);
 routerProduct.get('/products/:id',productController.productDetail);
-routerProduct.get('/products/:id/edit',productController.modProducto);
+routerProduct.get('/products/:id/edit',productController.modProductoForm);
 routerProduct.put('/products/:id/', uploadFile.single("imagen_producto"),productController.modProducto);
 routerProduct.delete('/products/:id/',productController.deleteProducto);
 
