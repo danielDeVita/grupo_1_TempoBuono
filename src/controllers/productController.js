@@ -1,8 +1,7 @@
-const { render } = require('express/lib/response');
+const { render,redirect } = require('express/lib/response');
 const fs = require('fs')
 const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/products.json'); 
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
 
 const productController = {
     productCart: (req, res) => {
@@ -42,17 +41,22 @@ const productController = {
         },
 
     modProducto: (req, res) => {
-        product = products.map( product=> {
+        let arrayProducts = [...products]
+        let modProduct = products.map( product=> {
                 if (product.id == req.params.id) {
                         product.name = req.body.name,
                         product.price = req.body.price,
-                        product.discount = req.body.discount,
                         product.category = req.body.category,
                         product.description = req.body.description,
                         product.image = req.file?.filename ?? "default-image.png"
                                                     }
-            return product
+            return product                                       
         });
+
+        arrayProducts.push(modProduct);
+        fs.writeFileSync(path.join(__dirname, '../data/products.json'), (JSON.stringify(arrayProducts, null, 2)));
+		return res.redirect('/products');
+
     },
 
     deleteProducto: (req, res)=>{

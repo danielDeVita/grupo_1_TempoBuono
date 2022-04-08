@@ -15,7 +15,7 @@
 
       <h2>Modificación de producto</h2>
 
-      <form action="/products/:id/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+      <form action="/products/<%= product.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
 
         <label for = "nombre_producto">
           <h3>Nombre de producto</h3>
