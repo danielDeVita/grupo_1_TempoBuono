@@ -42,20 +42,18 @@ const productController = {
         },
 
     modProducto: (req, res) => {
-        products = products.map(product=> {
-            if (product.id == req.params.id) {
-                product.name = req.body.name,
-                    product.price = req.body.price,
-                    product.discount = req.body.discount,
-                    product.category = req.body.category,
-                    product.description = req.body.description,
-                    product.image = req.file?.filename ?? "default-image.png"
-            }
+        products = products.map( product=> {
+                if (product.id == req.params.id) {
+                        product.name = req.body.name,
+                        product.price = req.body.price,
+                        product.discount = req.body.discount,
+                        product.category = req.body.category,
+                        product.description = req.body.description,
+                        product.image = req.file?.filename ?? "default-image.png"
+                                                    }
             return product
-        }
+        });
     },
-
-
 
     deleteProducto: (req, res)=>{
         //do something
