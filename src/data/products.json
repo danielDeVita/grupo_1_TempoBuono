@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Alfajor Cordobés",
     "description": "Lorem 3",
-    "image": "http://dummyimage.com/189x100.png/ff4444/ffffff",
+    "image": "1649389149249.png",
     "category": "Alfajores",
     "price": 300
   },
@@ -77,7 +77,7 @@
     "description": "Dos galletitas rellenas del mas delicioso Dulce de Leche, cubiertas con chocolate semi-amargo de máxima pureza.",
     "price": 50,
     "category": "Alfajores",
-    "image": "/img/alfajor_marplatense.png"
+    "image": "alfajor_marplatense.png"
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "description": "Un cafê con gratas notas aromáticas dulces y afrutadas que recuerdan el caramelo y un suave chocolate oscuro, de máxima pureza.",
     "price": 300,
     "category": "Cafés",
-    "image": "/img/img_cafe_sierra.png"
+    "image": "img_cafe_sierra.png"
   },
   {
     "id": 12,
@@ -93,6 +93,11 @@
     "description": "Una combinación perfecta que logra resaltar el aroma del café con el toque dulce del alfajor, de máxima pureza.",
     "price": 325,
     "category": "Combos",
-    "image": "/img/img_alfajorMarPlata_CafeSierra.png"
+    "image": "img_alfajorMarPlata_CafeSierra.png"
+  },
+  {
+    "id": 13,
+    "category": "",
+    "image": "default-image.png"
   }
 ]
