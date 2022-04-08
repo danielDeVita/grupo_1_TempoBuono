@@ -6,7 +6,7 @@ const productController = require(path.join(__dirname,'..','controllers','produc
 const multer = require("multer");
 const storage = multer.diskStorage({
     destination: function (req, file, cb){
-        cb(null, path.join("../../public/img"));
+        cb(null, path.join(__dirname,"/../../public/img"));
     },
     filename: function (req, file, cb){
         cb(null, Date.now()+path.extname(file.originalname));
@@ -21,7 +21,7 @@ routerProduct.get('/products/create',productController.crearProducto);
 routerProduct.post('/products/create', uploadFile.single("imagen_producto"),productController.crearProducto);
 routerProduct.get('/products/:id',productController.productDetail);
 routerProduct.get('/products/:id/edit',productController.modProductoForm);
-routerProduct.put('/products/:id/', uploadFile.single("imagen_producto"),productController.modProducto);
+routerProduct.put('/products/:id/edit', uploadFile.single("imagen_producto"),productController.modProducto);
 routerProduct.delete('/products/:id/',productController.deleteProducto);
 
 module.exports = routerProduct

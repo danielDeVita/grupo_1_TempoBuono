@@ -41,20 +41,19 @@ const productController = {
         },
 
     modProducto: (req, res) => {
-        let arrayProducts = [...products]
+        // let arrayProducts = [...products]
         let modProduct = products.map( product=> {
                 if (product.id == req.params.id) {
-                        product.name = req.body.name,
-                        product.price = req.body.price,
-                        product.category = req.body.category,
-                        product.description = req.body.description,
+                        product.name = req.body.nombre_producto,
+                        product.price = req.body.precio_producto,
+                        product.category = req.body.categoria,
+                        product.description = req.body.descripcion_producto,
                         product.image = req.file?.filename ?? "default-image.png"
                                                     }
             return product                                       
         });
 
-        arrayProducts.push(modProduct);
-        fs.writeFileSync(path.join(__dirname, '../data/products.json'), (JSON.stringify(arrayProducts, null, 2)));
+        fs.writeFileSync(path.join(__dirname, '../data/products.json'), (JSON.stringify(modProduct, null, 2)));
 		return res.redirect('/products');
 
     },
