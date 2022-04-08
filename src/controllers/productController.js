@@ -18,16 +18,18 @@ const productController = {
         res.render('productList', {products});
     },
     crearProducto: (req, res) => {
-        switch (req.method) {
-            case "GET":
-                res.render('crear',{styles: 'crearProducto'});
-            case "POST":
-            // do something;
-                res.send("producto creado");
-                /* res.render('crear', {styles: 'crearProducto'}); */
-            default:
-                res.render("index");
+        let arrayProductos = [...products]
+        let newProduct = {
+            id: arrayProductos.length > 0 ? arrayProductos[arrayProductos.length -1].id + 1 : 1,
+            name: req.body.nombre_producto,
+            description: req.body.descripcion_producto,
+            price: req.body.precio_producto,
+            category: "", //req.body
+            image: req.file?.filename ?? "default-image.png"
         }
+        arrayProductos.push(newProduct);
+		fs.writeFileSync(path.join(__dirname, '../data/products.json'), (JSON.stringify(arrayProductos, null, 2)));
+		return res.redirect('/products');
     },
     modProducto: (req, res) => {
         //res.render('modificar', {styles: 'crearProducto'})
