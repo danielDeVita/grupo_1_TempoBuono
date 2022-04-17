@@ -16,6 +16,11 @@ const productController = {
     productList: (req, res) => {
         res.render('productList', {products});
     },
+
+    crearProductoForm: (req, res) => { //Se muestra formulario de creación de producto
+		return res.render('crear', {styles})
+	}, 
+    
     crearProducto: (req, res) => {
         let arrayProductos = [...products]
         let newProduct = {

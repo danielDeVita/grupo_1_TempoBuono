@@ -17,7 +17,7 @@ const uploadFile = multer({storage});
 
 routerProduct.get('/cart', productController.productCart);
 routerProduct.get('/products', productController.productList);
-routerProduct.get('/products/create',productController.crearProducto);
+routerProduct.get('/products/create',productController.crearProductoForm);
 routerProduct.post('/products/create', uploadFile.single("imagen_producto"),productController.crearProducto);
 routerProduct.get('/products/:id',productController.productDetail);
 routerProduct.get('/products/:id/edit',productController.modProductoForm);

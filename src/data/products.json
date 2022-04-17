@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "name": "Alfajor Mar Del Plata",
-    "description": "Lorem 1",
-    "image": "http://dummyimage.com/121x100.png/cc0000/ffffff",
-    "category": "Alfajores",
-    "price": 100
+    "name": "Alfajor baricoque",
+    "description": "afohjaslfjash",
+    "image": "1649389925031.png",
+    "category": "1",
+    "price": 1200
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "afohjaslfjash",
     "image": "1649389925031.png",
     "category": "1",
-    "price": "12333"
+    "price": 100
   },
   {
     "id": 3,
@@ -97,6 +97,11 @@
   },
   {
     "id": 13,
+    "category": "",
+    "image": "default-image.png"
+  },
+  {
+    "id": 14,
     "category": "",
     "image": "default-image.png"
   }
