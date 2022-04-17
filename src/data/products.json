@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Alfajor baricoque",
     "description": "afohjaslfjash",
-    "image": "1649389925031.png",
+    "image": "default image coffee.png",
     "category": "1",
     "price": 1200
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Alfajor baricoque",
     "description": "afohjaslfjash",
-    "image": "1649389925031.png",
+    "image": "default image coffee.png",
     "category": "1",
     "price": 100
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Alfajor Cordobés",
     "description": "Lorem 3",
-    "image": "1649389149249.png",
+    "image": "default image coffee.png",
     "category": "Alfajores",
     "price": 300
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Café Tolima",
     "description": "Lorem 1",
-    "image": "http://dummyimage.com/173x100.png/5fa2dd/ffffff",
+    "image": "default image coffee.png",
     "category": "Cafés",
     "price": 150
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "name": "Café Quindío",
     "description": "Lorem 2",
-    "image": "http://dummyimage.com/150x100.png/ff4444/ffffff",
+    "image": "default image coffee.png",
     "category": "Cafés",
     "price": 200
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "name": "Café Rola",
     "description": "Lorem 3",
-    "image": "http://dummyimage.com/126x100.png/cc0000/ffffff",
+    "image": "default image coffee.png",
     "category": "Cafés",
     "price": 500
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "name": "Combo 1",
     "description": "Lorem 1",
-    "image": "http://dummyimage.com/200x100.png/ff4444/ffffff",
+    "image": "default image coffee.png",
     "category": "Combos",
     "price": 800
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "name": "Combo 2",
     "description": "Lorem 2",
-    "image": "http://dummyimage.com/201x100.png/5fa2dd/ffffff",
+    "image": "default image coffee.png",
     "category": "Combos",
     "price": 900
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "name": "Combo 3",
     "description": "Lorem 3",
-    "image": "http://dummyimage.com/113x100.png/ff4444/ffffff",
+    "image": "default image coffee.png",
     "category": "Combos",
     "price": 1000
   },
@@ -77,7 +77,7 @@
     "description": "Dos galletitas rellenas del mas delicioso Dulce de Leche, cubiertas con chocolate semi-amargo de máxima pureza.",
     "price": 50,
     "category": "Alfajores",
-    "image": "alfajor_marplatense.png"
+    "image": "default image coffee.png"
   },
   {
     "id": 11,
@@ -94,15 +94,5 @@
     "price": 325,
     "category": "Combos",
     "image": "img_alfajorMarPlata_CafeSierra.png"
-  },
-  {
-    "id": 13,
-    "category": "",
-    "image": "default-image.png"
-  },
-  {
-    "id": 14,
-    "category": "",
-    "image": "default-image.png"
   }
 ]

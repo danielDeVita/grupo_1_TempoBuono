@@ -18,7 +18,7 @@ const productController = {
     },
 
     crearProductoForm: (req, res) => { //Se muestra formulario de creación de producto
-		return res.render('crear', {styles})
+		return res.render('crear', {styles: "crearProducto"})
 	}, 
     
     crearProducto: (req, res) => {
