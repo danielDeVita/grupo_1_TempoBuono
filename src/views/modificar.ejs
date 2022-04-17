@@ -44,11 +44,13 @@
           <input id="precio_producto" type="text" <%= "placeholder=" %>"<%=product.price%>" name="precio_producto">
         </label>
 
-        <input class="boton" type="submit" value="Enviar">
-        <input class="boton" type="submit" value="Eliminar">
-        
-        
+        <input class="boton" type="submit" value="Enviar">  
       </form>
+
+      <form action="/products/<%= product.id %>/edit?_method=DELETE" method="POST" enctype="multipart/form-data">
+        <button type="submit" class="boton" value="Eliminar">ELIMINAR</button>
+      </form>
+
       
     </main>
 
