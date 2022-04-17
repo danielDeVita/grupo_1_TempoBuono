@@ -94,5 +94,13 @@
     "price": 325,
     "category": "Combos",
     "image": "img_alfajorMarPlata_CafeSierra.png"
+  },
+  {
+    "id": 13,
+    "name": "cafe de prueba modificado",
+    "description": "description de prueba modificada",
+    "price": "0987654321",
+    "category": "2",
+    "image": "1650230945120.jpg"
   }
 ]

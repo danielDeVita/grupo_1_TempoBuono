@@ -19,7 +19,7 @@
         <h2><%=producto.name%></h2>
 
         <div class="imagen">
-        <img src="<%=producto.image%>" alt="Imagen de alfajor">
+        <img src="/img/<%= producto.image %>" alt="Imagen de alfajor">
         </div>
 
         <div class="descripcion">
@@ -55,7 +55,7 @@
     <div class="ProductosRelacionados">
         <h2 id="tit-relacionados">Productos relacionados</h2>
         <article>
-          <img src="/img/alfajor_marplatense.png" alt="producto relacionado 1">
+          <img src="<%=producto.category%>" alt="producto relacionado 1">
           <h3>Mar del Plata</h3>
           <p>Alfajores</p>
           <p class="Precio">$ 20.00 USD</p>
