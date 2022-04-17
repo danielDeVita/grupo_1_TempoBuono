@@ -1,19 +1,12 @@
 [
   {
-    "id": 1,
-    "name": "Alfajor baricoque",
-    "description": "afohjaslfjash",
-    "image": "default image coffee.png",
-    "category": "1",
-    "price": 1200
-  },
-  {
     "id": 2,
     "name": "Alfajor baricoque",
     "description": "afohjaslfjash",
     "image": "default image coffee.png",
     "category": "1",
-    "price": 100
+    "price": 100,
+    "show": true
   },
   {
     "id": 3,
@@ -21,7 +14,8 @@
     "description": "Lorem 3",
     "image": "default image coffee.png",
     "category": "Alfajores",
-    "price": 300
+    "price": 300,
+    "show": true
   },
   {
     "id": 4,
@@ -29,7 +23,8 @@
     "description": "Lorem 1",
     "image": "default image coffee.png",
     "category": "Cafés",
-    "price": 150
+    "price": 150,
+    "show": true
   },
   {
     "id": 5,
@@ -37,7 +32,8 @@
     "description": "Lorem 2",
     "image": "default image coffee.png",
     "category": "Cafés",
-    "price": 200
+    "price": 200,
+    "show": true
   },
   {
     "id": 6,
@@ -45,7 +41,8 @@
     "description": "Lorem 3",
     "image": "default image coffee.png",
     "category": "Cafés",
-    "price": 500
+    "price": 500,
+    "show": true
   },
   {
     "id": 7,
@@ -53,7 +50,8 @@
     "description": "Lorem 1",
     "image": "default image coffee.png",
     "category": "Combos",
-    "price": 800
+    "price": 800,
+    "show": true
   },
   {
     "id": 8,
@@ -61,7 +59,8 @@
     "description": "Lorem 2",
     "image": "default image coffee.png",
     "category": "Combos",
-    "price": 900
+    "price": 900,
+    "show": true
   },
   {
     "id": 9,
@@ -69,7 +68,8 @@
     "description": "Lorem 3",
     "image": "default image coffee.png",
     "category": "Combos",
-    "price": 1000
+    "price": 1000,
+    "show": true
   },
   {
     "id": 10,
@@ -77,7 +77,8 @@
     "description": "Dos galletitas rellenas del mas delicioso Dulce de Leche, cubiertas con chocolate semi-amargo de máxima pureza.",
     "price": 50,
     "category": "Alfajores",
-    "image": "default image coffee.png"
+    "image": "default image coffee.png",
+    "show": true
   },
   {
     "id": 11,
@@ -85,7 +86,8 @@
     "description": "Un cafê con gratas notas aromáticas dulces y afrutadas que recuerdan el caramelo y un suave chocolate oscuro, de máxima pureza.",
     "price": 300,
     "category": "Cafés",
-    "image": "img_cafe_sierra.png"
+    "image": "img_cafe_sierra.png",
+    "show": true
   },
   {
     "id": 12,
@@ -93,14 +95,16 @@
     "description": "Una combinación perfecta que logra resaltar el aroma del café con el toque dulce del alfajor, de máxima pureza.",
     "price": 325,
     "category": "Combos",
-    "image": "img_alfajorMarPlata_CafeSierra.png"
+    "image": "img_alfajorMarPlata_CafeSierra.png",
+    "show": true
   },
   {
     "id": 13,
-    "name": "cafe de prueba modificado",
-    "description": "description de prueba modificada",
-    "price": "0987654321",
-    "category": "2",
-    "image": "1650230945120.jpg"
+    "name": "Cafe Ivan",
+    "description": "El que no se va a desaparecer",
+    "price": "10000",
+    "category": "",
+    "image": "1650234490791.jpg",
+    "show": false
   }
 ]

@@ -1,7 +1,11 @@
 const { render,redirect } = require('express/lib/response');
 const fs = require('fs')
 const path = require('path');
-const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
+let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
+
+function productsShowTrue(){
+return products = products.filter(product => product.show ==true);
+}
 
 const productController = {
     productCart: (req, res) => {
@@ -14,6 +18,7 @@ const productController = {
     },
 
     productList: (req, res) => {
+        let products = productsShowTrue();
         res.render('productList', {products});
     },
 
@@ -29,12 +34,14 @@ const productController = {
             description: req.body.descripcion_producto,
             price: req.body.precio_producto,
             category: "", //req.body
-            image: req.file?.filename ?? "default-image.png"
+            image: req.file?.filename ?? "default-image.png",
+            show:true
         }
         arrayProductos.push(newProduct);
 		fs.writeFileSync(path.join(__dirname, '../data/products.json'), (JSON.stringify(arrayProductos, null, 2)));
 		return res.redirect('/products');
     },
+
     modProductoForm: (req, res) => {
                 var product = products.find( product => product.id==req.params.id)
                 if(product){
@@ -64,9 +71,18 @@ const productController = {
     },
 
     deleteProducto: (req, res)=>{
-        //do something
-        res.send("producto borrado")
+        const id = req.params.id;
+        products= products.map(product => {
+            if (product.id == id){
+                product.show = false
+            }
+            return product; //producto a borrar
+        });
+     
+        fs.writeFileSync(path.join(__dirname, '../data/products.json'), (JSON.stringify(products, null, 2)));
+		return res.redirect('/products');
     }
+
 }
 
 module.exports = productController
