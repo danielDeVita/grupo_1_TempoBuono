@@ -1,9 +1,9 @@
 ☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆
 
-Supimos reconocer desde el primer momento las debilidades y fortalezas de cada integrante del grupo. Eso nos permitió tener una dinámica eficiente. El miembro con más conocimientos de JavaScript se encargó de generar la entry app, quien más sabe de diseńo y CSS tomó las riendas en materia de estilización y los miembros con menos información procuraron aprender lo más rápido posible y equilibraron su falta de know-how con horas/silla codeando el esqueleto HTML y el archivo .CSS de cada página.
+A medida que pasan las clases aumenta el grado de dificultad de cada sprint dado que los conocimientos se profundizan más, este obstáculo fue sorteado de la misma modalidad en que se solventaron los problemas de sprint anteriores, codeando en simultáneo. Si bien el avance se da un poco más lento por la propia metodología utilazada, esto permite que los integrantes avancen a un ritmo parejo y constante, sin dejar a ninguno rezagado.
+El grupo ha conseguido mejorar la comunicación aun más y esto permitio que la cantidad de commits cometidos en GIT sea pareja y distribuida de manera más equitativa.
 
-Entendimos que, idealmente, como grupo supimos encontrar rápidamente la forma de trabajo óptima y creemos que haciendo una división de tareas inteligente, podemos ahorrar tiempo y recursos sin ahorrar en calidad.
+ (˵ ͡° ͜ʖ ͡°˵) 
 
-Todo eso fue conseguido a través de planear el viernes de cada semana la división de tareas y los sábados y domingos nos dedicamos enteramente a codear y maquetear cada página. La agenda de trabajo lejos de ser rígida permitió que cada persona se conecte a una reunion en google meet cuando pudiese, en todo momento siempre hubo al menos 2 personas trabajando en simultáneo.
 
 ☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆
