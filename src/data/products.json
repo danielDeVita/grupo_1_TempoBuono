@@ -1,5 +1,14 @@
 [
   {
+    "id": 1,
+    "name": "Alfajor Marplatense",
+    "description": "El alfajor que nunca desaparece",
+    "image": "default image coffee.png",
+    "category": "1",
+    "price": 100,
+    "show": true
+  },
+  {
     "id": 2,
     "name": "Alfajor baricoque",
     "description": "afohjaslfjash",

@@ -9,7 +9,7 @@ return products = products.filter(product => product.show ==true);
 
 const productController = {
     productCart: (req, res) => {
-        res.render('productCart');
+        res.render('productCart', {styles: "productCart"});
     },
 
     productDetail: (req, res) => {
@@ -19,7 +19,7 @@ const productController = {
 
     productList: (req, res) => {
         let products = productsShowTrue();
-        res.render('productList', {products});
+        res.render('productList', {products, styles: "productList"});
     },
 
     crearProductoForm: (req, res) => { //Se muestra formulario de creación de producto
