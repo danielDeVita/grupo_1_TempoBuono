@@ -22,5 +22,19 @@
     "usuario": "test",
     "email": "federico.r.diaz@hotmail.com",
     "password": "test"
+  },
+  {
+    "id": 5,
+    "usuario": "Test",
+    "email": "federico.r.diaz@hotmail.com",
+    "password": "123456",
+    "image": "default-user-image.png"
+  },
+  {
+    "id": 6,
+    "usuario": "Rola",
+    "email": "federico.r.diaz@hotmail.com",
+    "password": "$2a$12$i8BTGAuXepLaJhswUmEhDuBQdOmLggtbD8urrcza7XuAIP2IwxOyq",
+    "image": "default-user-image.png"
   }
 ]

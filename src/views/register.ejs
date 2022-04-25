@@ -8,7 +8,7 @@
 
         <h2>Registro</h2>
 
-        <form action="/register" method="POST" class="register-form">
+        <form action="/register" method="POST" class="register-form" enctype="multipart/form-data">
 
             <div class="inputs">
 
@@ -19,7 +19,13 @@
                         <input type="text" name="usuario" id="usuario" placeholder="Usuario" minlength="2">
                         <span class="feedback">Ingresa tu nombre de usuario</span>
                     </div>
+                
+                </label>
 
+                <label for = "imagen_usuario">
+                    <h3>Imagen de usuario</h3>
+                    <input id= "imagen_usuario" type="file" name="imagen_usuario" accept=".jpg, .bmp, .png">
+                
                 </label>
 
                 <label for="email">
