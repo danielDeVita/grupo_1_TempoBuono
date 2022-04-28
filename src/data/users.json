@@ -36,5 +36,19 @@
     "email": "federico.r.diaz@hotmail.com",
     "password": "$2a$12$i8BTGAuXepLaJhswUmEhDuBQdOmLggtbD8urrcza7XuAIP2IwxOyq",
     "image": "default-user-image.png"
+  },
+  {
+    "id": 7,
+    "usuario": "Maria",
+    "email": "maria@gmail.com",
+    "password": "$2a$12$RM1LN0jOpVrZ.187zs5vc.nLRvKtmMho2InDx9EkyhrNqdv1VdeOW",
+    "image": "1651114642730.jpg"
+  },
+  {
+    "id": 8,
+    "usuario": "Maria",
+    "email": "maria@gmail.com",
+    "password": "$2a$12$wmVq92drK3rVoQgml4UtSe97MCBDQ0ZJsDKfTuDe3..qwvvu6bXKi",
+    "image": "1651117313452.png"
   }
 ]

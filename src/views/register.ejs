@@ -16,8 +16,12 @@
                     <h3>Usuario</h3>
                     <div class="icono-caja">
                         <i class="fa-solid fa-user-astronaut"></i>
-                        <input type="text" name="usuario" id="usuario" placeholder="Usuario" minlength="2">
-                        <span class="feedback">Ingresa tu nombre de usuario</span>
+                        <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+                        <!-- <span class="feedback">Ingresa tu nombre de usuario</span> -->
+                        <span class="feedback">
+                        <% if (locals.errors && errors.usuario) { %>
+                            <%= errors.usuario.msg %>
+                                <% } %> </span>
                     </div>
                 
                 </label>
@@ -25,15 +29,23 @@
                 <label for = "imagen_usuario">
                     <h3>Imagen de usuario</h3>
                     <input id= "imagen_usuario" type="file" name="imagen_usuario" accept=".jpg, .bmp, .png">
-                
+                    <span class="feedback">
+                    <% if (locals.errors && errors.imagen_usuario) { %>
+                        <%= errors.imagen_usuario.msg %>
+                        <% } %> </span>
                 </label>
+
 
                 <label for="email">
                     <h3>Email</h3>
                     <div class="icono-caja">
                         <i class="fa-solid fa-envelope"></i>
                         <input type="email" name="email" id="email" placeholder="Email">
-                        <span class="feedback">Ingresa un email válido</span>
+                        <!-- <span class="feedback">Ingresa un email válido</span> -->
+                        <span class="feedback">
+                            <% if (locals.errors && errors.email) { %>
+                                <%= errors.email.msg %>
+                                    <% } %> </span>
                     </div>
 
                 </label>
@@ -44,7 +56,11 @@
                     <div class="icono-caja">
                         <i class="fa-solid fa-lock"></i>
                         <input type="password" name="password" id="password" placeholder="Password" minlength="2">
-                        <span class="feedback">Ingresa un password válido</span>
+                        <!-- <span class="feedback">Ingresa un password válido</span> -->
+                        <span class="feedback">
+                            <% if (locals.errors && errors.password) { %>
+                                <%= errors.password.msg %>
+                                    <% } %> </span>
                     </div>
 
                 </label>

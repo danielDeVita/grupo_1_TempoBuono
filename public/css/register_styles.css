@@ -303,15 +303,15 @@ label input {
 }
 
 .feedback {
-  display: none;
+  /* display: none; */
   width: 100%;
   padding: 0 0 0 35px;
   margin-top: 10px;
 }
 
-input:invalid+.feedback {
+/* input:invalid+.feedback {
 display: block;
-}
+} */
 
 .inputs {
   padding: 30px;
