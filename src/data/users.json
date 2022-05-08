@@ -50,5 +50,12 @@
     "email": "maria@gmail.com",
     "password": "$2a$12$wmVq92drK3rVoQgml4UtSe97MCBDQ0ZJsDKfTuDe3..qwvvu6bXKi",
     "image": "1651117313452.png"
+  },
+  {
+    "id": 9,
+    "usuario": "daniel",
+    "email": "dani@dani.com",
+    "password": "$2a$12$rPRM6ATGgkEwrVc15VKl/ePwzR54qkDntZOJoSd6yYF7izVouz/Qm", 
+    "image": "1651942334050.png"
   }
 ]

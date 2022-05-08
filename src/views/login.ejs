@@ -1,58 +1,78 @@
 <%- include("./partials/head") %>
-<body>
 
-<%- include("./partials/header") %>
+    <body>
 
-  <div class="container">
-    <main class="login">
+        <%- include("./partials/header") %>
 
-        <h2>Login</h2>
+            <div class="container">
+                <main class="login">
 
-        <form action="/login" method="POST" class="login-form">
+                    <h2>Login</h2>
 
-            <div class="login-inputs">
+                    <form action="/login" method="POST" class="login-form">
 
-                <label for="usuario">
-                    <h3>Email</h3>
-                    <div class="icono-caja">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" name="usuario" id="usuario" placeholder="Usuario">
-                        <span class="feedback">Ingresa tu nombre de usuario</span>
-                    </div>
-                </label>
+                        <div class="login-inputs">
+
+                            <span class="feedback">
+                                <% if(typeof errors !="undefined" ) { %>
+                                    <% for (let i=0; i < errors.length; i++) { %>
+                                        <%= errors[i].msg %>
+                                            <% } %>
+                                                <% } %>
+                            </span>
+
+                            <label for="email">
+                                <!-- for cambiado de usuario a email -->
+                                <h3>Email</h3>
+                                <div class="icono-caja">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="email" name="email" id="usuario" placeholder="Email">
+                                    <!-- name/placeholder de usuario a email -->
+                                    <span class="feedback">
+                                        <% if (locals.errors && errors.email) { %>
+                                            <%= errors.email.msg %>
+                                                <% } %>
+                                    </span> <!-- puse Ingresa tu EMAIL -->
+                                </div>
+                            </label>
 
 
-                <label for="password">
-                    <h3> Password</h3>
-                    <div class="icono-caja">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" name="password" id="password" placeholder="Password" minlength="2">
-                        <span class="feedback">Ingresa de nuevo tu password</span>
-                    </div>
-                </label>
+                            <label for="password">
+                                <h3> Password</h3>
+                                <div class="icono-caja">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <input type="password" name="password" id="password" placeholder="Password">
+                                    <!-- borre el minlength="2" -->
+                                    <span class="feedback">
+                                        <% if (locals.errors && errors.password) { %>
+                                            <%= errors.password.msg %>
+                                                <% } %>
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="botonYcontrasena">
+                            <input id="boton-login" type="submit" name="" value="Iniciar sesión">
+
+                            <div class="recuerdame">
+                                <input type="checkbox" name="keep-login" id="keep-login" value="enviar" checked>
+                                <label for="keep-login"></label>Recuérdame</label>
+                            </div>
+
+                            <!-- AUN NO SABEMOS RESOLVER ESTO -->
+                            <a id="olvido" href="#">Olvidó su contraseña?</a>
+
+                            <a href="/register">No tienes una cuenta?</a>
+                        </div>
+                    </form>
+
+                </main>
+
+                <%- include("./partials/footer") %>
+
             </div>
 
-            <div class="botonYcontrasena">
-                <input id="boton-login" type="submit" name="" value="Iniciar sesión">
+    </body>
 
-                <div class="recuerdame">
-                    <input type="checkbox" name="keep-login" id="keep-login" value="enviar" checked>
-                    <label for="keep-login"></label>Recuérdame</label>
-                </div>
-
-                <!-- AUN NO SABEMOS RESOLVER ESTO -->
-                <a id="olvido" href="#">Olvidó su contraseña?</a>
-
-                <a href="/register">No tienes una cuenta?</a>
-            </div>
-        </form>
-
-    </main>
-
-  <%- include("./partials/footer") %>
- 
-</div>
- 
-</body>
-
-</html>
+    </html>

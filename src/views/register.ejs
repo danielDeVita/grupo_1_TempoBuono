@@ -1,82 +1,88 @@
 <%- include("./partials/head") %>
-<body>
-    
-<%- include("./partials/header") %>
 
-  <div class="container">
-    <main class="register">
+    <body>
 
-        <h2>Registro</h2>
+        <%- include("./partials/header") %>
 
-        <form action="/register" method="POST" class="register-form" enctype="multipart/form-data">
+            <div class="container">
+                <main class="register">
 
-            <div class="inputs">
+                    <h2>Registro</h2>
 
-                <label for="usuario">
-                    <h3>Usuario</h3>
-                    <div class="icono-caja">
-                        <i class="fa-solid fa-user-astronaut"></i>
-                        <input type="text" name="usuario" id="usuario" placeholder="Usuario">
-                        <!-- <span class="feedback">Ingresa tu nombre de usuario</span> -->
-                        <span class="feedback">
-                        <% if (locals.errors && errors.usuario) { %>
-                            <%= errors.usuario.msg %>
-                                <% } %> </span>
-                    </div>
-                
-                </label>
+                    <form action="/register" method="POST" class="register-form" enctype="multipart/form-data">
 
-                <label for = "imagen_usuario">
-                    <h3>Imagen de usuario</h3>
-                    <input id= "imagen_usuario" type="file" name="imagen_usuario" accept=".jpg, .bmp, .png">
-                    <span class="feedback">
-                    <% if (locals.errors && errors.imagen_usuario) { %>
-                        <%= errors.imagen_usuario.msg %>
-                        <% } %> </span>
-                </label>
+                        <div class="inputs">
 
+                            <label for="usuario">
+                                <h3>Usuario</h3>
+                                <div class="icono-caja">
+                                    <i class="fa-solid fa-user-astronaut"></i>
+                                    <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+                                    <!-- <span class="feedback">Ingresa tu nombre de usuario</span> -->
+                                    <span class="feedback">
+                                        <% if (locals.errors && errors.usuario) { %>
+                                            <%= errors.usuario.msg %>
+                                                <% } %>
+                                    </span>
+                                </div>
 
-                <label for="email">
-                    <h3>Email</h3>
-                    <div class="icono-caja">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" name="email" id="email" placeholder="Email">
-                        <!-- <span class="feedback">Ingresa un email válido</span> -->
-                        <span class="feedback">
-                            <% if (locals.errors && errors.email) { %>
-                                <%= errors.email.msg %>
-                                    <% } %> </span>
-                    </div>
+                            </label>
 
-                </label>
+                            <label for="imagen_usuario">
+                                <h3>Imagen de usuario</h3>
+                                <input id="imagen_usuario" type="file" name="imagen_usuario" accept=".jpg, .bmp, .png">
+                                <span class="feedback">
+                                    <% if (locals.errors && errors.imagen_usuario) { %>
+                                        <%= errors.imagen_usuario.msg %>
+                                            <% } %>
+                                </span>
+                            </label>
 
 
-                <label for="password">
-                    <h3>Password</h3>
-                    <div class="icono-caja">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" name="password" id="password" placeholder="Password" minlength="2">
-                        <!-- <span class="feedback">Ingresa un password válido</span> -->
-                        <span class="feedback">
-                            <% if (locals.errors && errors.password) { %>
-                                <%= errors.password.msg %>
-                                    <% } %> </span>
-                    </div>
+                            <label for="email">
+                                <h3>Email</h3>
+                                <div class="icono-caja">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="email" name="email" id="email" placeholder="Email">
+                                    <!-- <span class="feedback">Ingresa un email válido</span> -->
+                                    <span class="feedback">
+                                        <% if (locals.errors && errors.email) { %>
+                                            <%= errors.email.msg %>
+                                                <% } %>
+                                    </span>
+                                </div>
 
-                </label>
+                            </label>
+
+
+                            <label for="password">
+                                <h3>Password</h3>
+                                <div class="icono-caja">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <input type="password" name="password" id="password" placeholder="Password"
+                                        minlength="2">
+                                    <!-- <span class="feedback">Ingresa un password válido</span> -->
+                                    <span class="feedback">
+                                        <% if (locals.errors && errors.password) { %>
+                                            <%= errors.password.msg %>
+                                                <% } %>
+                                    </span>
+                                </div>
+
+                            </label>
+                        </div>
+
+                        <div class="botonYpregunta">
+                            <input id="boton-registro" type="submit" name="" value="Registrarme">
+                            <a href="/login">Ya tienes cuenta?</a>
+                        </div>
+                    </form>
+                </main>
+
+                <%- include("./partials/footer") %>
+
             </div>
 
-            <div class="botonYpregunta">
-                <input id="boton-registro" type="submit" name="" value="Registrarme">
-                <a href="/login">Ya tienes cuenta?</a>
-            </div>
-        </form>
-    </main>
+    </body>
 
-    <%- include("./partials/footer") %>
-
-  </div>
-  
-</body>
-
-</html>
+    </html>

@@ -302,15 +302,15 @@ label input {
 }
 
 .feedback {
-  display: none;
+  /* display: none;  SACADO POR DANI */ 
   width: 100%;
   padding: 0 0 0 35px;
   margin-top: 10px;
 }
 
-input:invalid+.feedback {
+/* input:invalid+.feedback { SACADO POR DANI
   display: block;
-  }
+  } */
   
   .inputs {
     padding: 30px;

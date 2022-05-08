@@ -3,22 +3,26 @@ const app = express();
 const path = require("path");
 const port = process.env.PORT || 3000;
 const methodOverride = require("method-override");
+const session = require("express-session") //agrego dani
 
-const routes = require(path.join(__dirname,'.','routes','routesMain.js'));
-const routesUser = require(path.join(__dirname,'.','routes','routesUser.js'));
-const routesProduct = require(path.join(__dirname,'.','routes','routesProduct.js'));
+const routes = require(path.join(__dirname, '.', 'routes', 'routesMain.js'));
+const routesUser = require(path.join(__dirname, '.', 'routes', 'routesUser.js'));
+const routesProduct = require(path.join(__dirname, '.', 'routes', 'routesProduct.js'));
 
 app.use(express.static("public"));
 
 app.set("view engine", "ejs");
-app.set("views","./src/views");
-app.use(express.urlencoded({extended:false}));
+app.set("views", "./src/views");
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
+app.use(session({
+    secret: "secret",
+})) //agrego dani
 
 
-app.use('/',routes);
-app.use('/',routesUser);
-app.use('/',routesProduct);
+app.use('/', routes);
+app.use('/', routesUser);
+app.use('/', routesProduct);
 
-app.listen(port, ()=> console.log("server "+port+" ok"));
+app.listen(port, () => console.log("server " + port + " ok"));
