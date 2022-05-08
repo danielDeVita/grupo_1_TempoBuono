@@ -3,6 +3,8 @@ const path = require('path');
 const routerUser = express.Router();
 const userController = require(path.join(__dirname,'..','controllers','userController.js'));
 const validator = require(path.join(__dirname,'..','middleware', 'express-validator.js'));
+const authMiddleware = require("../middleware/authMiddleware");
+const guestMiddleware = require("../middleware/guestMiddleware");
 
 const multer = require("multer");
 const storage = multer.diskStorage({
@@ -16,7 +18,8 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage});
 
-routerUser.get('/register',userController.register);
+routerUser.get('/register', userController.register);
+routerUser.get("/profile", authMiddleware, userController.profile); 
 routerUser.post("/register", uploadFile.single("imagen_usuario"), validator, userController.create);
 
 

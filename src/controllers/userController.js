@@ -30,6 +30,9 @@ const userController = {
             return res.redirect('/login');
         }
 
+    },
+    profile: (req, res) => {
+        res.send ("Página de usuario.");
     }
 
 }

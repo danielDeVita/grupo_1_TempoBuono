@@ -27,7 +27,7 @@ const mainController = {
                 res.render('login', { styles: 'login', errors: [{ msg: "Credenciales inválidas" }] })// esto me cuelga el server. HELP
             }
             req.session.usuarioLogueado = usuarioALoguearse
-            res.redirect("/")//redirige a la home si todo esta OK, anda de 10
+            res.redirect("/profile")//redirige a la home si todo esta OK, anda de 10
         } else {
             res.render('login', { styles: 'login', errors: errors.mapped() })//muestra los errores/validaciones via ejs, todo OK por aca tambien, se puede agregar un old: req.body
         }
