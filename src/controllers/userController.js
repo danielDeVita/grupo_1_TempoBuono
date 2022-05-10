@@ -32,7 +32,7 @@ const userController = {
 
     },
     profile: (req, res) => {
-        res.send ("Página de usuario.");
+        res.render ("profile", { styles: "profile"});
     }
 
 }
