@@ -33,7 +33,7 @@ const productController = {
             name: req.body.nombre_producto,
             description: req.body.descripcion_producto,
             price: req.body.precio_producto,
-            category: "", //req.body
+            category: "", //Es un recordatorio, el category se saca de: req.body
             image: req.file?.filename ?? "default-image.png",
             show:true
         }
