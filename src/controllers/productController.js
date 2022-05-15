@@ -9,21 +9,21 @@ return products = products.filter(product => product.show ==true);
 
 const productController = {
     productCart: (req, res) => {
-        res.render('productCart', {styles: "productCart"});
+        res.render('productCart', {styles: "productCart", user: req.session.usuarioLogueado});
     },
 
     productDetail: (req, res) => {
         let producto = products.find(producto=>producto.id==req.params.id)
-        return res.render('productDetail', {producto, styles: 'productDetail'});
+        return res.render('productDetail', {producto, styles: 'productDetail', user: req.session.usuarioLogueado});
     },
 
     productList: (req, res) => {
         let products = productsShowTrue();
-        res.render('productList', {products, styles: "productList"});
+        res.render('productList', {products, styles: "productList", user: req.session.usuarioLogueado});
     },
 
     crearProductoForm: (req, res) => { 
-		return res.render('crear', {styles: "crearProducto"})
+		return res.render('crear', {styles: "crearProducto", user: req.session.usuarioLogueado})
 	}, 
     
     crearProducto: (req, res) => {
@@ -45,7 +45,7 @@ const productController = {
     modProductoForm: (req, res) => {
                 var product = products.find( product => product.id==req.params.id)
                 if(product){
-                    res.render('modificar', {styles: 'crearProducto', product});
+                    res.render('modificar', {styles: 'crearProducto', product, user: req.session.usuarioLogueado});
                     }
                 else{
                     res.send('404 Not Found ');
