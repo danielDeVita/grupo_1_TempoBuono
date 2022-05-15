@@ -29,6 +29,7 @@ routerUser.post('/login', [
         .notEmpty().withMessage('Por favor escribe tu contraseña').bail()
         .isLength({ min: 8 }).withMessage('Su contraseña debe tener más de ocho caracteres.')
 ], userController.processLogin); 
-routerUser.get("/profile", authMiddleware, userController.profile); 
+routerUser.get("/profile", authMiddleware, userController.profile);
+routerUser.get('/logout', userController.logout);
 
 module.exports = routerUser;

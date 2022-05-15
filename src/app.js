@@ -20,6 +20,8 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 app.use(session({
     secret: "secret",
+    resave: false,
+    saveUninitialized: false
 })) 
 app.use(cookieParser());
 app.use(userLoggedMiddleware);

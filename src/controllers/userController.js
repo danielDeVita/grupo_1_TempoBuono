@@ -43,6 +43,12 @@ const userController = {
                 if ((usuarios[i].email == req.body.email) && (bcryptjs.compareSync(req.body.password, usuarios[i].password))) { 
                     usuarioALoguearse = usuarios[i];
                     req.session.usuarioLogueado = usuarioALoguearse
+
+
+                    if (req.body.keepLogin){
+                        res.cookie('userEmail', req.body.email, {maxAge:(1000 * 60) * 2})
+                    }
+
                     return res.redirect("/profile")
                 }
                 
@@ -58,6 +64,12 @@ const userController = {
     profile: (req, res) => {
         res.render ("profile", { styles: "profile", user: req.session.usuarioLogueado});
     },
+    logout: (req, res) => {
+
+        res.clearCookie('userEmail')
+        req.session.destroy()
+        return res.redirect('/')
+    }
 }
 
 module.exports = userController
