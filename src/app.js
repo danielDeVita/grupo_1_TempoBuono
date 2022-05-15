@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const port = process.env.PORT || 3000;
 const methodOverride = require("method-override");
-const session = require("express-session") //agrego dani
+const session = require("express-session") 
 
 const routes = require(path.join(__dirname, '.', 'routes', 'routesMain.js'));
 const routesUser = require(path.join(__dirname, '.', 'routes', 'routesUser.js'));
@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 app.use(session({
     secret: "secret",
-})) //agrego dani
+})) 
 
 
 app.use('/', routes);

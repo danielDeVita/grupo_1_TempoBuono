@@ -22,7 +22,7 @@ const productController = {
         res.render('productList', {products, styles: "productList"});
     },
 
-    crearProductoForm: (req, res) => { //Se muestra formulario de creación de producto
+    crearProductoForm: (req, res) => { 
 		return res.render('crear', {styles: "crearProducto"})
 	}, 
     
