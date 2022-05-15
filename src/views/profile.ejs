@@ -3,7 +3,12 @@
 <%- include("./partials/header") %>
     <div class="container">
     <main>
-        <h2>WIP - Página de profile</h2>
+
+        <img src="/img/users/<%=user.image%>">
+
+        <h2><%= user.usuario %></h2>
+
+        <h2><%= user.email %></h2>
         
     </main>
     <%- include("./partials/footer") %>

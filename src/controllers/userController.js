@@ -56,7 +56,7 @@ const userController = {
         }
     },
     profile: (req, res) => {
-        res.render ("profile", { styles: "profile"});
+        res.render ("profile", { styles: "profile", user: req.session.usuarioLogueado});
     },
 }
 
