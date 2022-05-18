@@ -2,19 +2,19 @@ const fs = require("fs");
 const path = require("path");
 const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf-8'));
 
-function userLoggedMiddleware (req, res, next) {
+function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
     let emailInCookie = req.cookies.userEmail;
-    let userFromCookie 
+    let userFromCookie
 
-    for (let i = 0; i < usuarios.length; i++){
+    for (let i = 0; i < usuarios.length; i++) {
 
-        if(usuarios[i].email == req.body.email){
+        if (usuarios[i].email == emailInCookie) {
             userFromCookie = usuarios[i]
         }
     }
 
-    if(userFromCookie){
+    if (userFromCookie) {
         req.session.usuarioLogueado = userFromCookie;
     }
 
@@ -24,7 +24,7 @@ function userLoggedMiddleware (req, res, next) {
         res.locals.usuarioLogueado = req.session.usuarioLogueado;
     }
 
-    next ();
+    next();
 }
 
 module.exports = userLoggedMiddleware;

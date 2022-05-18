@@ -1,4 +1,4 @@
-const { render,redirect } = require('express/lib/response');
+//const { render,redirect } = require('express/lib/response');
 const fs = require('fs')
 const path = require('path');
 let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
