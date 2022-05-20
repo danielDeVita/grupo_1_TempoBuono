@@ -10,6 +10,7 @@ const routes = require(path.join(__dirname, '.', 'routes', 'routesMain.js'));
 const routesUser = require(path.join(__dirname, '.', 'routes', 'routesUser.js'));
 const routesProduct = require(path.join(__dirname, '.', 'routes', 'routesProduct.js'));
 const userLoggedMiddleware = require("./middleware/userLoggedMiddleware");
+const morganMiddleware = require("./middleware/loggingMiddleware");
 
 app.use(express.static("public"));
 
@@ -25,6 +26,7 @@ app.use(session({
 })) 
 app.use(cookieParser());
 app.use(userLoggedMiddleware);
+app.use(morganMiddleware);
 
 app.use('/', routes);
 app.use('/', routesUser);
