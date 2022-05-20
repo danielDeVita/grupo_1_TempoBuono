@@ -1,6 +1,7 @@
 //const { render,redirect } = require('express/lib/response');
 const fs = require('fs')
 const path = require('path');
+const logger = require("../middleware/logger")
 let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
 
 function productsShowTrue(){
@@ -45,10 +46,13 @@ const productController = {
     modProductoForm: (req, res) => {
                 var product = products.find( product => product.id==req.params.id)
                 if(product){
+                    logger.info('[SYS] modificando el producto '+JSON.stringify(product));
                     res.render('modificar', {styles: 'crearProducto', product, user: req.session.usuarioLogueado});
                     }
                 else{
+                    logger.error('[SYS] el producto con id '+req.params.id.toString()+' no pudo ser encontrado');
                     res.send('404 Not Found ');
+
                 }
         },
 
@@ -64,7 +68,7 @@ const productController = {
                                                     }
             return product                                       
         });
-
+        logger.info('[SYS] base de datos modificada :  '+JSON.stringify(modProduct));
         fs.writeFileSync(path.join(__dirname, '../data/products.json'), (JSON.stringify(modProduct, null, 2)));
 		return res.redirect('/products');
 
@@ -78,7 +82,7 @@ const productController = {
             }
             return product; //producto a borrar
         });
-     
+        logger.info('[SYS] se eliminara el producto de la base de datos '+id.toString()+' base de datos modificada:'+JSON.stringify(products));
         fs.writeFileSync(path.join(__dirname, '../data/products.json'), (JSON.stringify(products, null, 2)));
 		return res.redirect('/products');
     }

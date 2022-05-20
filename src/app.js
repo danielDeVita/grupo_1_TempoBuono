@@ -10,7 +10,7 @@ const routes = require(path.join(__dirname, '.', 'routes', 'routesMain.js'));
 const routesUser = require(path.join(__dirname, '.', 'routes', 'routesUser.js'));
 const routesProduct = require(path.join(__dirname, '.', 'routes', 'routesProduct.js'));
 const userLoggedMiddleware = require("./middleware/userLoggedMiddleware");
-const morganMiddleware = require("./middleware/loggingMiddleware");
+const morganMiddleware = require("./middleware/loggingMorgan");
 
 app.use(express.static("public"));
 

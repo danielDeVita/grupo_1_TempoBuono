@@ -1,4 +1,3 @@
-const morgan = require('morgan');
 const winston = require('winston');
 const path = require('path');
 
@@ -24,9 +23,4 @@ const logger = winston.createLogger({
 });
 
 
-const morganMiddleware = morgan("combined", { stream: { write: message => logger.info(message) } });
-
-
-
-
-module.exports = morganMiddleware
+module.exports = logger
