@@ -1,4 +1,5 @@
-node.modules
+/node-modules*
+/node.modules/*
 .procfile*
 .gitignore
 *.bak*
