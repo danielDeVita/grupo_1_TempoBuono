@@ -8,7 +8,7 @@ const logger = winston.createLogger({
     format: winston.format.cli(),
     transports: [new winston.transports.File({
         level: 'info',
-        filename: path.join(__dirname,'logs', 'access.log'),
+        filename: path.join(__dirname,'..','logs', 'access.log'),
         handleExceptions: true,
         json: true,
         maxsize: 5242880, //5MB
