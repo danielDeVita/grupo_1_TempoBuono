@@ -1,0 +1,160 @@
+[32minfo[39m:    ::1 - - [20/May/2022:03:21:47 +0000] "GET / HTTP/1.1" 304 - "http://localhost:3000/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:21:48 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:21:49 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:22:00 +0000] "GET /products HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:22:01 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:22:02 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:22:19 +0000] "GET / HTTP/1.1" 304 - "http://localhost:3000/products" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:22:19 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:22:21 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:22:24 +0000] "GET /detail HTTP/1.1" 404 145 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:22:24 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/detail" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:22:25 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/detail" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[31merror[39m:   uncaughtException: Cannot read properties of undefined (reading 'info')
+TypeError: Cannot read properties of undefined (reading 'info')
+    at Object.write (/Users/gortega/Documents/CursoJS/grupo_1_TempoBuono/src/middleware/logger.js:53:85)
+    at Array.logRequest (/Users/gortega/Documents/CursoJS/grupo_1_TempoBuono/node_modules/morgan/index.js:130:14)
+    at listener (/Users/gortega/Documents/CursoJS/grupo_1_TempoBuono/node_modules/on-finished/index.js:169:15)
+    at onFinish (/Users/gortega/Documents/CursoJS/grupo_1_TempoBuono/node_modules/on-finished/index.js:100:5)
+    at callback (/Users/gortega/Documents/CursoJS/grupo_1_TempoBuono/node_modules/ee-first/index.js:55:10)
+    at ServerResponse.onevent (/Users/gortega/Documents/CursoJS/grupo_1_TempoBuono/node_modules/ee-first/index.js:93:5)
+    at ServerResponse.emit (node:events:402:35)
+    at onFinish (node:_http_outgoing:830:10)
+    at afterWrite (node:internal/streams/writable:497:5)
+    at afterWriteTick (node:internal/streams/writable:484:10)
+[31merror[39m:   uncaughtException: logginMethods is not defined
+ReferenceError: logginMethods is not defined
+    at Object.<anonymous> (/Users/gortega/Documents/CursoJS/grupo_1_TempoBuono/src/middleware/logger.js:59:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/Users/gortega/Documents/CursoJS/grupo_1_TempoBuono/src/app.js:13:26)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+[32minfo[39m:    ::1 - - [20/May/2022:03:31:05 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:31:05 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:31:07 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:31:10 +0000] "GET /products HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:31:10 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:31:11 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:33:52 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:33:53 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:33:54 +0000] "GET / HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:33:54 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:33:55 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:33:55 +0000] "GET /products HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:33:55 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:33:56 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:42:09 +0000] "GET /products/4/edit HTTP/1.1" 200 4578 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:42:10 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/4/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:42:11 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/4/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:42:25 +0000] "GET /products/999/edit HTTP/1.1" 200 14 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:42:25 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/999/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:42:26 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/999/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:43:01 +0000] "GET /products/999/edit HTTP/1.1" 500 1546 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:43:02 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/999/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:43:03 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/999/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:43:29 +0000] "GET /products/1/edit HTTP/1.1" 200 4609 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:43:29 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/1/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:43:31 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/1/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:43:35 +0000] "GET /products/9999/edit HTTP/1.1" 500 1546 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:43:35 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/9999/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:43:36 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/9999/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[31merror[39m:   el producto con id undefinedno pudo ser encontrado
+[32minfo[39m:    ::1 - - [20/May/2022:03:44:03 +0000] "GET /products/9999/edit HTTP/1.1" 200 14 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:44:03 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/9999/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:44:04 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/9999/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:44:07 +0000] "GET /products/1/edit HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:44:07 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/1/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:44:08 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/1/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:44:42 +0000] "GET /products/2/edit HTTP/1.1" 200 4589 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:44:42 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/2/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:44:43 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/2/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[31merror[39m:   el producto con id undefinedno pudo ser encontrado
+[32minfo[39m:    ::1 - - [20/May/2022:03:44:46 +0000] "GET /products/20/edit HTTP/1.1" 200 14 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:44:46 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/20/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:44:47 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/20/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[31merror[39m:   el producto con id undefinedno pudo ser encontrado
+[32minfo[39m:    ::1 - - [20/May/2022:03:46:07 +0000] "GET /products/200/edit HTTP/1.1" 200 14 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:46:07 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/200/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:46:08 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/200/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    el producto [object Object]se encontro
+[32minfo[39m:    ::1 - - [20/May/2022:03:46:10 +0000] "GET /products/2/edit HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:46:10 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/2/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:46:11 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/2/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[31merror[39m:   el producto con id 2000no pudo ser encontrado
+[32minfo[39m:    ::1 - - [20/May/2022:03:47:59 +0000] "GET /products/2000/edit HTTP/1.1" 200 14 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:48:00 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/2000/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:48:01 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/2000/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    el producto {"id":2,"name":"Alfajor baricoque","description":"afohjaslfjash","image":"default image coffee.png","category":"1","price":100,"show":true} se encontro
+[32minfo[39m:    ::1 - - [20/May/2022:03:48:03 +0000] "GET /products/2/edit HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:48:04 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/2/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
+[32minfo[39m:    ::1 - - [20/May/2022:03:48:05 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/products/2/edit" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+
