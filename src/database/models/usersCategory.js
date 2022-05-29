@@ -21,6 +21,11 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: true,
     };
     const usersCategory = sequelize.define(alias, cols, config);
-    //usersCategory.associate = function(models){}
+    usersCategory.associate = function (models) {
+        usersCategory.belongsTo(models.users, {
+            as: "users",
+            foreignKey: "idUsers"
+        })
+    }
     return usersCategory;
 };
