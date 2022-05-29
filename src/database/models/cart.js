@@ -15,10 +15,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.FLOAT,
             allowNull: false
         },
-        users_IdUsers: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-        },
         CartDate: {
             type: dataTypes.DATE,
             allowNull: false

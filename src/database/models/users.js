@@ -19,11 +19,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(255),
             allowNull: false
         },
-        usersCategory_idusersCategory: {
-            type: dataTypes.INTEGER,
-            autoIncrement: true,
-            allowNull: false
-        },
     };
     let config = {
         tableName: "users",
