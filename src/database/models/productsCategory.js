@@ -21,6 +21,6 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: true
     };
     const productsCategory = sequelize.define(alias, cols, config);
-    //aca van las relaciones productsCategory.associate
+    //productsCategory.associate = function(models){}
     return productsCategory;
 }

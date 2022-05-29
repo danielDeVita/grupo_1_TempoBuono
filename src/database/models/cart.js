@@ -25,6 +25,6 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: true
     };
     const Cart = sequelize.define(alias, cols, config);
-    //aca van las relaciones Cart.associate
+    //Cart.associate = function(models){}
     return Cart;
 }

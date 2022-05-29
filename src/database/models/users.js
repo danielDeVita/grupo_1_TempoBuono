@@ -25,6 +25,6 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: true
     };
     const Users = sequelize.define(alias, cols, config);
-    //aca van las relaciones Users.associate
+    //Users.associate = function(models){}
     return Users;
 }

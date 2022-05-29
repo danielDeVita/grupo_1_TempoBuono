@@ -20,6 +20,6 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: true,
     };
     const productsImages = sequelize.define(alias, cols, config);
-    //aca van las relaciones productsImages.associate
+    //productsImages.associate = function(models){}
     return productsImages;
 };
