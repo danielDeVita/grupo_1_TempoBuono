@@ -17,6 +17,14 @@ module.exports = (sequelize, dataTypes) => {
     timestamps: true,
   };
   const productsCombo = sequelize.define(alias, cols, config);
-  //productsCombo.associate = function(models){}
+  productsCombo.associate = function (models) {
+    productsCombo.belongsToMany(models.prodcuts, {
+      as: "products", 
+      through: "products_has_productsCombo",
+      foreignKey: "idproductsCombo",
+      otherKey: "idProd",
+      timestamps: false
+    })
+  }
   return productsCombo;
 };
