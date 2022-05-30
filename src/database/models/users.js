@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "users";
+    let alias = "Users";
     let cols = {
         idUsers: {
             type: dataTypes.INTEGER,
@@ -24,13 +24,13 @@ module.exports = (sequelize, dataTypes) => {
         tableName: "users",
         timestamps: true
     };
-    const users = sequelize.define(alias, cols, config);
-    users.associate = function (models) {
-        users.hasMany(models.usersCategory, {
+    const Users = sequelize.define(alias, cols, config);
+    Users.associate = function (models) {
+        Users.hasMany(models.Users, {
             as: "usersCategory",
             foreignKey: "idUsers"
         })
-        users.belongsTo(models.cart, {
+        Users.belongsTo(models.Cart, {
             as: "cart",
             foreignKey: "idCart"
         })
