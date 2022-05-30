@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: "users",
-        timestamps: false
+        timestamps: false // lo cambiamos a false porque no andaba sino
     };
     const Users = sequelize.define(alias, cols, config);
     Users.associate = function (models) {
@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
             as: "usersCategory",
             foreignKey: "idUsers"
         })
-        /* Users.belongsTo(models.cart, {
+        /* Users.belongsTo(models.Cart, {
             as: "cart",
             foreignKey: "idCart"
         }) */
