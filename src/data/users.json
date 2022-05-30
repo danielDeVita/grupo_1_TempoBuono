@@ -64,5 +64,12 @@
     "email": "dani@sql.com",
     "password": "$2a$12$qiSftySewcPiXAI5uYeCN.Wwv1BjFnHM7xcNfQH5vhVx7C3vjF5m.",
     "image": "1653872644483.jpg"
+  },
+  {
+    "id": 11,
+    "usuario": "danisql",
+    "email": "dani@sql.com",
+    "password": "$2a$12$LWMSSEgE7M.nL1QrbYu7o./aKLV/1Kk2A/SJKxTPvlTs0igSy808q",
+    "image": "1653920471794.jpg"
   }
 ]
