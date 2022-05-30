@@ -55,7 +55,14 @@
     "id": 9,
     "usuario": "daniel",
     "email": "dani@dani.com",
-    "password": "$2a$12$rPRM6ATGgkEwrVc15VKl/ePwzR54qkDntZOJoSd6yYF7izVouz/Qm", 
+    "password": "$2a$12$rPRM6ATGgkEwrVc15VKl/ePwzR54qkDntZOJoSd6yYF7izVouz/Qm",
     "image": "1651929279680.png"
+  },
+  {
+    "id": 10,
+    "usuario": "daniSQL",
+    "email": "dani@sql.com",
+    "password": "$2a$12$qiSftySewcPiXAI5uYeCN.Wwv1BjFnHM7xcNfQH5vhVx7C3vjF5m.",
+    "image": "1653872644483.jpg"
   }
 ]
