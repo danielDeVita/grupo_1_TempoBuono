@@ -4,6 +4,7 @@ const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 //const req = require("express/lib/request");
+const db = require("../database/models")
 
 const userController = {
     register: (req, res) => {
@@ -68,6 +69,12 @@ const userController = {
         res.clearCookie('userEmail')
         req.session.destroy()
         return res.redirect('/')
+    },
+    list: (req, res) => {
+        db.Users.findAll()
+            .then(users => {
+                res.send(users)
+            })
     }
 }
 
