@@ -19,6 +19,12 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.DATE,
       allowNull: false,
     },
+    createdAt: {
+      type: dataTypes.DATE
+    },
+    updatedAt: {
+      type: dataTypes.DATE
+    },
   };
   let config = {
     tableName: "Cart",

@@ -13,17 +13,23 @@ module.exports = (sequelize, dataTypes) => {
         },
         productsImagesDesc: {
             type: dataTypes.STRING(45),
-        }
+        },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
+        },
     };
     let config = {
         tableName: "productsImages",
         timestamps: true,
     };
     const productsImages = sequelize.define(alias, cols, config);
-    productsImages.associate = function(models){
-        productsImages.belongsTo(models.products,{
-            as:"products",
-            foreignKey:"idProd"
+    productsImages.associate = function (models) {
+        productsImages.belongsTo(models.products, {
+            as: "products",
+            foreignKey: "idProd"
         })
     }
     return productsImages;

@@ -19,6 +19,12 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.FLOAT(255),
       allowNull: false,
     },
+    createdAt: {
+      type: dataTypes.DATE
+    },
+    updatedAt: {
+      type: dataTypes.DATE
+    },
   };
   let config = {
     tableName: "products",
@@ -27,7 +33,7 @@ module.exports = (sequelize, dataTypes) => {
   const products = sequelize.define(alias, cols, config);
   products.associate = function (models) {
     products.belongsToMany(models.Cart, {
-      as: "cart", 
+      as: "cart",
       through: "Cart_has_products",
       foreignKey: "idProd",
       otherKey: "idCart",
@@ -42,7 +48,7 @@ module.exports = (sequelize, dataTypes) => {
         foreignKey: "idproductsCategory"
       }),
       products.belongsToMany(models.productsCombo, {
-        as: "productCombo", 
+        as: "productCombo",
         through: "products_has_productsCombo",
         foreignKey: "idProd",
         otherKey: "idproductsCombo",

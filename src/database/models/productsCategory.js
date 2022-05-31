@@ -15,13 +15,19 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(45),
             allowNull: false
         },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
+        },
     };
     let config = {
         tableName: "productsCategory",
         timestamps: true
     };
     const productsCategory = sequelize.define(alias, cols, config);
-    productsCategory.associate = function(models){
+    productsCategory.associate = function (models) {
         productsCategory.hasMany(models.products, {
             as: "products",
             foreignKey: "idProd"

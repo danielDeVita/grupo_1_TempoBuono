@@ -19,10 +19,16 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(255),
             allowNull: false
         },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
+        },
     };
     let config = {
         tableName: "users",
-        timestamps: false // lo cambiamos a false porque no andaba sino
+        timestamps: true 
     };
     const Users = sequelize.define(alias, cols, config);
     Users.associate = function (models) {
