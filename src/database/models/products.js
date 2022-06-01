@@ -39,13 +39,13 @@ module.exports = (sequelize, dataTypes) => {
       otherKey: "idCart",
       timestamps: false,
     }),
-      products.hasMany(models.productsImages, {
+      products.hasMany(models.productsImages, { //ok
         as: "productsImages",
-        foreignKey: "idproductsImages"
+        foreignKey: "products_idProd"
       }),
-      products.belongsTo(models.productsCategory, {
+      products.belongsTo(models.productsCategory, { //ok
         as: "productsCategory",
-        foreignKey: "idproductsCategory"
+        foreignKey: "productsCategory_idproductsCategory"
       }),
       products.belongsToMany(models.productsCombo, {
         as: "productCombo",
