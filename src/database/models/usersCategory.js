@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
     usersCategory.associate = function (models) {
         usersCategory.hasMany(models.Users, {
             as: "users",
-            foreignKey: "idUsers"
+            foreignKey: "usersCategory_idusersCategory"
         })
     }
     return usersCategory;

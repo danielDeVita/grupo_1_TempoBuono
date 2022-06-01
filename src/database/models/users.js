@@ -34,7 +34,7 @@ module.exports = (sequelize, dataTypes) => {
     Users.associate = function (models) {
         Users.belongsTo(models.usersCategory, {
             as: "usersCategory",
-            foreignKey: "idUsers"
+            foreignKey: "usersCategory_idusersCategory"
         })
         Users.hasMany(models.Cart, {
             as: "cart",
