@@ -14,16 +14,16 @@ module.exports = (sequelize, dataTypes) => {
         productsImagesDesc: {
             type: dataTypes.STRING(45),
         },
-        createdAt: {
+        /* createdAt: {
             type: dataTypes.DATE
         },
         updatedAt: {
             type: dataTypes.DATE
-        },
+        }, */
     };
     let config = {
         tableName: "productsImages",
-        timestamps: true,
+        timestamps: false,
     };
     const productsImages = sequelize.define(alias, cols, config);
     productsImages.associate = function (models) {

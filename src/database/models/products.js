@@ -19,16 +19,16 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.FLOAT(255),
       allowNull: false,
     },
-    createdAt: {
+    /* createdAt: {
       type: dataTypes.DATE
     },
     updatedAt: {
       type: dataTypes.DATE
-    },
+    }, */
   };
   let config = {
     tableName: "products",
-    timestamps: true,
+    timestamps: false,
   };
   const products = sequelize.define(alias, cols, config);
   products.associate = function (models) {

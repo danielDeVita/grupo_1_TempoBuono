@@ -19,16 +19,16 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.DATE,
       allowNull: false,
     },
-    createdAt: {
+    /* createdAt: {
       type: dataTypes.DATE
     },
     updatedAt: {
       type: dataTypes.DATE
-    },
+    }, */
   };
   let config = {
     tableName: "Cart",
-    timestamps: true,
+    timestamps: false,
   };
   const Cart = sequelize.define(alias, cols, config);
   Cart.associate = function (models) {

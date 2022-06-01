@@ -11,16 +11,16 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.FLOAT,
       allowNull: false,
     },
-    createdAt: {
+    /* createdAt: {
       type: dataTypes.DATE
     },
     updatedAt: {
       type: dataTypes.DATE
-    },
+    }, */
   };
   let config = {
     tableName: "productsCombo",
-    timestamps: true,
+    timestamps: false,
   };
   const productsCombo = sequelize.define(alias, cols, config);
   productsCombo.associate = function (models) {

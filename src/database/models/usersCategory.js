@@ -15,16 +15,16 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(45),
             allowNull: false,
         },
-        createdAt: {
+       /*  createdAt: {
             type: dataTypes.DATE
         },
         updatedAt: {
             type: dataTypes.DATE
-        },
+        }, */
     };
     let config = {
         tableName: "usersCategory",
-        timestamps: true,
+        timestamps: false,
     };
     const usersCategory = sequelize.define(alias, cols, config);
     usersCategory.associate = function (models) {
