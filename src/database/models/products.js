@@ -47,11 +47,11 @@ module.exports = (sequelize, dataTypes) => {
         as: "productsCategory",
         foreignKey: "productsCategory_idproductsCategory"
       }),
-      products.belongsToMany(models.productsCombo, {
+      products.belongsToMany(models.productsCombo, { //ok
         as: "productCombo",
         through: "products_has_productsCombo",
-        foreignKey: "idProd",
-        otherKey: "idproductsCombo",
+        foreignKey: "products_idProd",
+        otherKey: "productsCombo_idproductsCombo",
         timestamps: false
       })
   };
