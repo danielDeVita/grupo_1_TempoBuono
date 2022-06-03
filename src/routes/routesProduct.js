@@ -19,9 +19,9 @@ routerProduct.get('/cart', productController.productCart);
 routerProduct.get('/products', productController.productList);
 routerProduct.get('/products/create',productController.crearProductoForm);
 routerProduct.post('/products/create', uploadFile.single("imagen_producto"),productController.crearProducto);
-routerProduct.get('/products/:id',productController.productDetail);
-routerProduct.get('/products/:id/edit',productController.modProductoForm);
-routerProduct.put('/products/:id/edit', uploadFile.single("imagen_producto"),productController.modProducto);
-routerProduct.delete('/products/:id/edit',productController.deleteProducto);
+routerProduct.get('/products/:idProd',productController.productDetail);
+routerProduct.get('/products/:idProd/edit',productController.modProductoForm);
+routerProduct.put('/products/:idProd/edit', uploadFile.single("imagen_producto"),productController.modProducto);
+routerProduct.delete('/products/:idProd/edit',productController.deleteProducto);
 
 module.exports = routerProduct

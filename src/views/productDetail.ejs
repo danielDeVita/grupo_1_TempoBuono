@@ -16,17 +16,17 @@
     
       <div class="fichaDeProducto">
       
-        <h2><%=producto.name%></h2>
+        <h2><%=producto.ProductsName%></h2>
 
         <div class="imagen">
-        <img src="/img/<%= producto.image %>" alt="Imagen de alfajor">
+        <img src="/img/<%= producto.productsImages.productImagesNombre %>" alt="Imagen de alfajor"><!-- tabla(modelo).relacion.nombreDelCampo(en la DB) -->
         </div>
 
         <div class="descripcion">
 
         <!-- Hay que estilizar el contador de las líneas 68 y 69, está feo. -->
         <div class="cantidad">
-          <p class="precio"><%=producto.price%></p>
+          <p class="precio">$ <%=producto.ProductsPrice%></p>
             <label for="cantProd">Cantidad:
             <input type="number" id="cantProd" name="cantidadDeProducto" min="1" max="10" value="1">
             </label>
@@ -35,12 +35,12 @@
         </div>
         <div class="descripcion-total">
             <h4>Descripción del producto</h4>
-            <p><%=producto.description%></p>
+            <p><%=producto.ProductsDescription%></p>
          </div>
           
         <div class="categoria">
           <h4>Categoría:</h4>
-          <p><%=producto.category%></p>
+          <p><%=producto.productsCategory.productsCategorNombre%></p>
         </div>
           
         <div class="compartir">

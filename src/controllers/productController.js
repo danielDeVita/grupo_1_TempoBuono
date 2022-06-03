@@ -13,12 +13,17 @@ const productController = {
         res.render('productCart', {styles: "productCart", user: req.session.usuarioLogueado});
     },
 
-    productDetail: (req, res) => {
-        let producto = products.find(producto=>producto.id==req.params.id)
-        return res.render('productDetail', {producto, styles: 'productDetail', user: req.session.usuarioLogueado});
+    productDetail: (req, res) => { //ok, falta solo agregar imagenes en la DB
+        db.products.findByPk(req.params.idProd,
+            {include:["productsImages", "productsCategory"]})
+            .then(producto=>{
+                return res.render('productDetail', {producto, styles: 'productDetail', user: req.session.usuarioLogueado});
+            })
+        //let producto = products.find(producto=>producto.id==req.params.id)
+        //return res.render('productDetail', {producto, styles: 'productDetail', user: req.session.usuarioLogueado});
     },
 
-    productList: (req, res) => { //ok, falta solo modificar el .ejs para que muestre las imagenes (y agregar imagenes)
+    productList: (req, res) => { //ok, falta solo agregar imagenes en la DB
         db.products.findAll({
             include:["productsImages"]
         })
