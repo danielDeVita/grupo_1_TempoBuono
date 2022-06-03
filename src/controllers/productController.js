@@ -1,12 +1,12 @@
 //const { render,redirect } = require('express/lib/response');
 const fs = require('fs')
 const path = require('path');
-let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8'));
+/* let products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8')); */
 const db = require("../database/models")
 
-function productsShowTrue(){
+/* function productsShowTrue(){
 return products = products.filter(product => product.show ==true);
-}
+} */
 
 const productController = {
     productCart: (req, res) => {
@@ -18,9 +18,15 @@ const productController = {
         return res.render('productDetail', {producto, styles: 'productDetail', user: req.session.usuarioLogueado});
     },
 
-    productList: (req, res) => {
-        let products = productsShowTrue();
-        res.render('productList', {products, styles: "productList", user: req.session.usuarioLogueado});
+    productList: (req, res) => { //ok, falta solo modificar el .ejs para que muestre las imagenes (y agregar imagenes)
+        db.products.findAll({
+            include:["productsImages"]
+        })
+            .then(products=>{
+                res.render('productList', {products, styles: "productList", user: req.session.usuarioLogueado});
+            })
+        /* let products = productsShowTrue();
+        res.render('productList', {products, styles: "productList", user: req.session.usuarioLogueado}); */
     },
 
     crearProductoForm: (req, res) => { 
