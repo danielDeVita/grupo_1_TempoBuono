@@ -39,19 +39,23 @@ const productController = {
 	}, 
     
     crearProducto: (req, res) => {
-        let arrayProductos = [...products]
-        let newProduct = {
-            id: arrayProductos.length > 0 ? arrayProductos[arrayProductos.length -1].id + 1 : 1,
-            name: req.body.nombre_producto,
-            description: req.body.descripcion_producto,
-            price: req.body.precio_producto,
-            category: "", //Es un recordatorio, el category se saca de: req.body
-            image: req.file?.filename ?? "default-image.png",
-            show:true
-        }
-        arrayProductos.push(newProduct);
-		fs.writeFileSync(path.join(__dirname, '../data/products.json'), (JSON.stringify(arrayProductos, null, 2)));
-		return res.redirect('/products');
+        db.products
+        // let arrayProductos = [...products]
+        .create( {
+            // id: arrayProductos.length > 0 ? arrayProductos[arrayProductos.length -1].id + 1 : 1,
+            ProductsName: req.body.nombre_producto,
+            ProductsDescription: req.body.descripcion_producto,
+            ProductsPrice: req.body.precio_producto,
+            productsCategory_idproductsCategory: req.body.categoria, // El valor 1,2 o 3, por select/option
+            productsImagesNombre: req.file?.filename ?? "default-image.png",
+            // show:true
+        })
+        .then(()=>{
+            return res.redirect('/products');
+        })
+        .catch(error=> console.error(error))
+        // arrayProductos.push(newProduct);
+		// fs.writeFileSync(path.join(__dirname, '../data/products.json'), (JSON.stringify(arrayProductos, null, 2)));
     },
 
     modProductoForm: (req, res) => {
