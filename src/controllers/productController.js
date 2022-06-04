@@ -76,7 +76,7 @@ const productController = {
           productsImagesDesc: "",
           products_idProd: product.idProd
         })
-        .then(()=>{
+      .then(()=>{
           return res.redirect("/products");
         })
       // .then((image)=>{
@@ -126,9 +126,19 @@ const productController = {
           where: { idProd: req.params.idProd }, //Comparación id modelo con id URL.
         }
       )
-      .then(() => {
-        return res.redirect("/products");
+      .then((product) => { //product es el producto creado en db
+        db.productsImages.update({
+          productsImagesNombre: req.file?.filename ?? "default-image.png",
+          productsImagesDesc: "",
+          // products_idProd: product.idProd
+        },
+        // {where: { idProd: req.params.idProd }}
+        )
+      .then(()=>{
+          return res.redirect("/products");
+        })
       })
+
       .catch((error) => console.error(error));
 
     // let modProduct = products.map(product => {
