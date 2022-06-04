@@ -19,7 +19,7 @@
         <h2><%=producto.ProductsName%></h2>
 
         <div class="imagen">
-        <img src="/img/<%= producto.productsImages.productImagesNombre %>" alt="Imagen de alfajor"><!-- tabla(modelo).relacion.nombreDelCampo(en la DB) -->
+        <img src="/img/<%=  producto.productsImages[0] ? producto.productsImages[0].productsImagesNombre : 'default image coffee.png' %>" alt="Imagen de alfajor"><!-- tabla(modelo).relacion.nombreDelCampo(en la DB) -->
         </div>
 
         <div class="descripcion">

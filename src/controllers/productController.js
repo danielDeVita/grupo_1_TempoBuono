@@ -130,7 +130,7 @@ const productController = {
         db.productsImages.update({
           productsImagesNombre: req.file?.filename ?? "default-image.png",
           productsImagesDesc: "",
-          // products_idProd: product.idProd
+          products_idProd: product.idProd
         },
         // {where: { idProd: req.params.idProd }}
         )
