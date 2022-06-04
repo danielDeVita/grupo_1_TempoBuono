@@ -65,12 +65,24 @@ const productController = {
         ProductsName: req.body.nombre_producto,
         ProductsDescription: req.body.descripcion_producto,
         ProductsPrice: req.body.precio_producto,
-        productsCategory_idproductsCategory: req.body.categoria, // El valor 1,2 o 3, por select/option
-        productsImagesNombre: req.file?.filename ?? "default-image.png",
+        productsCategory_idproductsCategory: req.body.categoria // El valor 1,2 o 3, por select/option
+        //productsImagesNombre: req.file?.filename ?? "default-image.png",
         // show:true
       })
-      .then(() => {
-        return res.redirect("/products");
+      //Asesoria con Fede
+      .then((product) => { //product es el producto creado en db
+        db.productsImages.create({
+          productsImagesNombre: req.file?.filename ?? "default-image.png",
+          productsImagesDesc: "",
+          products_idProd: product.idProd
+        })
+        .then(()=>{
+          return res.redirect("/products");
+        })
+      // .then((image)=>{
+      //   // image.setProductsImages(product)
+      //   return res.redirect("/products");
+      // })
       })
       .catch((error) => console.error(error));
     // arrayProductos.push(newProduct);
@@ -107,7 +119,7 @@ const productController = {
           ProductsDescription: req.body.descripcion_producto,
           ProductsPrice: req.body.precio_producto,
           productsCategory_idproductsCategory: req.body.categoria,
-          productsImagesNombre: req.file?.filename ?? "default-image.png",
+          // productsImagesNombre: req.file?.filename ?? "default-image.png",
         }, //Preguntar a fede como subir imagenes a DB.
 
         {

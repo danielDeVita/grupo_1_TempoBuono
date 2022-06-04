@@ -14,6 +14,10 @@ module.exports = (sequelize, dataTypes) => {
         productsImagesDesc: {
             type: dataTypes.STRING(45),
         },
+        products_idProd: {
+            type: dataTypes.INTEGER,
+            foreignKey: true
+        } //Asesoria con Fede
         /* createdAt: {
             type: dataTypes.DATE
         },

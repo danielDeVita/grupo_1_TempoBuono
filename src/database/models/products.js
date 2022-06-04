@@ -19,6 +19,7 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.FLOAT(255),
       allowNull: false,
     },
+
     /* createdAt: {
       type: dataTypes.DATE
     },

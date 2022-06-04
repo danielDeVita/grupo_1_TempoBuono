@@ -25,7 +25,7 @@
                 <h2>Lista de Productos</h2>
                 <% for (let i =0; i < products.length; i ++) { %>
                     <article>
-                        <img class="img-article" src="/img/<%= products[i].productsImages.productsImagesNombre %> " alt="foto del producto">
+                        <img class="img-article" src="/img/<%=  products[i].productsImages[0] ? products[i].productsImages[0].productsImagesNombre : 'default image coffee.png' %>" alt="foto del producto">
                         <h3 class="tit-article"><%=products[i].ProductsName%></h3>
                         <div class="stars">
                         <div>
