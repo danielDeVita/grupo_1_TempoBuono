@@ -72,7 +72,7 @@ const productController = {
       //Asesoria con Fede
       .then((product) => { //product es el producto creado en db
         db.productsImages.create({
-          productsImagesNombre: req.file?.filename ?? "default-image.png",
+          productsImagesNombre: req.file?.filename ?? "default image coffee.png",
           productsImagesDesc: "",
           products_idProd: product.idProd
         })
@@ -128,7 +128,7 @@ const productController = {
       )
       .then((product) => { //product es el producto creado en db
         db.productsImages.update({
-          productsImagesNombre: req.file?.filename ?? "default-image.png",
+          productsImagesNombre: req.file?.filename ?? "default image coffee.png",
           productsImagesDesc: "",
           products_idProd: product.idProd
         },
