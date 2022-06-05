@@ -24,6 +24,7 @@
   h2 { font-family: 'Work Sans', sans-serif;
        font-weight: 800;
        font-size: 30px;
+       text-align: ce;
   }
   
   
@@ -88,15 +89,16 @@
     position: absolute;
     top: 100px;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .imageProfile{
-  width: 200px;
-  height: auto;
-  background-color: red;
-  margin-top: 5%;
-  margin-left: 5%
-}
+    width: 200px;
+    height: auto;
+    background-color: red;
+  }
 
   .contenedor-menus {
     display: flex;
@@ -209,6 +211,7 @@
     background: white;
     color: #251410;
     height: 500px;
+    width: 80%;
   }
   
   .miga-de-pan ul {
