@@ -17,18 +17,29 @@ const userController = {
         if (errors.errors.length > 0) {
             return res.render('register', { styles: "register", errors: errors.mapped(), old: req.body });
         } else {
+            db.Users.create({
+                UsersNombre: req.body.usuario,
+                UsersEmail: req.body.email,
+                UsersPasswd: bcryptjs.hashSync(req.body.password, 12),
+                UsersImageName: req.file?.filename ?? "default-user-image.png",
+                usersCategory_idusersCategory: req.body.categoria
+            })
+            .then(user=>{
+                return res.redirect('/login');
+            })
+            .catch(err=>console.error(err))
 
-            let arrayUsuarios = [...usuarios]
-            let newUser = {
+            /* let arrayUsuarios = [...usuarios] */
+
+            /* let newUser = {
                 id: arrayUsuarios.length > 0 ? arrayUsuarios[arrayUsuarios.length - 1].id + 1 : 1,
                 usuario: req.body.usuario,
                 email: req.body.email,
                 password: bcryptjs.hashSync(req.body.password, 12),
                 image: req.file?.filename ?? "default-user-image.png"
-            }
-            arrayUsuarios.push(newUser);
-            fs.writeFileSync(path.join(__dirname, '../data/users.json'), (JSON.stringify(arrayUsuarios, null, 2)));
-            return res.redirect('/login');
+            } */
+            /* arrayUsuarios.push(newUser); */
+            /* fs.writeFileSync(path.join(__dirname, '../data/users.json'), (JSON.stringify(arrayUsuarios, null, 2))); */
         }
 
     },
