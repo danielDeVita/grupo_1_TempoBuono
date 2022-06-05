@@ -4,11 +4,11 @@
     <div class="container">
     <main>
 
-        <img src="/img/users/<%=user.image%>">
+        <img src="/img/users/<%=user.UsersImageName%>" class="imageProfile">
 
-        <h2><%= user.usuario %></h2>
+        <h2><%= user.UsersNombre %></h2>
 
-        <h2><%= user.email %></h2>
+        <h2><%= user.UsersEmail %></h2>
         
     </main>
     <%- include("./partials/footer") %>

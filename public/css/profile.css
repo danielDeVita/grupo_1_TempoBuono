@@ -89,6 +89,15 @@
     top: 100px;
     width: 100%;
   }
+
+  .imageProfile{
+  width: 200px;
+  height: auto;
+  background-color: red;
+  margin-top: 5%;
+  margin-left: 5%
+}
+
   .contenedor-menus {
     display: flex;
     align-items: center; /* centrar los dos menús <ul>*/

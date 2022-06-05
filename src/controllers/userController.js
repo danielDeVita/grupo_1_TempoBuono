@@ -1,6 +1,6 @@
-const fs = require("fs");
+//const fs = require("fs");
 const path = require("path");
-const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf-8'));
+//const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf-8'));
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 //const req = require("express/lib/request");
@@ -51,27 +51,33 @@ const userController = {
 
         if (errors.isEmpty()) {
             let usuarioALoguearse
-            for (let i = 0; i < usuarios.length; i++) {
-                if ((usuarios[i].email == req.body.email) && (bcryptjs.compareSync(req.body.password, usuarios[i].password))) {
-                    usuarioALoguearse = usuarios[i];
-                    req.session.usuarioLogueado = usuarioALoguearse
-
-                    if (req.body.keepLogin) {
-                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
+            //hacer un find all de db.Users
+            db.Users.findAll()
+            .then(usuarios=>{
+                
+                for (let i = 0; i < usuarios.length; i++) {
+                    if ((usuarios[i].UsersEmail == req.body.email) && (bcryptjs.compareSync(req.body.password, usuarios[i].UsersPasswd))) {
+                        usuarioALoguearse = usuarios[i];
+                        req.session.usuarioLogueado = usuarioALoguearse
+    
+                        if (req.body.keepLogin) {
+                            res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
+                        }
+    
+                        return res.redirect("/profile")
                     }
-
-                    return res.redirect("/profile")
+    
                 }
-
+                if (usuarioALoguearse == undefined) {
+                    res.render('login', { styles: 'login', errors: [{ msg: "Credenciales inválidas" }] })
+                }
+             else {
+                res.render('login', { styles: 'login', errors: errors.mapped() })
             }
-            if (usuarioALoguearse == undefined) {
-                res.render('login', { styles: 'login', errors: [{ msg: "Credenciales inválidas" }] })
-            }
+            })//llave y parentesis del THEN
 
-        } else {
-            res.render('login', { styles: 'login', errors: errors.mapped() })
-        }
-    },
+    }},
+    
     profile: (req, res) => {
         res.render("profile", { styles: "profile", user: req.session.usuarioLogueado });
     },
