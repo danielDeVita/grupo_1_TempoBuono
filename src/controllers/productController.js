@@ -91,11 +91,15 @@ const productController = {
       }
     )
       .then((product) => {
-        db.productsImages.update({
-          productsImagesNombre: req.file?.filename ?? "default image coffee.png",
-          productsImagesDesc: "",
-          products_idProd: product.idProd
-        },
+        db.productsImages.update(
+          {
+            productsImagesNombre: req.file?.filename ?? "default image coffee.png",
+            productsImagesDesc: "",
+            products_idProd: product.idProd
+          },
+          {
+            where: { products_idProd: req.params.idProd }
+          },
         )
           .then(() => {
             return res.redirect("/products");
