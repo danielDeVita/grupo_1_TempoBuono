@@ -31,6 +31,5 @@ routerUser.post('/login', [
 ], userController.processLogin);
 routerUser.get("/profile", authMiddleware, userController.profile);
 routerUser.get('/logout', userController.logout);
-routerUser.get("/list", userController.list)
 
 module.exports = routerUser;
