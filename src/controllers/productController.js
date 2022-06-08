@@ -105,15 +105,16 @@ const productController = {
             return res.redirect("/products");
           })
       })
-
       .catch((error) => console.error(error));
   },
 
   deleteProducto: (req, res) => {
-    let id = req.params.idProd;
-    db.products.destroy({ where: { idProd: id }, force: true })
+    db.products.destroy({ where: { idProd: req.params.idProd } })
       .then(() => {
-        return res.redirect("/products");
+        db.productsImages.destroy({ where: { products_idProd: req.params.idProd } })
+          .then(productRIP => {
+            return res.redirect("/products");
+          })
       })
       .catch(err => console.error(err))
   },
