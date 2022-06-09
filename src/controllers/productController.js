@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+/* const fs = require("fs");
+const path = require("path"); */
 const db = require("../database/models");
 
 const productController = {
@@ -109,10 +109,18 @@ const productController = {
   },
 
   deleteProducto: (req, res) => {
-    db.products.destroy({ where: { idProd: req.params.idProd } })
+    db.products.destroy(
+      {
+        where: { idProd: req.params.idProd }
+      }
+    )
       .then(() => {
-        db.productsImages.destroy({ where: { products_idProd: req.params.idProd } })
-          .then(productRIP => {
+        db.productsImages.destroy(
+          {
+            where: { products_idProd: req.params.idProd }
+          }
+        )
+          .then(() => {
             return res.redirect("/products");
           })
       })
