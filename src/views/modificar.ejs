@@ -51,7 +51,10 @@
         <button type="submit" class="boton" value="Eliminar">Eliminar</button>
       </form>
 
-      
+      <div><%producto.productsImages.forEach(function (image){%>
+          <img src="/img/<%=image.productsImagesNombre %>" alt="">
+        <%})%>
+      </div>
     </main>
 
   <%- include("./partials/footer") %>

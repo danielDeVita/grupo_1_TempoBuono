@@ -70,6 +70,7 @@ const productController = {
       include: ["productsImages", "productsCategory"],
     })
       .then((producto) => {
+       /*  return res.json(producto) */
         return res.render("modificar", {
           producto,
           styles: "crearProducto",
@@ -95,7 +96,7 @@ const productController = {
           {
             productsImagesNombre: req.file?.filename ?? "default image coffee.png",
             productsImagesDesc: "",
-            products_idProd: product.idProd
+            products_idProd: req.params.idProd
           },
           {
             where: { products_idProd: req.params.idProd }
@@ -114,15 +115,15 @@ const productController = {
         where: { idProd: req.params.idProd }
       }
     )
-      .then(() => {
+      /* .then(() => {
         db.productsImages.destroy(
           {
             where: { products_idProd: req.params.idProd }
           }
         )
-          .then(() => {
-            return res.redirect("/products");
-          })
+      }) */
+      .then(() => {
+        return res.redirect("/products");
       })
       .catch(err => console.error(err))
   },
