@@ -105,6 +105,15 @@ textarea{
   width: 100%;
 }
 
+.feedback {
+  /* display: none;  SACADO POR DANI */ 
+  width: 100%;
+  padding: 0 0 0 35px;
+  margin-top: 10px;
+  color: red;
+  font-size: small;
+}
+
 .boton {
   padding: 6px;
   border-radius: 20px;

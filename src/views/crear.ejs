@@ -20,16 +20,31 @@
         <label for = "nombre_producto">
           <h3>Nombre de producto</h3>
           <input id="nombre_producto" type="text" placeholder="Nombre producto" name="nombre_producto">
+          <span class="feedback">
+            <% if (locals.errors && errors.nombre_producto) { %>
+                <%= errors.nombre_producto.msg %>
+                    <% } %>
+        </span>   
         </label>
 
         <label for = "descripcion_producto">
           <h3>Descripción del producto</h3>
           <textarea id="descripcion_producto" name="descripcion_producto" placeholder="Descripción producto" rows="7"></textarea>
+          <span class="feedback">
+            <% if (locals.errors && errors.descripcion_producto) { %>
+                <%= errors.descripcion_producto.msg %>
+                    <% } %>
+          </span> 
         </label>
 
         <label for = "imagen_producto">
           <h3>Imagen del producto</h3>
           <input id= "imagen_producto" type="file" name="imagen_producto" accept=".jpg, .bmp, .png">
+          <span class="feedback">
+            <% if (locals.errors && errors.imagen_producto) { %>
+                <%= errors.imagen_producto.msg %>
+                    <% } %>
+          </span> 
         </label>
 
         <label><h3>Elige la categoría</h3></label>
@@ -37,11 +52,21 @@
           <option value="1">Alfajor</option>
           <option value="2">Café</option>
           <option value="3">Combo</option>
+          <span class="feedback">
+            <% if (locals.errors && errors.categoria) { %>
+                <%= errors.categoria.msg %>
+                    <% } %>
+          </span> 
         </select>
 
         <label for = "precio_producto">
           <h3>Precio de producto</h3>
           <input id="precio_producto" type="text" placeholder="Precio producto" name="precio_producto">
+          <span class="feedback">
+            <% if (locals.errors && errors.precio_producto) { %>
+                <%= errors.precio_producto.msg %>
+                    <% } %>
+          </span> 
         </label>
 
         <input class="boton" type="submit" value="Enviar">

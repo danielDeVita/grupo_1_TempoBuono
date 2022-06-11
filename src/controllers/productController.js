@@ -1,5 +1,6 @@
 /* const fs = require("fs");
 const path = require("path"); */
+const { validationResult } = require('express-validator');
 const db = require("../database/models");
 
 const productController = {
@@ -46,23 +47,29 @@ const productController = {
   },
 
   crearProducto: (req, res) => {
-    db.products.create({
-      ProductsName: req.body.nombre_producto,
-      ProductsDescription: req.body.descripcion_producto,
-      ProductsPrice: req.body.precio_producto,
-      productsCategory_idproductsCategory: req.body.categoria
-    })
-      .then((product) => {
-        db.productsImages.create({
-          productsImagesNombre: req.file?.filename ?? "default image coffee.png",
-          productsImagesDesc: "",
-          products_idProd: product.idProd
-        })
-          .then(() => {
-            return res.redirect("/products");
-          })
+    const errors = validationResult(req)
+
+    if (errors.errors.length > 0) {
+      return res.render('crear', { styles: "crearProducto", errors: errors.mapped(), old: req.body });
+  } else { 
+      db.products.create({
+        ProductsName: req.body.nombre_producto,
+        ProductsDescription: req.body.descripcion_producto,
+        ProductsPrice: req.body.precio_producto,
+        productsCategory_idproductsCategory: req.body.categoria
       })
-      .catch((error) => console.error(error));
+        .then((product) => {
+          db.productsImages.create({
+            productsImagesNombre: req.file?.filename ?? "default image coffee.png",
+            productsImagesDesc: "",
+            products_idProd: product.idProd
+          })
+            .then(() => {
+              return res.redirect("/products");
+            })
+        })
+        .catch((error) => console.error(error));
+    }
   },
 
   modProductoForm: (req, res) => {
