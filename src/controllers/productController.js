@@ -115,13 +115,6 @@ const productController = {
         where: { idProd: req.params.idProd }
       }
     )
-      /* .then(() => {
-        db.productsImages.destroy(
-          {
-            where: { products_idProd: req.params.idProd }
-          }
-        )
-      }) */
       .then(() => {
         return res.redirect("/products");
       })
