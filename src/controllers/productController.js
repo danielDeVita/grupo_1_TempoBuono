@@ -90,7 +90,13 @@ const productController = {
 
     const errors = validationResult(req)
     if (errors.errors.length > 0) {
-      return res.render('modificar', { styles: "modificar", errors: errors.mapped(), old: req.body });
+      db.products
+      .findByPk(req.params.idProd, {
+        include: ["productsImages", "productsCategory"],
+      })
+      .then((producto)=>{
+        return res.render('modificar', { producto, styles: "modificar", errors: errors.mapped(), old: req.body });
+      })
      } else {
 
       db.products.update(
