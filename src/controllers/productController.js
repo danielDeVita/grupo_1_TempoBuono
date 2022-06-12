@@ -87,33 +87,41 @@ const productController = {
   },
 
   modProducto: (req, res) => {
-    db.products.update(
-      {
-        ProductsName: req.body.nombre_producto,
-        ProductsDescription: req.body.descripcion_producto,
-        ProductsPrice: req.body.precio_producto,
-        productsCategory_idproductsCategory: req.body.categoria,
-      },
-      {
-        where: { idProd: req.params.idProd },
-      }
-    )
-      .then((product) => {
-        db.productsImages.update(
-          {
-            productsImagesNombre: req.file?.filename ?? "default image coffee.png",
-            productsImagesDesc: "",
-            products_idProd: req.params.idProd
-          },
-          {
-            where: { products_idProd: req.params.idProd }
-          },
-        )
-          .then(() => {
-            return res.redirect("/products");
-          })
-      })
-      .catch((error) => console.error(error));
+
+    const errors = validationResult(req)
+    if (errors.errors.length > 0) {
+      return res.render('modificar', { styles: "modificar", errors: errors.mapped(), old: req.body });
+     } else {
+
+      db.products.update(
+        {
+          ProductsName: req.body.nombre_producto,
+          ProductsDescription: req.body.descripcion_producto,
+          ProductsPrice: req.body.precio_producto,
+          productsCategory_idproductsCategory: req.body.categoria,
+        },
+        {
+          where: { idProd: req.params.idProd },
+        }
+      )
+        .then((product) => {
+          db.productsImages.update(
+            {
+              productsImagesNombre: req.file?.filename ?? "default image coffee.png",
+              productsImagesDesc: "",
+              products_idProd: req.params.idProd
+            },
+            {
+              where: { products_idProd: req.params.idProd }
+            },
+          )
+            .then(() => {
+              return res.redirect("/products");
+            })
+        })
+        .catch((error) => console.error(error));
+
+    }
   },
 
   deleteProducto: (req, res) => {
