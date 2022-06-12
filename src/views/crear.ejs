@@ -39,7 +39,7 @@
 
         <label for = "imagen_producto">
           <h3>Imagen del producto</h3>
-          <input id= "imagen_producto" type="file" name="imagen_producto" accept=".jpg, .bmp, .png">
+          <input id= "imagen_producto" type="file" name="imagen_producto">
           <span class="feedback">
             <% if (locals.errors && errors.imagen_producto) { %>
                 <%= errors.imagen_producto.msg %>

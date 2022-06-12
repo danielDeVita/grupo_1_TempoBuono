@@ -80,7 +80,7 @@ const productController = {
        /*  return res.json(producto) */
         return res.render("modificar", {
           producto,
-          styles: "crearProducto",
+          styles: "modificar",
           user: req.session.usuarioLogueado,
         });
       });
