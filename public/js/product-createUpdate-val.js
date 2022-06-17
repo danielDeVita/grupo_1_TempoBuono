@@ -2,7 +2,6 @@ window.onload = function (){
     let nombre_producto = document.getElementById("nombre_producto");  console.log(nombre_producto)
     let descripcion_producto = document.getElementById("descripcion_producto"); console.log(descripcion_producto)
     let imagen_producto = document.getElementById("imagen_producto"); console.log (imagen_producto)
-    let botonCategoria = document.querySelector(".boton-categoria"); console.log(botonCategoria) 
     let precio_producto = document.getElementById("precio_producto"); console.log(precio_producto)
 
     let errores = 
@@ -41,16 +40,6 @@ window.onload = function (){
         }
     })
 
-    botonCategoria.addEventListener("blur", function (e){ 
-        if (botonCategoria.value === undefined){ //No sale el innerHTML
-        errores +1;
-        botonCategoria.nextElementSibling.classList.add("is-invalid");
-        botonCategoria.nextElementSibling.innerHTML = "Debe elegir una categoría";
-        } else {
-        botonCategoria.nextElementSibling.classList.toggle("is-valid");//es un estilo invisible   
-        }
-    })
-
     precio_producto.addEventListener("blur", function (e){ 
         if (precio_producto.value === ""){ //al dar TRUE jamas pudimos hacer que vuelva el estilo "is-invalid"
         errores +1;
@@ -60,5 +49,4 @@ window.onload = function (){
         precio_producto.nextElementSibling.classList.toggle("is-valid");//es un estilo invisible   
         }
     })
-
 }
