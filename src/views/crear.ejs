@@ -20,6 +20,7 @@
         <label for = "nombre_producto">
           <h3>Nombre de producto</h3>
           <input id="nombre_producto" type="text" placeholder="Nombre producto" name="nombre_producto">
+          <p></p><!-- este p y los subsiguientes es lo que rellena el INNER HTML que valida -->
           <span class="feedback">
             <% if (locals.errors && errors.nombre_producto) { %>
                 <%= errors.nombre_producto.msg %>
@@ -30,6 +31,7 @@
         <label for = "descripcion_producto">
           <h3>Descripción del producto</h3>
           <textarea id="descripcion_producto" name="descripcion_producto" placeholder="Descripción producto" rows="7"></textarea>
+          <p></p>
           <span class="feedback">
             <% if (locals.errors && errors.descripcion_producto) { %>
                 <%= errors.descripcion_producto.msg %>
@@ -40,6 +42,7 @@
         <label for = "imagen_producto">
           <h3>Imagen del producto</h3>
           <input id= "imagen_producto" type="file" name="imagen_producto">
+          <p></p>
           <span class="feedback">
             <% if (locals.errors && errors.imagen_producto) { %>
                 <%= errors.imagen_producto.msg %>
@@ -49,6 +52,7 @@
 
         <label><h3>Elige la categoría</h3></label>
         <select class="boton-categoria" name="categoria">
+          <p></p>
           <option value="1">Alfajor</option>
           <option value="2">Café</option>
           <option value="3">Combo</option>
@@ -62,6 +66,7 @@
         <label for = "precio_producto">
           <h3>Precio de producto</h3>
           <input id="precio_producto" type="text" placeholder="Precio producto" name="precio_producto">
+          <p></p>
           <span class="feedback">
             <% if (locals.errors && errors.precio_producto) { %>
                 <%= errors.precio_producto.msg %>
@@ -79,6 +84,6 @@
   <%- include("./partials/footer") %>
  
   </div>    
-  
+  <script src="/js/product-createUpdate-val.js"></script>
 </body>
 </html>

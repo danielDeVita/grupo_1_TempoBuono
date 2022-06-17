@@ -114,6 +114,18 @@ textarea{
   font-size: small;
 }
 
+.is-invalid {
+  width: 100%;
+  padding: 0 0 0 35px;
+  margin-top: 10px;
+  color: red;
+  font-size: small;
+}
+
+.is-valid {
+  display: none
+}
+
 .boton {
   padding: 6px;
   border-radius: 20px;
