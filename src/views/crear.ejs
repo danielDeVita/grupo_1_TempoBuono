@@ -52,16 +52,19 @@
 
         <label><h3>Elige la categoría</h3></label>
         <select class="boton-categoria" name="categoria">
-          <p></p>
+          
           <option value="1">Alfajor</option>
           <option value="2">Café</option>
           <option value="3">Combo</option>
+          <p></p>
           <span class="feedback">
             <% if (locals.errors && errors.categoria) { %>
                 <%= errors.categoria.msg %>
                     <% } %>
           </span> 
         </select>
+        <div></div>
+        
 
         <label for = "precio_producto">
           <h3>Precio de producto</h3>
