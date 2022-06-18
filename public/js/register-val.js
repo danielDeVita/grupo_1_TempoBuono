@@ -9,7 +9,7 @@ window.onload = function() {
   let errores = 
 
   usuario.addEventListener("blur",function(e){
-    if (!usuario.value || usuario.value === ""){
+    if (!usuario.value || usuario.value === ""){//al dar TRUE jamas pudimos hacer que vuelva el estilo "is-invalid"
       errores + 1;
       usuario.nextElementSibling.classList.add("is-invalid");
       usuario.nextElementSibling.innerHTML = "El campo no puede estar vacío";
@@ -23,7 +23,7 @@ window.onload = function() {
   })
 
   imagenUsuario.addEventListener("blur", function (e) {
-    if (!imagenUsuario.value) { //no sabemos bien como validar una imagen, es con un ".include(arrayExtensiones)"??
+    if (!imagenUsuario.value) { //no sabemos bien como validar una imagen, es con un ".include(arrayExtensiones)"?? Y //al dar TRUE jamas pudimos hacer que vuelva el estilo "is-invalid"
         errores + 1;
         imagenUsuario.nextElementSibling.classList.add("is-invalid");
         imagenUsuario.nextElementSibling.innerHTML = "Debes subir una imagen";
@@ -33,18 +33,18 @@ window.onload = function() {
   })
 
   email.addEventListener('blur',function(e){
-    if(!email.value || email.value === ""){
+    if(!email.value || email.value === ""){//al dar TRUE jamas pudimos hacer que vuelva el estilo "is-invalid"
       errores + 1;
       email.nextElementSibling.classList.add("is-invalid");
       email.nextElementSibling.innerHTML= "Ingresa tu email";
-    } else { // Preguntar a Fede cómo se valida un email. @
+    } else { // Preguntar a Fede cómo se valida un email. @ (metodo "find/include/indexOf"? si es que es un array...)
       email.nextElementSibling.classList.toggle("is-valid");
     }
   })
 
   password.addEventListener('blur', function(e){
 
-    if (!password.value || password.value === ""){
+    if (!password.value || password.value === ""){//al dar TRUE jamas pudimos hacer que vuelva el estilo "is-invalid"
       errores + 1;
       password.nextElementSibling.classList.add("is-invalid");
       password.nextElementSibling.innerHTML = "El campo no puede estar vacío";
