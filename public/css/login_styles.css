@@ -362,6 +362,18 @@ label input {
   margin-top: 10px;
 }
 
+.is-invalid {
+  width: 100%;
+  padding: 0 0 0 35px;
+  margin-top: 10px;
+  color: red;
+  font-size: small;
+}
+
+.is-valid {
+  display: none
+}
+
 /* input:invalid+.feedback { SACADO POR DANI
   display: block;
   } */

@@ -10,14 +10,14 @@ window.onload = function () {
         nombre_producto.addEventListener("blur", function (e) {
             if (!nombre_producto.value || nombre_producto.value === "") { //al dar TRUE jamas pudimos hacer que vuelva el estilo "is-invalid"
                 errores + 1;
-                nombre_producto.nextElementSibling.classList.add("is-invalid");// es un estilo rojo
+                nombre_producto.nextElementSibling.classList.add("is-invalid");// es un estilo CSS rojo
                 nombre_producto.nextElementSibling.innerHTML = "El campo no puede estar vacío";
             } else if (nombre_producto.value.length < 5) {
                 errores + 1;
                 nombre_producto.nextElementSibling.classList.add("is-invalid");
                 nombre_producto.nextElementSibling.innerHTML = "El nombre del produto debe contener al menos 5 caracteres";
             } else {
-                nombre_producto.nextElementSibling.classList.toggle("is-valid");//es un estilo invisible   
+                nombre_producto.nextElementSibling.classList.toggle("is-valid");//es un estilo CSS invisible y toggle en como un switch de clases.  
             }
         })
 

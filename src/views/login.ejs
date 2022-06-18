@@ -28,6 +28,7 @@
                                     <i class="fa-solid fa-envelope"></i>
                                     <input type="email" name="email" id="usuario" placeholder="Email">
                                     <!-- name/placeholder de usuario a email -->
+                                    <p></p>
                                     <span class="feedback">
                                         <% if (locals.errors && errors.email) { %>
                                             <%= errors.email.msg %>
@@ -43,11 +44,13 @@
                                     <i class="fa-solid fa-lock"></i>
                                     <input type="password" name="password" id="password" placeholder="Password">
                                     <!-- borre el minlength="2" -->
+                                    <p></p>
                                     <span class="feedback">
                                         <% if (locals.errors && errors.password) { %>
                                             <%= errors.password.msg %>
                                                 <% } %>
                                     </span>
+                                    
                                 </div>
                             </label>
                         </div>
@@ -72,7 +75,7 @@
                 <%- include("./partials/footer") %>
 
             </div>
-
+    <script src="/js/registerLogin-val.js"></script> 
     </body>
 
     </html>
