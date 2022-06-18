@@ -1,7 +1,3 @@
-/* const fs = require("fs");
-const path = require("path");
-const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf-8'));
- */
 const db = require("../database/models")
 function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;

@@ -22,18 +22,16 @@
                             </span>
 
                             <label for="email">
-                                <!-- for cambiado de usuario a email -->
                                 <h3>Email</h3>
                                 <div class="icono-caja">
                                     <i class="fa-solid fa-envelope"></i>
-                                    <input type="email" name="email" id="usuario" placeholder="Email">
-                                    <!-- name/placeholder de usuario a email -->
+                                    <input type="email" name="email" id="email" placeholder="Email">
                                     <p></p>
                                     <span class="feedback">
                                         <% if (locals.errors && errors.email) { %>
                                             <%= errors.email.msg %>
                                                 <% } %>
-                                    </span> <!-- puse Ingresa tu EMAIL -->
+                                    </span> 
                                 </div>
                             </label>
 
@@ -43,7 +41,6 @@
                                 <div class="icono-caja">
                                     <i class="fa-solid fa-lock"></i>
                                     <input type="password" name="password" id="password" placeholder="Password">
-                                    <!-- borre el minlength="2" -->
                                     <p></p>
                                     <span class="feedback">
                                         <% if (locals.errors && errors.password) { %>
