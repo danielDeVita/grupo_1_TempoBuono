@@ -26,8 +26,8 @@ app.use(session({
 app.use(cookieParser());
 app.use(userLoggedMiddleware);
 
-app.use('/', routes);
+app.use('/', routes); //mandarlo abajo de todo y los que tienen prefijo, arriba
 app.use('/', routesUser);
-app.use('/', routesProduct);
+app.use('/', routesProduct); //sumarle un /products y quitar el /products del router
 
 app.listen(port, () => console.log("server " + port + " ok"));
