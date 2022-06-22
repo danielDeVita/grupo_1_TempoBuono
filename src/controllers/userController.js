@@ -35,7 +35,7 @@ const userController = {
 
         if (errors.isEmpty()) {
             let usuarioALoguearse
-            db.Users.findAll()
+            db.Users.findAll()//hacer un findeOne (condicion: email == email)
                 .then(usuarios => {
 
                     for (let i = 0; i < usuarios.length; i++) {
@@ -51,12 +51,12 @@ const userController = {
                     if (usuarioALoguearse == undefined) {
                         res.render('login', { styles: 'login', errors: [{ msg: "Credenciales inválidas" }] })
                     }
-                    else {
-                        res.render('login', { styles: 'login', errors: errors.mapped() })
-                    }
                 })
-        }
-    },
+            }
+            else {
+                res.render('login', { styles: 'login', errors: errors.mapped() })
+            }
+        },
     profile: (req, res) => {
         res.render("profile", { styles: "profile", user: req.session.usuarioLogueado });
     },

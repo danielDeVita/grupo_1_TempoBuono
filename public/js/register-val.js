@@ -4,21 +4,27 @@ window.onload = function() {
   let email = document.getElementById('email'); console.log(email)
   let password = document.getElementById('password'); console.log(password)
   let form = document.querySelector("form"); console.log(form)
-  // falta validar el select de categoría.
+  // falta validar el select de categoría. usar el .value?
 
   let errores = 
 
   usuario.addEventListener("blur",function(e){
+    let usuario = document.getElementById('usuario')
+    console.log(typeof usuario.value)
+    console.log(usuario.value)
     if (!usuario.value || usuario.value === ""){//al dar TRUE jamas pudimos hacer que vuelva el estilo "is-invalid"
       errores + 1;
-      usuario.nextElementSibling.classList.add("is-invalid");
+      
+      usuario.nextElementSibling.classList.add("is-invalid"); // HACER EN TODOS LOS CAMPOS
+      usuario.nextElementSibling.classList.remove("is-valid");
       usuario.nextElementSibling.innerHTML = "El campo no puede estar vacío";
     } else if (usuario.value.length < 2) {
       errores + 1;
       usuario.nextElementSibling.classList.add("is-invalid");
+      usuario.nextElementSibling.classList.remove("is-valid");
       usuario.nextElementSibling.innerHTML = "Por favor digita al menos dos caracteres"
     } else {
-      usuario.nextElementSibling.classList.toggle("is-valid");
+      usuario.nextElementSibling.classList.replace("is-invalid", "is-valid");
     }
   })
 
@@ -33,6 +39,13 @@ window.onload = function() {
   })
 
   email.addEventListener('blur',function(e){
+    /* const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+}; */
     if(!email.value || email.value === ""){//al dar TRUE jamas pudimos hacer que vuelva el estilo "is-invalid"
       errores + 1;
       email.nextElementSibling.classList.add("is-invalid");
