@@ -29,5 +29,6 @@ app.use(userLoggedMiddleware);
 app.use('/', routes); //mandarlo abajo de todo y los que tienen prefijo, arriba
 app.use('/', routesUser);
 app.use('/', routesProduct); //sumarle un /products y quitar el /products del router
+//sumarle un: "*, func (404)"
 
 app.listen(port, () => console.log("server " + port + " ok"));
