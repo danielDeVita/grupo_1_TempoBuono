@@ -18,12 +18,12 @@ const storage = multer.diskStorage({
 const uploadFile = multer({storage});
 
 routerProduct.get('/cart', productController.productCart); //agregarle un /products y corregir app.js
-routerProduct.get('/products', productController.productList);
-routerProduct.get('/products/create',productController.crearProductoForm);
-routerProduct.post('/products/create', uploadFile.single("imagen_producto"),validatorProducts,productController.crearProducto);
-routerProduct.get('/products/:idProd',productController.productDetail);
-routerProduct.get('/products/:idProd/edit',productController.modProductoForm);
-routerProduct.put('/products/:idProd/edit', uploadFile.single("imagen_producto"),validatorProducts,productController.modProducto);
-routerProduct.delete('/products/:idProd/edit',productController.deleteProducto);
+routerProduct.get('/', productController.productList);
+routerProduct.get('/create',productController.crearProductoForm);
+routerProduct.post('/create', uploadFile.single("imagen_producto"),validatorProducts,productController.crearProducto);
+routerProduct.get('/:idProd',productController.productDetail);
+routerProduct.get('/:idProd/edit',productController.modProductoForm);
+routerProduct.put('/:idProd/edit', uploadFile.single("imagen_producto"),validatorProducts,productController.modProducto);
+routerProduct.delete('/:idProd/edit',productController.deleteProducto);
 
 module.exports = routerProduct

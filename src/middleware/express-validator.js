@@ -4,7 +4,7 @@ const { body } = require('express-validator');
 const validator = [
   body('usuario')
   .notEmpty().withMessage('Por favor escribe el nombre de usuario').bail()
-  .isLength({min:5 , max:10}).withMessage('El nombre de usuario debe tener entre 5 y 10 caracteres, que pena!! Sorry!'),
+  .isLength({min:5 , max:10}).withMessage('El nombre de usuario debe tener entre 5 y 10 caracteres'),
   body('imagen_usuario').custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = ['.jpg', '.png', '.gif'];
