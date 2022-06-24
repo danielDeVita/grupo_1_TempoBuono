@@ -9,9 +9,10 @@ window.onload = function () {
         if (!email.value || email.value == "") { //al dar TRUE jamas pudimos hacer que vuelva el estilo "is-invalid"
             errores++
             email.nextElementSibling.classList.add("is-invalid");
+            email.nextElementSibling.classList.remove("is-valid");
             email.nextElementSibling.innerHTML = "Debes ingresar un email";
         } else {  // Preguntar a Fede cómo se valida un email. @ (metodo "find/include/indexOf"? si es que es un array...)
-            email.nextElementSibling.classList.toggle("is-valid");
+            email.nextElementSibling.classList.replace("is-invalid", "is-valid");
         }
     })
 
@@ -19,9 +20,10 @@ window.onload = function () {
         if (!password.value || password.value == "") { //al dar TRUE jamas pudimos hacer que vuelva el estilo "is-invalid"
             errores++
             password.nextElementSibling.classList.add("is-invalid");
+            password.nextElementSibling.classList.remove("is-valid");
             password.nextElementSibling.innerHTML = "Debes ingresar tu password";
         } else {
-            password.nextElementSibling.classList.toggle("is-valid");
+            password.nextElementSibling.classList.replace("is-invalid", "is-valid");
         }
     })
 
