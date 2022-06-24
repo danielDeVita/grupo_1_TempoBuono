@@ -6,7 +6,7 @@ window.onload = function () {
     let errores
 
     email.addEventListener("blur", e => {
-        if (!email.value || email.value == "") { //al dar TRUE jamas pudimos hacer que vuelva el estilo "is-invalid"
+        if (!email.value || email.value == "") {
             errores++
             email.nextElementSibling.classList.add("is-invalid");
             email.nextElementSibling.classList.remove("is-valid");
@@ -17,7 +17,7 @@ window.onload = function () {
     })
 
     password.addEventListener("blur", e => {
-        if (!password.value || password.value == "") { //al dar TRUE jamas pudimos hacer que vuelva el estilo "is-invalid"
+        if (!password.value || password.value == "") {
             errores++
             password.nextElementSibling.classList.add("is-invalid");
             password.nextElementSibling.classList.remove("is-valid");
