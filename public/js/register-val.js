@@ -4,7 +4,6 @@ window.onload = function() {
   let email = document.getElementById('email'); console.log(email)
   let password = document.getElementById('password'); console.log(password)
   let form = document.querySelector("form"); console.log(form)
-  // falta validar el select de categoría. usar el .value?
 
   let errores = 
 
@@ -41,19 +40,22 @@ window.onload = function() {
   })
 
   email.addEventListener('blur',function(e){
-    /* const validateEmail = (email) => {
-  return String(email)
-    .toLowerCase()
-    .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
-}; */
+
+  // let campo = e.target; 
+  // let emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+
     if(!email.value || email.value === ""){
       errores + 1;
       email.nextElementSibling.classList.add("is-invalid");
       email.nextElementSibling.classList.remove("is-valid");
       email.nextElementSibling.innerHTML= "Ingresa tu email";
-    } else { // Preguntar a Fede cómo se valida un email. @ (metodo "find/include/indexOf"? si es que es un array...)
+    }
+    // else if (emailRegex.test(campo.value)){
+    //   email.nextElementSibling.classList.add("is-invalid");
+    //   email.nextElementSibling.classList.remove("is-valid");
+    //   email.nextElementSibling.innerHTML= "Ingresa un email correcto";
+    // }
+    else{ 
       email.nextElementSibling.classList.replace("is-invalid", "is-valid");
     }
   })
