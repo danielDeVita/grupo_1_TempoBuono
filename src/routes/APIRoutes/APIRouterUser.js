@@ -4,6 +4,6 @@ const APIRouterUser = express.Router();
 const APIUserController = require("../../controllers/APIControllers/APIUserController.js")
 
 APIRouterUser.get("/", APIUserController.list);
-//APIRouterUser.get("/:idUsers", APIUserController.user);
+APIRouterUser.get("/:idUsers", APIUserController.user);
 
 module.exports = APIRouterUser;
