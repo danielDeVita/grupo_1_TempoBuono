@@ -25,7 +25,11 @@ const APIUserController = {
           status: 200,
           url: 'api/users/userImage' //falta mostrar imagen
         },
-        data: user,
+        data: {
+            id: user.idUsers,
+            user: user.UsersNombre,
+            email: user.UsersEmail
+        }
       };
       res.json(respuesta);
     });
