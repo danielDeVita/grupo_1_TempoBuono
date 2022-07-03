@@ -11,6 +11,8 @@ const routesUser = require(path.join(__dirname, '.', 'routes', 'routesUser.js'))
 const routesProduct = require(path.join(__dirname, '.', 'routes', 'routesProduct.js'));
 const userLoggedMiddleware = require("./middleware/userLoggedMiddleware");
 
+const APIRouterUser = require("./routes/APIRoutes/APIRouterUser")
+
 app.use(express.static("public"));
 
 app.set("view engine", "ejs");
@@ -29,6 +31,7 @@ app.use(userLoggedMiddleware);
 app.use('/', routes); //mandarlo abajo de todo y los que tienen prefijo, arriba
 app.use('/', routesUser);
 app.use('/products', routesProduct); //sumarle un /products y quitar el /products del router
-//sumarle un: "*, func (404)"
+
+app.use("/api/users", APIRouterUser);
 
 app.listen(port, () => console.log("server " + port + " ok"));
