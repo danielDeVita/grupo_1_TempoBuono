@@ -18,6 +18,24 @@ const APIProductController = {
       });
     },
 
+    detailProduct: (req, res) => {
+        db.products.findByPk(req.params.idProd).then((product) => {
+          let respuesta = {
+            meta: {
+              status: 200,
+            },
+            data: {
+                id: product.idProd,
+                name: product.ProductsName,
+                description: product.ProductsDescription,
+                price: product.ProductsPrice,
+                urlImage: "No sabemos" // Estamos investigando como resolverlo.
+            }
+          };
+          res.json(respuesta);
+        });
+      },
+
 
 }
 

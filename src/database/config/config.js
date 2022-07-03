@@ -1,13 +1,13 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "root",
     // "password": "",
-    "database": "tempo_buono_new",
+    "database": "Tempo_Buono_New",
     // "database": "tempo_buono_new",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "port": "3306"
+    "port": "8889"
     // "port": "3306"
   },
   "test": {

@@ -4,6 +4,6 @@ const APIRouterProduct = express.Router();
 const APIProductController = require("../../controllers/APIControllers/APIProductController.js")
 
 APIRouterProduct.get("/", APIProductController.list);
-// APIRouterProduct.get("/:idProd", APIProductController.detailProduct);
+APIRouterProduct.get("/:idProd", APIProductController.detailProduct);
 
 module.exports = APIRouterProduct;
