@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import ContentInfoList from './components/InfoList/ContentInfoList';
 
 function App() {
+
+  const [usuarios, setUsuarios] = useState();
+  
+  useEffect( () => {
+    const url = "http://localhost:3001/api/users"; 
+  
+    async function fetchUsuarios(url) {
+      const result =  await fetch(url)
+      const data = await result.json()
+      //setTimeout(() => setMovie(data), 5000)
+      setUsuarios(data);
+      console.log(data)
+    }
+
+    fetchUsuarios(url);
+  },[]);
+
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ContentInfoList listaUsuarios = { usuarios }/>
+
     </div>
   );
 }
