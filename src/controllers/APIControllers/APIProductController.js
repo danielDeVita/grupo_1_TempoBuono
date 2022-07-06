@@ -24,7 +24,7 @@ const APIProductController = {
             meta: {
               status: 200,
             },
-            data: {
+            data: { //nos falta también un array con principal relación de uno a muchos
                 id: product.idProd,
                 name: product.ProductsName,
                 description: product.ProductsDescription,
