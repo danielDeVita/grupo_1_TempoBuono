@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import ContentInfoList from './components/InfoList/ContentInfoList';
+import ContentInfoList from './Components/InfoList/ContentInfoList';
 
 function App() {
 

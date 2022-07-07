@@ -20,7 +20,7 @@ function ContentInfoList(props) {
 
     return(
         <div className="row">
-            { Array.isArray(infoCardList) && infoCardList.map(mapper) }
+            { Array.isArray(listaUsuarios) && listaUsuarios.map(mapper) }
         </div>
     )
 }
