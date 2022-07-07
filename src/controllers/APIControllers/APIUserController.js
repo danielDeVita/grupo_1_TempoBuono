@@ -23,12 +23,12 @@ const APIUserController = {
       let respuesta = {
         meta: {
           status: 200,
-          url: 'api/users/userImage' //falta mostrar imagen
         },
         data: {
-            id: user.idUsers,
-            user: user.UsersNombre,
-            email: user.UsersEmail
+          id: user.idUsers,
+          user: user.UsersNombre,
+          email: user.UsersEmail,
+          url: 'api/users/userImage' //falta mostrar imagen
         }
       };
       res.json(respuesta);
