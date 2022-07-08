@@ -3,7 +3,7 @@ const db = require("../../database/models");
 
 const APIProductController = {
     list: (req, res) => {
-      db.products.findAll().then((products) => {
+      db.products.findAll().then((products) => { //hacer un include con category
         let respuesta = {
           meta: {
             status: 200,
@@ -11,7 +11,7 @@ const APIProductController = {
           },
           products: {
             products, //nos falta también un array con principal relación de uno a muchos
-            detail: "api/products/:idProd", //cómo se resuelve?
+            detail: "api/products/:idProd", //cómo se resuelve? (hacer un map del array productos y meterle el detail)
           },
         };
         res.json(respuesta);
@@ -19,7 +19,7 @@ const APIProductController = {
     },
 
     detailProduct: (req, res) => {
-        db.products.findByPk(req.params.idProd).then((product) => {
+        db.products.findByPk(req.params.idProd).then((product) => { //hacer un include con category
           let respuesta = {
             meta: {
               status: 200,
@@ -29,7 +29,7 @@ const APIProductController = {
                 name: product.ProductsName,
                 description: product.ProductsDescription,
                 price: product.ProductsPrice,
-                urlImage: "No sabemos" // Estamos investigando como resolverlo.
+                urlImage: "No sabemos" // Estamos investigando como resolverlo. (map del array)
             }
           };
           res.json(respuesta);

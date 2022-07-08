@@ -11,7 +11,7 @@ const APIUserController = {
         },
         users: {
           users,
-          detail: "api/users/:idUsers", //cómo se resuelve?
+          detail: "api/users/:idUsers", //va la URL que lleva al perfil del usuario (hacer un map al array de objetos y sumarle el detail:)
         },
       };
       res.json(respuesta);
@@ -28,7 +28,7 @@ const APIUserController = {
           id: user.idUsers,
           user: user.UsersNombre,
           email: user.UsersEmail,
-          url: 'api/users/userImage' //falta mostrar imagen
+          url: 'api/users/userImage' //falta mostrar imagen (http://localhost:3000/...+nombreImage)
         }
       };
       res.json(respuesta);
