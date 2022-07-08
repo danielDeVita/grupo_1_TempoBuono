@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
-  const [data, setData] = useState({});
+  const [data, setData] = useState({users:{}, products:[]});
 
   async function peticiones(){
 
@@ -25,7 +25,7 @@ function App() {
     }
 
     const result = await Promise.all(arrayPromesas)
-    setData({users:result[0],products:result[1]})
+    setData({users:result[0].data, products:result[1].products.products})
   }
 
   useEffect(
@@ -34,9 +34,12 @@ function App() {
     },[]
   )
 
+  // console.log (data.users)
+  // console.log (data.products)
+
   return (
     <div className="App">
-      <TotalCard />
+      <TotalCard users = {data.users.count} products = {data.products} />
       <LastProduct />
       <ProductsByCat />
       <ProductList />
