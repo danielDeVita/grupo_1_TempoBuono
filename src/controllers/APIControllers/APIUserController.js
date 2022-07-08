@@ -7,8 +7,17 @@ const APIUserController = {
     let url = req.protocol+ "://" +req.get('host') +'/api/'
     db.sequelize.query(`SELECT  *, CONCAT('${url}', idUsers) AS url_detalle From users`,{ type: db.sequelize.QueryTypes.SELECT })
     .then((resultado)=>{
-      return res.json(resultado)
-    })
+      let respuesta = {
+        meta: {
+          status: 200,
+        },
+        data: {
+          users: resultado,
+          count: resultado.length
+        },
+      };
+      res.json(respuesta);
+    });
 
 
     // db.Users.findAndCountAll().then((users) => {
