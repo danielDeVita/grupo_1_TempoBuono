@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TotalCard() {
+function TotalCard(props) {
     return (
         <div className="row">
 
@@ -8,7 +8,7 @@ function TotalCard() {
                 <div className="card">
                     <div className="card-body">
                         <h5 className="card-title">Total de productos</h5>
-                        <p className="card-text">Número de cantidad de productos</p>
+                        <p className="card-text">Cantidad productos</p>
                     </div>
                 </div>
             </div>
@@ -17,7 +17,8 @@ function TotalCard() {
                 <div className="card">
                     <div className="card-body">
                         <h5 className="card-title">Total de usuarios</h5>
-                        <p className="card-text">Número de cantidad de usuarios</p>
+                        <p className="card-text">Cantidad usuarios
+                        </p>
                     </div>
                 </div>
             </div>

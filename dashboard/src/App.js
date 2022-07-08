@@ -7,21 +7,32 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
-  const [users, setUsers] = useState([]);
-  const [products, setProducts] = useState([]);
+  const [data, setData] = useState({});
 
-  useEffect(() => {
-    fetch("http://localhost:3001/api/users")
-      .then(response => response.json())
-      .then(data => {
-        setUsers(data.users)
-      })
-    fetch("http://localhost:3001/api/products")
-      .then(response => response.json())
-      .then(data => {
-        setProducts(data.products)
-      })
-  }, [])
+  async function peticiones(){
+
+    let urls = [
+      "http://localhost:3001/api/users",
+      "http://localhost:3001/api/products"
+    ]
+    
+    const arrayPromesas = []
+  
+    for(let i= 0; i< urls.length; i++){
+      const dataFetch = await fetch(urls[i])
+      const data = await dataFetch.json()
+      arrayPromesas.push(data)
+    }
+
+    const result = await Promise.all(arrayPromesas)
+    setData({users:result[0],products:result[1]})
+  }
+
+  useEffect(
+    ()=>{
+      peticiones()
+    },[]
+  )
 
   return (
     <div className="App">
