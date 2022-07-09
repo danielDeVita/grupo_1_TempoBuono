@@ -30,9 +30,9 @@ app.use(session({
 app.use(cookieParser());
 app.use(userLoggedMiddleware);
 
-app.use('/', routes); //mandarlo abajo de todo y los que tienen prefijo, arriba
+app.use('/', routes); 
 app.use('/', routesUser);
-app.use('/products', routesProduct); //sumarle un /products y quitar el /products del router
+app.use('/products', routesProduct); 
 
 app.use(cors());
 app.use("/api/users", APIRouterUser);

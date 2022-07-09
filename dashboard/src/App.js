@@ -34,8 +34,8 @@ function App() {
     },[]
   )
 
-  // console.log (data.users)
-  // console.log (data.products)
+   console.log (data.users)
+   console.log (data.products)
 
   return (
     <div className="App">
