@@ -3,14 +3,14 @@ const db = require("../../database/models");
 
 const APIProductController = {
     list: (req, res) => {
-      db.products.findAll().then((products) => { //hacer un include con category
+      db.products.findAll({include: ["productsCategory"]}).then((products) => {
         let respuesta = {
           meta: {
             status: 200,
             count: products.length,
           },
           products: {
-            products, //nos falta también un array con principal relación de uno a muchos
+            products, //nos falta también un array con principal relación de uno a muchos (resuelto con un include: productsCategory)
             detail: "api/products/:idProd", //cómo se resuelve? (hacer un map del array productos y meterle el detail)
           },
         };
