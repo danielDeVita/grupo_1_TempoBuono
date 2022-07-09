@@ -42,7 +42,7 @@ function App() {
       <TotalCard users = {data.users.count} products = {data.products} />
       <LastProduct />
       <ProductsByCat />
-      <ProductList />
+      <ProductList products = {data.products} />
     </div>
   );
 }

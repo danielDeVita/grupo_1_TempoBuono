@@ -1,13 +1,14 @@
 import React from 'react';
+import Product from './Product'
 
-function ProductList() {
+function ProductList(props) {
     return (
         <ul className="list-group">
-            <li className="list-group-item">Producto 1</li>
-            <li className="list-group-item">Producto 2</li>
-            <li className="list-group-item">Product 3</li>
-            <li className="list-group-item">Product 4</li>
-            <li className="list-group-item">Product 5</li>
+            {
+                props.products.map((product, i) => (
+                    <Product nombreProducto={product.ProductsName} key={product.ProductsName + i} />
+                ))
+            }
         </ul>
     )
 }
