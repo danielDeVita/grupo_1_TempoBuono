@@ -22,7 +22,7 @@ const APIProductController = {
 
     //let prueba = db.sequelize.query(`SELECT products.idProd, productsImages.productsImagesNombre FROM products INNER JOIN productsImages ON products.idProd = productsImages.products_idProd`, { type: db.sequelize.QueryTypes.SELECT })
 
-    db.products.findByPk(req.params.idProd).then((product) => { //hacer un include con category, pero no funciona
+    db.products.findByPk(req.params.idProd).then((product) => { //hacer un include con category/images, pero no funciona
       let respuesta = {
         meta: {
           status: 200,
@@ -36,7 +36,6 @@ const APIProductController = {
         }
       };
       res.json(respuesta);
-
     });
   },
 }
