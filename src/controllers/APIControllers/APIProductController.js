@@ -10,8 +10,8 @@ const APIProductController = {
             count: products.length,
           },
           products: {
-            products, //nos falta también un array con principal relación de uno a muchos (resuelto con un include: productsCategory)
-            detail: "api/products/:idProd", //cómo se resuelve? (hacer un map del array productos y meterle el detail)
+            products,
+            detail: /* products.map(product, index)=>{} */"api/products/:idProd", //cómo se resuelve? (hacer un map del array productos y meterle el detail)
           },
         };
         res.json(respuesta);
