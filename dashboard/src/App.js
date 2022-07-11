@@ -37,12 +37,14 @@ function App() {
    console.log (data.users)
    console.log (data.products)
 
+   const lastProduct = data.products.pop()
+
   return (
     <div className="App">
       <TotalCard users = {data.users.count} products = {data.products} />
-      <LastProduct />
+      <LastProduct lastProduct = {lastProduct} />
       <ProductsByCat />
-      <ProductList products = {data.products} />
+      <ProductList products = {data.products}/>
     </div>
   );
 }
