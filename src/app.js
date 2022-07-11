@@ -14,6 +14,7 @@ const userLoggedMiddleware = require("./middleware/userLoggedMiddleware");
 
 const APIRouterUser = require("./routes/APIRoutes/APIRouterUser");
 const APIRouterProduct = require("./routes/APIRoutes/APIRouterProduct");
+const APIRouterCategories = require("./routes/APIRoutes/APIRouterCategories");
 
 app.use(express.static("public"));
 
@@ -37,5 +38,6 @@ app.use('/products', routesProduct);
 app.use(cors());
 app.use("/api/users", APIRouterUser);
 app.use("/api/products", APIRouterProduct);
+app.use("/api/categories", APIRouterCategories);
 
 app.listen(port, () => console.log("server " + port + " ok"));
