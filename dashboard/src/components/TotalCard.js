@@ -9,7 +9,6 @@ function TotalCard(props) {
                     <div className="card-body">
                         <h5 className="card-title">Total de productos</h5>
                         <p className="card-text">Cantidad productos {props.products && props.products.length}</p>
-
                     </div>
                 </div>
             </div>
