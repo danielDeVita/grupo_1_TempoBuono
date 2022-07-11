@@ -8,10 +8,8 @@ function TotalCard(props) {
                 <div className="card">
                     <div className="card-body">
                         <h5 className="card-title">Total de productos</h5>
-                        <p className="card-text">Cantidad productos {
-                            props.products && props.products.length
-                            }</p>
-                            
+                        <p className="card-text">Cantidad productos {props.products && props.products.length}</p>
+
                     </div>
                 </div>
             </div>
@@ -21,10 +19,7 @@ function TotalCard(props) {
                     <div className="card-body">
                         <h5 className="card-title">Total de usuarios
                         </h5>
-                        <p className="card-text">Cantidad usuarios {
-                             props.users && props.users
-                            }
-                        </p>
+                        <p className="card-text">Cantidad usuarios {props.users && props.users}</p>
                     </div>
                 </div>
             </div>
@@ -33,7 +28,8 @@ function TotalCard(props) {
                 <div className="card">
                     <div className="card-body">
                         <h5 className="card-title">Total de categorias</h5>
-                        <p className="card-text">Número de cantidad de categorías</p>
+                        <p className="card-text">Cantidad categorías {props.totalCategories}
+                        </p>
                     </div>
                 </div>
             </div>
