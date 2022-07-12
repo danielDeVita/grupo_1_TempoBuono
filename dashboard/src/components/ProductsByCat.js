@@ -1,11 +1,10 @@
 import React from 'react';
 
-function ProductsByCat(props) {
+function ProductsByCat() {
     return (
         <table className="table">
             <thead>
                 <tr>
-
                     <th scope="col">Categoría</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Cantidad</th>
@@ -29,7 +28,7 @@ function ProductsByCat(props) {
                     <td>Combo</td>
                     <td>Número de Combo</td>
                 </tr>
-
+                
             </tbody>
         </table>
     )

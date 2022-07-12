@@ -66,7 +66,7 @@ function App() {
       combos.push(arrayDeProductos[i].productsCategory_idproductsCategory)
     }
   }
-  
+
   let quantAlfajores = alfajores.length;
   let quantCoffes = coffes.length;
   let quantCombos = combos.length;
@@ -86,10 +86,11 @@ function App() {
       <LastProduct products={data.products} />
       <ProductsByCat
         products={data.products}
-        totalCategorias={data.categories}
+        totalCategories={data.categories}
         quantAlfajores={quantAlfajores}
         quantCoffes={quantCoffes}
         quantCombos={quantCombos}
+        categoryName={data.categories}
       />
       <ProductList products={data.products} />
     </div>
