@@ -15,20 +15,20 @@ function ProductsByCat() {
 
                 <tr>
                     <th scope="row">1</th>
-                    <td>Cafe</td>
-                    <td>Número de Café</td>
+                    <td>Alfajor</td>
+                    <td>Número de alfajor</td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>Alfajor</td>
-                    <td>Número de alfajor</td>
+                    <td>Cafe</td>
+                    <td>Número de Café</td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>Combo</td>
                     <td>Número de Combo</td>
                 </tr>
-                
+
             </tbody>
         </table>
     )
