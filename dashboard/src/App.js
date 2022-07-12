@@ -67,9 +67,9 @@ function App() {
   let quantCoffes = coffes.length;
   let quantCombos = combos.length;
 
-  console.log(quantAlfajores)
-  console.log(quantCoffes)
-  console.log(quantCombos)
+  console.log("Hay "+quantAlfajores+" alfajores")
+  console.log("Hay "+quantCoffes+" cafe")
+  console.log("Hay "+quantCombos+" combos")
   ///////////////////////////////////////////////////////////
   return (
     <div className="App">
