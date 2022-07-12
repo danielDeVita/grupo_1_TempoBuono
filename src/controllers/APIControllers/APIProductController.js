@@ -38,6 +38,12 @@ const APIProductController = {
       res.json(respuesta);
     });
   },
+
+  categoryCount: (req,res)=>{
+
+    //SELECT COUNT(idProd)FROM products WHERE productsCategory_idproductsCategory = 1
+  }
+
 }
 
 module.exports = APIProductController;
