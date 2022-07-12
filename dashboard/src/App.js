@@ -46,13 +46,31 @@ function App() {
   console.log(data.users)
   console.log(data.products)
   console.log(data.categories)
-
- /*  let arrayDeProductos = Object.values(data.products)
+  ///////////////////////////////////////////////////////////
+  let arrayDeProductos = Object.values(data.products)
   console.log(arrayDeProductos)
-  arrayDeProductos.map(producto=>{
-    producto.productsCategory_idproductsCategory
-  }) */ 
 
+  let i;
+  let alfajores = [];
+  let coffes = [];
+  let combos = [];
+  for (i = 0; i < arrayDeProductos.length; i++) {
+    if (arrayDeProductos[i].productsCategory_idproductsCategory === 1) {
+      alfajores.push(arrayDeProductos[i].productsCategory_idproductsCategory)
+    } else if (arrayDeProductos[i].productsCategory_idproductsCategory === 2) {
+      coffes.push(arrayDeProductos[i].productsCategory_idproductsCategory)
+    } else if (arrayDeProductos[i].productsCategory_idproductsCategory === 2) {
+      combos.push(arrayDeProductos[i].productsCategory_idproductsCategory)
+    }
+  }
+  let quantAlfajores = alfajores.length;
+  let quantCoffes = coffes.length;
+  let quantCombos = combos.length;
+
+  console.log(quantAlfajores)
+  console.log(quantCoffes)
+  console.log(quantCombos)
+  ///////////////////////////////////////////////////////////
   return (
     <div className="App">
       <TotalCard
