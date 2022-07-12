@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ProductsByCat() {
+function ProductsByCat(props) {
     return (
         <table className="table">
             <thead>
@@ -13,6 +13,7 @@ function ProductsByCat() {
             </thead>
 
             <tbody>
+
                 <tr>
                     <th scope="row">1</th>
                     <td>Cafe</td>
@@ -28,6 +29,7 @@ function ProductsByCat() {
                     <td>Combo</td>
                     <td>Número de Combo</td>
                 </tr>
+
             </tbody>
         </table>
     )

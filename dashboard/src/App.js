@@ -47,6 +47,8 @@ function App() {
   console.log(data.products)
   console.log(data.categories)
   ///////////////////////////////////////////////////////////
+
+  /* LOGICA PARA SABER CUANTOS PRODUCTOS HAY POR CATEGORIA */
   let arrayDeProductos = Object.values(data.products)
   console.log(arrayDeProductos)
 
@@ -54,6 +56,7 @@ function App() {
   let alfajores = [];
   let coffes = [];
   let combos = [];
+
   for (i = 0; i < arrayDeProductos.length; i++) {
     if (arrayDeProductos[i].productsCategory_idproductsCategory === 1) {
       alfajores.push(arrayDeProductos[i].productsCategory_idproductsCategory)
@@ -63,13 +66,15 @@ function App() {
       combos.push(arrayDeProductos[i].productsCategory_idproductsCategory)
     }
   }
+  
   let quantAlfajores = alfajores.length;
   let quantCoffes = coffes.length;
   let quantCombos = combos.length;
 
-  console.log("Hay "+quantAlfajores+" alfajores")
-  console.log("Hay "+quantCoffes+" cafe")
-  console.log("Hay "+quantCombos+" combos")
+  console.log("Hay " + quantAlfajores + " alfajores")
+  console.log("Hay " + quantCoffes + " cafe")
+  console.log("Hay " + quantCombos + " combos")
+
   ///////////////////////////////////////////////////////////
   return (
     <div className="App">
@@ -79,10 +84,15 @@ function App() {
         totalCategories={data.categories}
       />
       <LastProduct products={data.products} />
-      <ProductsByCat />
+      <ProductsByCat
+        products={data.products}
+        totalCategorias={data.categories}
+        quantAlfajores={quantAlfajores}
+        quantCoffes={quantCoffes}
+        quantCombos={quantCombos}
+      />
       <ProductList products={data.products} />
     </div>
   );
 }
-
 export default App;
