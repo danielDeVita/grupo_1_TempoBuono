@@ -47,7 +47,11 @@ function App() {
   console.log(data.products)
   console.log(data.categories)
 
-  //const lastProduct = data.products.pop() este metodo no nos sirve porque elimina un producto que deberia viajar a <ProductList/>
+ /*  let arrayDeProductos = Object.values(data.products)
+  console.log(arrayDeProductos)
+  arrayDeProductos.map(producto=>{
+    producto.productsCategory_idproductsCategory
+  }) */ 
 
   return (
     <div className="App">
