@@ -26,8 +26,7 @@ const APIProductController = {
             status: 200,
           },
           data: {
-            products: resultado,
-            count: resultado.length
+            products: resultado
           },
         };
           res.json(respuesta);
