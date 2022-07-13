@@ -3,7 +3,7 @@ const db = require("../../database/models");
 
 const APIProductController = {
   list: (req, res) => {
-    db.products.findAll({ include: ["productsCategory"] }).then((products) => {
+    db.products.findAll({ include: ["productsCategory", "productsImages"] }).then((products) => {
       let respuesta = {
         meta: {
           status: 200,
