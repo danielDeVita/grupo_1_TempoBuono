@@ -19,19 +19,20 @@ const APIProductController = {
   },
 
   detailProduct: (req, res) => {
-    let url = req.protocol + "://" + req.get('host') + '/api/'
-    db.sequelize.query(`SELECT productsProductsDescription, productsProductsPrice, CONCAT('${url}',productsImages.productsImagesNombre) FROM products INNER JOIN productsImages ON products.idProd = productsImages.products_idProd`, { type: db.sequelize.QueryTypes.SELECT }).then(
-        (resultado) => {let respuesta = {
-          meta: {
-            status: 200,
-          },
-          data: {
-            products: resultado
-          },
-        };
+    let url = req.protocol + "://" + req.get('host') + '/images/'
+    db.sequelize.query(`SELECT productsProductsDescription, productsProductsPrice, CONCAT('${url}',productsImages.productsImagesNombre) FROM products INNER JOIN productsImages ON products.idProd = productsImages.products_idProd`, { type: db.sequelize.QueryTypes.SELECT })
+        .then((resultado) => {
+          let respuesta = {
+            meta: {
+              status: 200,
+            },
+            data: {
+              products: resultado,
+            },
+          };
           res.json(respuesta);
-          },
-  }
+        });
+  },
  /*   db.products.findByPk(req.params.idProd).then((product) => { //hacer un include con category/images, pero no funciona
       let respuesta = {
         meta: {
