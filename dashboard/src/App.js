@@ -4,6 +4,7 @@ import LastProduct from './Components/LastProduct'
 import ProductsByCat from './Components/ProductsByCat'
 import ProductList from './Components/ProductList'
 import { useState, useEffect } from 'react';
+import NavMenu from './Components/NavMenu';
 
 function App() {
 
@@ -78,6 +79,7 @@ function App() {
   ///////////////////////////////////////////////////////////
   return (
     <div className="App">
+      < NavMenu />
       <TotalCard
         users={data.users.count}
         products={data.products}
