@@ -39,7 +39,6 @@ const APIProductController = {
     db.sequelize.query(`COUNT(DISTINCT(productsCategory_idproductsCategory)) FROM products`, { type: db.sequelize.QueryTypes.SELECT })
         .then((resultado) => {
           let respuesta = {
-
             meta: {
               status: 200,
             },
