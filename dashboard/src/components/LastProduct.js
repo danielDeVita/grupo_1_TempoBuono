@@ -2,16 +2,16 @@ import React from 'react';
 
 function LastProduct(props) {
 
-    const pathImg = "http://localhost:3001/img/"
+    const pathImg = window.location.protocol+"//"+window.location.hostname+":3001/img/" 
+
+    let lastProduct = props.products[props.products.length - 1]
 
     let lastProductImg;
 
-    let lastProduct = props.products[props.products.length - 1]
-    
     if (lastProduct) {
         lastProductImg = pathImg + lastProduct.productsImages[0].productsImagesNombre
     }
-
+   
     return (
         <div className="card" style={{ width: '18rem' }}>
             <img src={lastProductImg} className="card-img-top" alt="foto-producto" />
