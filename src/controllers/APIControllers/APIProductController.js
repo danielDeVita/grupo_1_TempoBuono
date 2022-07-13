@@ -36,8 +36,19 @@ const APIProductController = {
   },
 
   categoryCount: (req,res)=>{
+    db.sequelize.query(`COUNT(DISTINCT(productsCategory_idproductsCategory)) FROM products`, { type: db.sequelize.QueryTypes.SELECT })
+        .then((resultado) => {
+          let respuesta = {
 
-    //SELECT COUNT(idProd)FROM products WHERE productsCategory_idproductsCategory = 1
+            meta: {
+              status: 200,
+            },
+            data: {
+              products_category: resultado,
+            },
+
+          };
+        });
   }
 
 }
