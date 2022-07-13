@@ -19,8 +19,9 @@ const APIProductController = {
   },
 
   detailProduct: (req, res) => {
-    let url = req.protocol + "://" + req.get('host') + '/images/'
-    db.sequelize.query(`SELECT productsProductsDescription ,productsProductsDescription, productsProductsPrice, CONCAT('${url}',productsImages.productsImagesNombre) FROM products INNER JOIN productsImages ON products.idProd = productsImages.products_idProd WHERE idProd=${req.params.idProd}`, { type: db.sequelize.QueryTypes.SELECT })
+    let url = req.protocol + "://" + req.get('host') + '/img/'
+    
+    db.sequelize.query(`SELECT products.ProductsName, products.ProductsDescription, products.ProductsPrice, CONCAT('${url}',productsImages.productsImagesNombre) AS urlImage FROM productsImages INNER JOIN products ON products.idProd = productsImages.products_idProd WHERE products.idProd = ${req.params.idProd}`, { type: db.sequelize.QueryTypes.SELECT })
         .then((resultado) => {
           let respuesta = {
             meta: {
@@ -33,22 +34,6 @@ const APIProductController = {
           res.json(respuesta);
         });
   },
- /*   db.products.findByPk(req.params.idProd).then((product) => { //hacer un include con category/images, pero no funciona
-      let respuesta = {
-        meta: {
-          status: 200,
-        },
-        data: { //nos falta también un array con principal relación de uno a muchos
-          id: product.idProd,
-          name: product.ProductsName,
-          description: product.ProductsDescription,
-          price: product.ProductsPrice,
-          urlImage: "No sabemos"  // Estamos investigando como resolverlo. (map del array) 
-        }
-      };
-      res.json(respuesta);
-    });*/
-
 
   categoryCount: (req,res)=>{
 
