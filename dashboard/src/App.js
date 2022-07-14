@@ -63,7 +63,7 @@ function App() {
       alfajores.push(arrayDeProductos[i].productsCategory_idproductsCategory)
     } else if (arrayDeProductos[i].productsCategory_idproductsCategory === 2) {
       coffes.push(arrayDeProductos[i].productsCategory_idproductsCategory)
-    } else if (arrayDeProductos[i].productsCategory_idproductsCategory === 2) {
+    } else if (arrayDeProductos[i].productsCategory_idproductsCategory === 3) {
       combos.push(arrayDeProductos[i].productsCategory_idproductsCategory)
     }
   }
