@@ -11,7 +11,7 @@ const APIProductController = {
         },
         products: {
           products,
-          detail: /* products.map(product, index)=>{} */"api/products/:idProd", //cómo se resuelve? (hacer un map del array productos y meterle el detail)
+          detail: "api/products/:idProd", 
         },
       };
       res.json(respuesta);
