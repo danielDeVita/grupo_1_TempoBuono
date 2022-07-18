@@ -11,7 +11,7 @@ window.onload = function () {
             email.nextElementSibling.classList.add("is-invalid");
             email.nextElementSibling.classList.remove("is-valid");
             email.nextElementSibling.innerHTML = "Debes ingresar un email";
-        } else {  // Preguntar a Fede cómo se valida un email. @ (metodo "find/include/indexOf"? si es que es un array...)
+        } else {  
             email.nextElementSibling.classList.replace("is-invalid", "is-valid");
         }
     })

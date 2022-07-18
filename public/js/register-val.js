@@ -9,11 +9,8 @@ window.onload = function() {
 
   usuario.addEventListener("blur",function(e){
     let usuario = document.getElementById('usuario')
-    console.log(typeof usuario.value)
-    console.log(usuario.value)
     if (!usuario.value || usuario.value === ""){
       errores + 1;
-      
       usuario.nextElementSibling.classList.add("is-invalid");
       usuario.nextElementSibling.classList.remove("is-valid");
       usuario.nextElementSibling.innerHTML = "El campo no puede estar vacío";
@@ -30,7 +27,6 @@ window.onload = function() {
   imagenUsuario.addEventListener("blur", function (e) {
     if (!imagenUsuario.value) { 
         errores + 1;
-
         imagenUsuario.nextElementSibling.classList.add("is-invalid");
         imagenUsuario.nextElementSibling.classList.remove("is-valid");
         imagenUsuario.nextElementSibling.innerHTML = "Debes subir una imagen";
@@ -41,21 +37,12 @@ window.onload = function() {
 
   email.addEventListener('blur',function(e){
 
-  // let campo = e.target; 
-  // let emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-
-    if(!email.value || email.value === ""){
+      if(!email.value || email.value === ""){
       errores + 1;
       email.nextElementSibling.classList.add("is-invalid");
       email.nextElementSibling.classList.remove("is-valid");
       email.nextElementSibling.innerHTML= "Ingresa tu email";
-    }
-    // else if (emailRegex.test(campo.value)){
-    //   email.nextElementSibling.classList.add("is-invalid");
-    //   email.nextElementSibling.classList.remove("is-valid");
-    //   email.nextElementSibling.innerHTML= "Ingresa un email correcto";
-    // }
-    else{ 
+    } else{ 
       email.nextElementSibling.classList.replace("is-invalid", "is-valid");
     }
   })
