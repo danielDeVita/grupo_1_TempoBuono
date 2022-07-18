@@ -1,10 +1,12 @@
-import './App.css';
+import './App.css'
 import TotalCard from './Components/TotalCard'
 import LastProduct from './Components/LastProduct'
 import ProductsByCat from './Components/ProductsByCat'
 import ProductList from './Components/ProductList'
+// import Sidebar from './Components/SideBar';
 import { useState, useEffect } from 'react';
-import NavMenu from './Components/NavMenu';
+// import { Route } from "react-router-dom";
+// import NavMenu from './Components/NavMenu';
 
 function App() {
 
@@ -78,23 +80,35 @@ function App() {
 
   ///////////////////////////////////////////////////////////
   return (
-    <div className="App">
-      < NavMenu />
-      <TotalCard
-        users={data.users.count}
-        products={data.products}
-        totalCategories={data.categories}
-      />
-      <LastProduct products={data.products} />
-      <ProductsByCat
-        products={data.products}
-        totalCategories={data.categories}
-        quantAlfajores={quantAlfajores}
-        quantCoffes={quantCoffes}
-        quantCombos={quantCombos}
-        categoryName={data.categories}
-      />
-      <ProductList products={data.products} />
+    <div id="wrapper">
+        {/* < NavMenu /> */}
+        {/* <Sidebar /> */}
+        <div id="content-wrapper" className="d-flex flex-column ">
+          <div id="content d-flex">
+            <div><h2 className= "ml-3 my-3">App Dashboard</h2></div>
+            <div className= "mx-3">
+            <TotalCard
+              users={data.users.count}
+              products={data.products}
+              totalCategories={data.categories}
+            /></div>
+            <div className='row mx-3'>
+              <LastProduct products={data.products} />
+              <ProductsByCat
+                products={data.products}
+                totalCategories={data.categories}
+                quantAlfajores={quantAlfajores}
+                quantCoffes={quantCoffes}
+                quantCombos={quantCombos}
+                categoryName={data.categories}
+              />
+            </div>
+            <div className='mx-3 mb-4'>
+              <ProductList products={data.products} />
+              {/* <Route path='/productList' component={ProductList} /> */}
+            </div>
+          </div>
+        </div>
     </div>
   );
 }

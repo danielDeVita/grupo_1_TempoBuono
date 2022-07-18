@@ -2,7 +2,9 @@ import React from 'react';
 
 function ProductsByCat(props) {
     return (
-        <table className="table">
+        <div className='col'>
+        
+        <table className="table mt-3 mb-3">
             <thead>
                 <tr>
                     <th scope="col">Categoría</th>
@@ -31,6 +33,7 @@ function ProductsByCat(props) {
 
             </tbody>
         </table>
+    </div>
     )
 }
 

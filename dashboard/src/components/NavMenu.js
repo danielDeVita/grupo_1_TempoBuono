@@ -6,7 +6,7 @@ console.log(logo);
 function NavMenu() {
 
     return (
-        <div className="nav">
+        <div className="nav mb-3">
             <img className="navImage" src={logo} alt="logo" />
         </div>
     )

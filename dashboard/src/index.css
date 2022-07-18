@@ -13,21 +13,24 @@
   -moz-osx-font-smoothing: grayscale;
  }
   
- .App{
+ /* .App{
   max-width: 768px;
   margin: auto;
   padding: 20px;
- }
+ } */
   
- .nav{
+ /* .nav{
   height: 80px;
   margin-bottom: 20px;
  }
   
  .navImage{
-  height: 100%;
+  height: 50%;
+ } */
+
+ .sidebar-color {
+  background-color: "#9b6436";
  }
-  
  code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
