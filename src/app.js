@@ -6,7 +6,7 @@ const methodOverride = require("method-override");
 const session = require("express-session") 
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-
+ 
 const routes = require(path.join(__dirname, '.', 'routes', 'routesMain.js'));
 const routesUser = require(path.join(__dirname, '.', 'routes', 'routesUser.js'));
 const routesProduct = require(path.join(__dirname, '.', 'routes', 'routesProduct.js'));
