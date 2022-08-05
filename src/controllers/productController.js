@@ -17,6 +17,9 @@ const productController = {
         include: ["productsImages", "productsCategory"],
       })
       .then((producto) => {
+        if(!producto){
+         res.send("ese producto no existe") // hacerle una vista bonita a este error
+        } else 
         return res.render("productDetail", {
           producto,
           styles: "productDetail",

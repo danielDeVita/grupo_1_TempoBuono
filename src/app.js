@@ -34,6 +34,9 @@ app.use(userLoggedMiddleware);
 app.use('/', routes); 
 app.use('/', routesUser);
 app.use('/products', routesProduct); 
+app.use("/*", (req, res) => {
+    res.send("pagina inexistente")
+})//hacerle una vista copada con un 404 y un mensaje
 
 app.use(cors());
 app.use("/api/users", APIRouterUser);

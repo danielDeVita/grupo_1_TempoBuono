@@ -33,5 +33,3 @@ routerUser.get("/profile", authMiddleware, userController.profile);
 routerUser.get('/logout', userController.logout);
 
 module.exports = routerUser;
-
-//comentado el validator de la ruta /login POST porque al usar credenciales incorrectas, se colgaba

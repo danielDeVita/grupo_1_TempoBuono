@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage});
 
-routerProduct.get('/cart', authMiddleware, productController.productCart); //agregarle un /products y corregir app.js
+routerProduct.get('/cart', authMiddleware, productController.productCart); 
 routerProduct.get('/', productController.productList);
 routerProduct.get('/create', authMiddleware, productController.crearProductoForm);
 routerProduct.post('/create', uploadFile.single("imagen_producto"),validatorProducts,productController.crearProducto);
