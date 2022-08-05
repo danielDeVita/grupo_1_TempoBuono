@@ -45,6 +45,9 @@ const userController = {
                             if (req.body.keepLogin) {
                                 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
                             }
+                           /*  if (req.session.usuarioLogueado.categoria == 2){
+                                aca poner la logica para discriminar admin de user
+                            } */
                             return res.redirect("/profile")
                         }
                     }
