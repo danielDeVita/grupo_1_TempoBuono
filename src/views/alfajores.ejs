@@ -27,7 +27,7 @@
                 <% for (let i =0; i < products.length; i ++) { %>
                     <article>
                         <a href="/products/<%= products[i].idProd%>">
-                        
+                            <img class="img-article"  src="/img/<%=  products[i].productsImages[0] ? products[i].productsImages[0].productsImagesNombre : 'default image coffee.png' %>" alt="foto del producto">
                         </a>
                         <h3 class="tit-article"><%=products[i].ProductsName%></h3>
                         <div class="stars">
