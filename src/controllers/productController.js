@@ -17,14 +17,14 @@ const productController = {
         include: ["productsImages", "productsCategory"],
       })
       .then((producto) => {
-        if(!producto){
-         res.send("ese producto no existe") // hacerle una vista bonita a este error
-        } else 
-        return res.render("productDetail", {
-          producto,
-          styles: "productDetail",
-          user: req.session.usuarioLogueado,
-        });
+        if (!producto) {
+          res.send("ese producto no existe") // hacerle una vista bonita a este error
+        } else
+          return res.render("productDetail", {
+            producto,
+            styles: "productDetail",
+            user: req.session.usuarioLogueado,
+          });
       });
   },
 
@@ -35,6 +35,22 @@ const productController = {
       })
       .then((products) => {
         res.render("productList", {
+          products,
+          styles: "productList",
+          user: req.session.usuarioLogueado,
+        });
+      });
+  },
+
+  cafeList: (req, res) => {
+    db.products
+      .findAll({
+        where: { productsCategory_idproductsCategory: 2 },
+      }, {
+        include: ["productsImages"],
+      })
+      .then((products) => {
+        res.render("cafe", {
           products,
           styles: "productList",
           user: req.session.usuarioLogueado,
@@ -54,7 +70,7 @@ const productController = {
 
     if (errors.errors.length > 0) {
       return res.render('crear', { styles: "crearProducto", errors: errors.mapped(), old: req.body });
-  } else { 
+    } else {
       db.products.create({
         ProductsName: req.body.nombre_producto,
         ProductsDescription: req.body.descripcion_producto,
@@ -80,7 +96,7 @@ const productController = {
       include: ["productsImages", "productsCategory"],
     })
       .then((producto) => {
-       /*  return res.json(producto) */
+        /*  return res.json(producto) */
         return res.render("modificar", {
           producto,
           styles: "modificar",
@@ -94,13 +110,13 @@ const productController = {
     const errors = validationResult(req)
     if (errors.errors.length > 0) {
       db.products
-      .findByPk(req.params.idProd, {
-        include: ["productsImages", "productsCategory"],
-      })
-      .then((producto)=>{
-        return res.render('modificar', { producto, styles: "modificar", errors: errors.mapped(), old: req.body });
-      })
-     } else {
+        .findByPk(req.params.idProd, {
+          include: ["productsImages", "productsCategory"],
+        })
+        .then((producto) => {
+          return res.render('modificar', { producto, styles: "modificar", errors: errors.mapped(), old: req.body });
+        })
+    } else {
 
       db.products.update(
         {
