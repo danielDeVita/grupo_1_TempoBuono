@@ -1,115 +1,116 @@
-
 <%- include("./partials/head") %>
-<body>
-  <%- include("./partials/header") %>
-  <div class="container">
-      <main>
 
-        <div class="miga-de-pan">
-          <ul>
-            <li><a href="#">Home</a></li>
-          </ul>
-        </div>
+  <body>
+    <%- include("./partials/header") %>
+      <div class="container">
+        <main>
 
-        <section class="carrousel">
-
-          <div class="slideshow-container">
-
-            <div class="mySlides fade">
-              <img src="img/img_tempobuono_carrusel.png" style="width:100%" alt="banner_tempobuono" />
-              <!-- <div class="text">Caption Uno</div> -->
-            </div>
-
-            <div class="mySlides fade">
-              <img src="img/img_manana_carrusel.png" style="width:100%" alt="banner_manana_cafe" />
-              <!-- <div class="text">Caption Two</div> -->
-            </div>
-
-            <div class="mySlides fade">
-              <img src="img/img_alfajores_carrusel.png" style="width:100%" alt="banner_alfajores" />
-              <!-- <div class="text">Caption Three</div> -->
-            </div>
-
-            <div class="mySlides fade">
-              <img src="img/img_cafe_carrusel.png" style="width:100%" alt="banner_cafe" />
-              <!-- <div class="text">Caption Cuatro</div> -->
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+          <div class="miga-de-pan">
+            <ul>
+              <li><a href="#">Home</a></li>
+            </ul>
           </div>
 
-          <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-          </div>
-        
-        </section>
+          <section class="carrousel">
 
-        <section class="slogan">
+            <div class="slideshow-container">
 
-          <h2>Tempo Buono</h2>
-
-          <p>Somos un sitio de e-commerce que se especializa en brindar un <em>'buen
-              rato'</em> a cada cliente que compre su café y alfajor en función de sus gustos y estados de ánimo. Marinando una
-            <strong>combinación perfecta</strong>.
-          </p>
-        </section>
-
-
-        <section class="categorias">
-
-          <h2>Productos</h2>
-
-          <div class="productos">
-
-            <article class="producto" id="cafe">
-              <img src="img/Ilu_taza_cafe.png" alt="foto de taza">
-              <div class="producto-sin-imagen">
-                <h4>Café</h4>
-                <p>"El mismo que le sirvió Bilardo a Branco en 1990"</p>
-                <a href="detail"><button type="button">Ver</button></a>
+              <div class="mySlides fade">
+                <img src="img/img_tempobuono_carrusel.png" style="width:100%" alt="banner_tempobuono" />
+                <!-- <div class="text">Caption Uno</div> -->
               </div>
-            </article>
 
-            <article class="producto" id="alfajor">
-              <img src="img/Ilu_alfajor.png" alt="foto de alfajor">
-              <div class="producto-sin-imagen">
-                <h4>Alfajores</h4>
-                <p>"Los que le daba doña Tota a Pelusa en Cebollitas"</p>
-                <a href="detail"><button type="button">Ver</button></a>
+              <div class="mySlides fade">
+                <img src="img/img_manana_carrusel.png" style="width:100%" alt="banner_manana_cafe" />
+                <!-- <div class="text">Caption Two</div> -->
               </div>
-            </article>
 
-            <article class="producto" id="combo">
-              <img src="img/combos.png" alt="foto de combo">
-              <div class="producto-sin-imagen">
-                <h4>Combos</h4>
-                <p>"La mejor combinación desde la dupla con Guillote"</p>
-                <a href="detail"><button type="button">Ver</button></a>
+              <div class="mySlides fade">
+                <img src="img/img_alfajores_carrusel.png" style="width:100%" alt="banner_alfajores" />
+                <!-- <div class="text">Caption Three</div> -->
               </div>
-            </article>
-          </div>
-        </section>
 
-        <section class="spotify">
+              <div class="mySlides fade">
+                <img src="img/img_cafe_carrusel.png" style="width:100%" alt="banner_cafe" />
+                <!-- <div class="text">Caption Cuatro</div> -->
+              </div>
 
-          <h2>Música cafeínica</h2>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-          <iframe src="https://open.spotify.com/embed/artist/2KFLecg2vCOBdzDPvfhX91" frameborder="0"
-            allowtransparency="true" allow="encrypted-media"></iframe>
-        
+            </div>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
           </section>
-      </main>
 
-      <%- include("./partials/footer") %>
-  </div>
-  
-  <script src="js/carousel.js" defer></script>
+          <section class="slogan">
 
-</body>
+            <h2>Tempo Buono</h2>
 
-</html>
+            <p>Somos un sitio de e-commerce que se especializa en brindar un <em>'buen
+                rato'</em> a cada cliente que compre su café y alfajor en función de sus gustos y estados de ánimo.
+              Marinando una
+              <strong>combinación perfecta</strong>.
+            </p>
+          </section>
+
+
+          <section class="categorias">
+
+            <h2>Productos</h2>
+
+            <div class="productos">
+
+              <article class="producto" id="cafe">
+                <img src="img/Ilu_taza_cafe.png" alt="foto de taza">
+                <div class="producto-sin-imagen">
+                  <h4>Café</h4>
+                  <p>"El mismo que le sirvió Bilardo a Branco en 1990"</p>
+                  <a href="/products/cafe"><button type="button">Ver</button></a>
+                </div>
+              </article>
+
+              <article class="producto" id="alfajor">
+                <img src="img/Ilu_alfajor.png" alt="foto de alfajor">
+                <div class="producto-sin-imagen">
+                  <h4>Alfajores</h4>
+                  <p>"Los que le daba doña Tota a Pelusa en Cebollitas"</p>
+                  <a href="/products/alfajor"><button type="button">Ver</button></a>
+                </div>
+              </article>
+
+              <article class="producto" id="combo">
+                <img src="img/combos.png" alt="foto de combo">
+                <div class="producto-sin-imagen">
+                  <h4>Combos</h4>
+                  <p>"La mejor combinación desde la dupla con Guillote"</p>
+                  <a href="/products/combos"><button type="button">Ver</button></a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="spotify">
+
+            <h2>Música cafeínica</h2>
+
+            <iframe src="https://open.spotify.com/embed/artist/2KFLecg2vCOBdzDPvfhX91" frameborder="0"
+              allowtransparency="true" allow="encrypted-media"></iframe>
+
+          </section>
+        </main>
+
+        <%- include("./partials/footer") %>
+      </div>
+
+      <script src="js/carousel.js" defer></script>
+
+  </body>
+
+  </html>

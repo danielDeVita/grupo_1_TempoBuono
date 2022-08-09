@@ -1,57 +1,66 @@
 <%- include("./partials/head") %>
-<body>
 
-    <%- include("./partials/header") %>
-    
-    <div class="container">
-    <main>
-        <div class="miga-de-pan">
-            <ul>
-              <li><a href="#">Home</a></li>/
-              <li><a href="#">Lista de productos</a></li>/
-              <li><a href="#">Cafe</a></li>
-            </ul>
-        <div class="menuYlistaproductos">
-            
-            <div class="menu-lateral">
-                <h2>Categorías</h2>
-                <div>
-                    <a href="#news">Café</a>
-                    <a href="#contact">Alfajor</a>
-                    <a href="#about">Combos</a>
-                </div>
+    <body>
+
+        <%- include("./partials/header") %>
+
+            <div class="container">
+                <main>
+                    <div class="miga-de-pan">
+                        <ul>
+                            <li><a href="#">Home</a></li>/
+                            <li><a href="#">Lista de productos</a></li>/
+                            <li><a href="#">Cafe</a></li>
+                        </ul>
+                        <div class="menuYlistaproductos">
+
+                            <div class="menu-lateral">
+                                <h2>Categorías</h2>
+                                <div>
+                                    <a href="#news">Café</a>
+                                    <a href="#contact">Alfajor</a>
+                                    <a href="#about">Combos</a>
+                                </div>
+                            </div>
+
+                            <section class="lista-productos">
+                                <h2>Café</h2>
+                                <% for (let i=0; i < products.length; i ++) { %>
+                                    <article>
+                                        <a href="/products/<%= products[i].idProd%>">
+                                            <img class="img-article"
+                                                src="/img/<%=  products[i].productsImages[0] ? products[i].productsImages[0].productsImagesNombre : 'default image coffee.png' %>"
+                                                alt="foto del producto">
+                                        </a>
+                                        <h3 class="tit-article">
+                                            <%=products[i].ProductsName%>
+                                        </h3>
+                                        <div class="stars">
+                                            <div>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p>300 reviews</p>
+                                        </div>
+                                        <p class="descripcion-article">
+                                            <%= products[i].ProductsDescription %>
+                                        </p>
+                                        <p class="precio-article"> $<%= products[i].ProductsPrice %>
+                                        </p>
+                                    </article>
+                                    <% } %>
+
+                            </section>
+                        </div>
+
+                </main>
+
+                <%- include("./partials/footer") %>
+
             </div>
-            
-            <section class="lista-productos">
-                <h2>Café</h2>
-                <% for (let i =0; i < products.length; i ++) { %>
-                    <article>
-                        <a href="/products/<%= products[i].idProd%>">
-                        <img class="img-article"  src="/img/<%=  products[i].productsImages[0] ? products[i].productsImages[0].productsImagesNombre : 'default image coffee.png' %>" alt="foto del producto">
-                        </a>
-                        <h3 class="tit-article"><%=products[i].ProductsName%></h3>
-                        <div class="stars">
-                        <div>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p>300 reviews</p>
-                        </div>
-                        <p class="descripcion-article"> <%= products[i].ProductsDescription %></p>
-                        <p class="precio-article"> $<%= products[i].ProductsPrice %></p>
-                    </article>
-                <% } %>
-            
-            </section>
-        </div>
+    </body>
 
-    </main>
-
-    <%- include("./partials/footer") %>
-
-    </div>     
-</body>
-</html>
+    </html>
