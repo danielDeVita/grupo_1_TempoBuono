@@ -21,6 +21,8 @@ const uploadFile = multer({storage});
 routerProduct.get('/cart', authMiddleware, productController.productCart); 
 routerProduct.get('/', productController.productList);
 routerProduct.get('/cafe', productController.cafeList);
+routerProduct.get('/alfajor', productController.alfajorList);
+routerProduct.get('/combos',productController.comboList);
 routerProduct.get('/create', authMiddleware, productController.crearProductoForm);
 routerProduct.post('/create', uploadFile.single("imagen_producto"),validatorProducts,productController.crearProducto);
 routerProduct.get('/:idProd',productController.productDetail);

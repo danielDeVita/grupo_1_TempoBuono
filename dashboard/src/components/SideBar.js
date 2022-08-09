@@ -8,9 +8,11 @@ function Sidebar() {
 
 		<ul className="navbar-nav bg-warning sidebar sidebar-dark accordion" id="accordionSidebar">
 
+				<Link to="/">
 				<div className="sidebar-brand-icon my-3 ">
 					<img className="w-50 mx-auto d-block" src={Logo} alt="Tempo-Buono-Logo" />
 				</div>
+				</Link>
 
 
 			<hr className="sidebar-divider my-0 bg-dark" />
@@ -27,25 +29,25 @@ function Sidebar() {
       <hr className="sidebar-divider d-none d-md-block bg-dark my-3" />
 
 			<li className="nav-item">
-				<Link className="nav-link collapsed" to="/productList">
+				{/* <Link className="nav-link collapsed" to="/productList"> */}
 					<i className="fas fa-fw fa-folder text-dark"></i>
 					<span className= "text-dark small">Listado de Productos</span>
-				</Link>
+				{/* </Link> */}
 			</li>
 
 			<li className="nav-item">
-				<Link className="nav-link" to="/productsByCart">
+				{/* <Link className="nav-link" to="/productsByCart"> */}
 					<i className="fas fa-fw fa-chart-area text-dark"></i>
 					<span className= "text-dark small">Productos por categoría</span>
-				</Link>
+				{/* </Link> */}
 			</li>
 
 
 			<li className="nav-item">
-				<Link className="nav-link" to="/lastProduct">
+				{/* <Link className="nav-link" to="/lastProduct"> */}
 					<i className="fas fa-fw fa-table text-dark"></i>
 					<span className= "text-dark small">Detalle de Producto</span>
-				</Link>
+				{/* </Link> */}
 			</li>
 
 			<hr className="sidebar-divider d-none d-md-block bg-dark" />

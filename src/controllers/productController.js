@@ -58,6 +58,39 @@ const productController = {
       });
   },
 
+  alfajorList: (req, res) => {
+    db.products
+      .findAll({
+        where: { productsCategory_idproductsCategory: 1 },
+      }, {
+        include: ["productsImages"],
+      })
+      .then((products) => {
+        res.render("alfajores", {
+          products,
+          styles: "productList",
+          user: req.session.usuarioLogueado,
+        });
+      });
+  },
+
+  comboList: (req, res) => {
+    db.products
+      .findAll({
+        where: { productsCategory_idproductsCategory: 3 },
+      }, {
+        include: ["productsImages"],
+      })
+      .then((products) => {
+        res.render("combos", {
+          products,
+          styles: "productList",
+          user: req.session.usuarioLogueado,
+        });
+      });
+  },
+
+
   crearProductoForm: (req, res) => {
     return res.render("crear", {
       styles: "crearProducto",
