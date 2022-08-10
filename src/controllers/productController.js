@@ -60,9 +60,8 @@ const productController = {
   alfajorList: (req, res) => {
     db.products
       .findAll({
+        include: [{ association: "productsImages"}],
         where: { productsCategory_idproductsCategory: 1 },
-      }, {
-        include: ["productsImages"],
       })
       .then((products) => {
         res.render("alfajores", {
