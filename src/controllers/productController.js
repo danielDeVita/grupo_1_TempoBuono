@@ -45,9 +45,8 @@ const productController = {
   cafeList: (req, res) => {
     db.products
       .findAll({
+        include: [{ association: "productsImages" }],
         where: { productsCategory_idproductsCategory: 2 },
-      }, {
-        include: ["productsImages"],
       })
       .then((products) => {
         res.render("cafe", {
@@ -77,9 +76,8 @@ const productController = {
   comboList: (req, res) => {
     db.products
       .findAll({
+        include: [{ association: "productsImages" }],
         where: { productsCategory_idproductsCategory: 3 },
-      }, {
-        include: ["productsImages"],
       })
       .then((products) => {
         res.render("combos", {
