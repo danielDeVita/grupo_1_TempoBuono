@@ -10,7 +10,6 @@ const productController = {
       user: req.session.usuarioLogueado,
     });
   },
-
   productDetail: (req, res) => {
     db.products
       .findByPk(req.params.idProd, {
@@ -18,7 +17,7 @@ const productController = {
       })
       .then((producto) => {
         if (!producto) {
-          res.send("ese producto no existe") // hacerle una vista bonita a este error
+          res.render("404")
         } else
           return res.render("productDetail", {
             producto,
@@ -27,7 +26,6 @@ const productController = {
           });
       });
   },
-
   productList: (req, res) => {
     db.products
       .findAll({
@@ -41,7 +39,6 @@ const productController = {
         });
       });
   },
-
   cafeList: (req, res) => {
     db.products
       .findAll({
@@ -56,11 +53,10 @@ const productController = {
         });
       });
   },
-
   alfajorList: (req, res) => {
     db.products
       .findAll({
-        include: [{ association: "productsImages"}],
+        include: [{ association: "productsImages" }],
         where: { productsCategory_idproductsCategory: 1 },
       })
       .then((products) => {
@@ -71,7 +67,6 @@ const productController = {
         });
       });
   },
-
   comboList: (req, res) => {
     db.products
       .findAll({
@@ -86,15 +81,12 @@ const productController = {
         });
       });
   },
-
-
   crearProductoForm: (req, res) => {
     return res.render("crear", {
       styles: "crearProducto",
       user: req.session.usuarioLogueado,
     });
   },
-
   crearProducto: (req, res) => {
     const errors = validationResult(req)
 
@@ -120,7 +112,6 @@ const productController = {
         .catch((error) => console.error(error));
     }
   },
-
   modProductoForm: (req, res) => {
     db.products.findByPk(req.params.idProd, {
       include: ["productsImages", "productsCategory"],
@@ -134,9 +125,7 @@ const productController = {
         });
       });
   },
-
   modProducto: (req, res) => {
-
     const errors = validationResult(req)
     if (errors.errors.length > 0) {
       db.products
@@ -147,7 +136,6 @@ const productController = {
           return res.render('modificar', { producto, styles: "modificar", errors: errors.mapped(), old: req.body });
         })
     } else {
-
       db.products.update(
         {
           ProductsName: req.body.nombre_producto,
@@ -175,10 +163,8 @@ const productController = {
             })
         })
         .catch((error) => console.error(error));
-
     }
   },
-
   deleteProducto: (req, res) => {
     db.products.destroy(
       {
