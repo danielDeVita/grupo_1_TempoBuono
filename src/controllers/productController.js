@@ -2,6 +2,7 @@
 const path = require("path"); */
 const { validationResult } = require('express-validator');
 const db = require("../database/models");
+const Op = db.Sequelize.Op;
 
 const productController = {
   productCart: (req, res) => {
@@ -176,6 +177,24 @@ const productController = {
       })
       .catch(err => console.error(err))
   },
+  search: (req, res) => {
+    let search = req.query.search;
+    db.products
+      .findAll({
+        include: [{ association: "productsImages" }],
+        where: { ProductsName: search },
+      })
+      .then((products) => {
+        if (products == 0) {
+          res.render("404")
+        } else
+          res.render("productList", {
+            products,
+            styles: "productList",
+            user: req.session.usuarioLogueado,
+          });
+      });
+  }
 };
 
 module.exports = productController;

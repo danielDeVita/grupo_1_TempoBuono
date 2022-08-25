@@ -25,6 +25,7 @@ routerProduct.get('/alfajor', productController.alfajorList);
 routerProduct.get('/combos',productController.comboList);
 routerProduct.get('/create', authMiddleware, productController.crearProductoForm);
 routerProduct.post('/create', uploadFile.single("imagen_producto"),validatorProducts,productController.crearProducto);
+routerProduct.get('/search', productController.search);
 routerProduct.get('/:idProd',productController.productDetail);
 routerProduct.get('/:idProd/edit', authMiddleware, productController.modProductoForm);
 routerProduct.put('/:idProd/edit', uploadFile.single("imagen_producto"),validatorProducts,productController.modProducto);

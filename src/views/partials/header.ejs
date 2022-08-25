@@ -1,40 +1,45 @@
 <header>
-    <nav>
-      <div class="logo"><a href="/"><img src="/img/Tempo_Buono_Logo.svg" alt="Logo-Tempo-Buono"></a></div>
+  <nav>
+    <div class="logo"><a href="/"><img src="/img/Tempo_Buono_Logo.svg" alt="Logo-Tempo-Buono"></a></div>
 
-      <!-- input para dar click a burger menu (en responsive) -->
-      <input type="checkbox" id="click">
-      <label for="click" class="menu-btn">
-        <i class="fa-solid fa-bars"></i>
-      </label>
+    <!-- input para dar click a burger menu (en responsive) -->
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </label>
 
-      <div class="contenedor-menus">
-        <ul class="menu">
-          <li><a href="/">HOME</a></li>
-          <li><a href="/products">PRODUCTOS</a></li>
-          <li><a href="#">CONTACTO</a></li>
-        </ul>
+    <div class="contenedor-menus">
+      <ul class="menu">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/products">PRODUCTOS</a></li>
+        <li><a href="#">CONTACTO</a></li>
+      </ul>
 
-        <ul class="user">
-          
-          <% if(locals.isLogged){ %>
-            <li><a href="/login"><img class="profile_img"src="/img/users/<%=user.UsersImageName%>"></i></a></li>
-            <li class="dropdown">
-              <button class="dropbtn">Hola! <%= user.usuario %> <i class="fa-solid fa-caret-down"></i></button>
-              <div class="dropdown-content">
-                <a href="/profile">Perfil</a>
-                <a href="/logout">Salir</a>
-              </div>
-            </li>
+      <ul class="user">
+
+        <% if(locals.isLogged){ %>
+          <li><a href="/login"><img class="profile_img" src="/img/users/<%=user.UsersImageName%>"></i></a></li>
+          <li class="dropdown">
+            <button class="dropbtn">Hola! <%= user.usuario %> <i class="fa-solid fa-caret-down"></i></button>
+            <div class="dropdown-content">
+              <a href="/profile">Perfil</a>
+              <a href="/logout">Salir</a>
+            </div>
+          </li>
           <% } else { %>
             <li><a href="/login"><i class="fa-solid fa-user-astronaut"></i></a></li>
-          <% } %>
-          <li><a href="#"><i class="fa-solid fa-magnifying-glass lupa"></i></a></li>
-          <li><a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        </ul>
+            <% } %>
+              <li>
+                <form action="/products/search" method="GET">
+                  <input type="text" name="search">
+                  <button type="submit"><i class="fa-solid fa-magnifying-glass lupa"></i></button>
+                </form>
+              </li>
+              <li><a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
 
-        <!-- esto se ve solo en el menu responsive post click en burger -->
-        <p id="hechopor">Hecho con &#10084; <br> THE <img src="/img/icon_monkey.svg" alt="icon monkey group"> GROUP </p>
-      </div>
-    </nav>
-  </header>
+      <!-- esto se ve solo en el menu responsive post click en burger -->
+      <p id="hechopor">Hecho con &#10084; <br> THE <img src="/img/icon_monkey.svg" alt="icon monkey group"> GROUP </p>
+    </div>
+  </nav>
+</header>
