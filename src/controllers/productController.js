@@ -182,7 +182,7 @@ const productController = {
     db.products
       .findAll({
         include: [{ association: "productsImages" }],
-        where: { ProductsName: search },
+        where: { ProductsName: { [Op.like]: `%${search}%` } },
       })
       .then((products) => {
         if (products == 0) {
