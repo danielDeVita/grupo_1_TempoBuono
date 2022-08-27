@@ -129,6 +129,7 @@
   
   .user li {
     padding: 15px;
+    align-self: center;
   }
   
   .logo {
@@ -155,6 +156,17 @@
     font-size: 24px;
     cursor: pointer;
     display: none;
+  }
+
+  #form-search{
+    display: flex;
+    box-shadow: none;
+    margin-bottom: 0px;
+  }
+  
+  #input-search{
+    width: 100px;
+    margin-right: 10px;
   }
   
   #click {
@@ -452,6 +464,11 @@
     .user .lupa {
       display: none;
     }
+
+    #form-search{
+      display: none;
+    }
+
     #hechopor {
       display: block;
       color: var(--crema);

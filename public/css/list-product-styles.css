@@ -108,6 +108,7 @@ nav a {
 
 .user li {
   padding: 15px;
+  align-self: center;
 }
 
 
@@ -544,6 +545,10 @@ footer .copyrigth p {
     width: 100%;
     justify-content: center;
     align-items: center;
+  }
+
+  #form-search{
+    display: none;
   }
   
   #hechopor {

@@ -77,6 +77,7 @@ nav ul {
   display:flex;
   list-style-type: none;
   align-content: space-between;
+  align-items: center;
 }
 
 nav a {
@@ -106,6 +107,7 @@ nav a {
 
 .user li {
   padding: 15px;
+  align-self: center;
 }
 
 .logo a img{
@@ -131,6 +133,17 @@ nav a {
   font-size: 24px;
   cursor: pointer;
   display: none;
+}
+
+#form-search{
+  display: flex;
+  box-shadow: none;
+  margin-bottom: 0px;
+}
+
+#input-search{
+  width: 100px;
+  margin-right: 10px;
 }
 
 #click {
@@ -528,6 +541,7 @@ main {
     width: 100%;
     padding: 0;
     justify-content: center;
+    align-items: center;
   }
 
   .user li {
@@ -549,6 +563,11 @@ main {
     justify-content: center;
     align-items: center;
   }
+
+  #form-search{
+    display: none;
+  }
+
   #hechopor {
     display: block;
     color: var(--crema);
