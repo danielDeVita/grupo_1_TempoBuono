@@ -1,13 +1,13 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": "root",
+    "username": process.env.DB_USER,
+    "password": process.env.DB_PASSWORD,
     // "password": "",
-    "database": "Tempo_Buono_New",
+    "database": process.env.DB_NAME,
     // "database": "tempo_buono_new",
-    "host": "127.0.0.1",
+    "host": process.env.DB_HOST,
     "dialect": "mysql",
-    "port": "8889"
+    "port": process.env.DB_PORT
     // "port": "3306"
   },
   "test": {
