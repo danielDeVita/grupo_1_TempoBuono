@@ -1,14 +1,14 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const port = process.env.PORT || 3001;
+const port = process.env.PORT /* || 3001 */;
 const methodOverride = require("method-override");
-const session = require("express-session") 
+const session = require("express-session")
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 require('dotenv').config();
 console.log(process.env)
- 
+
 const routes = require(path.join(__dirname, '.', 'routes', 'routesMain.js'));
 const routesUser = require(path.join(__dirname, '.', 'routes', 'routesUser.js'));
 const routesProduct = require(path.join(__dirname, '.', 'routes', 'routesProduct.js'));
@@ -29,19 +29,19 @@ app.use(session({
     secret: "secret",
     resave: false,
     saveUninitialized: false
-})) 
+}))
 app.use(cookieParser());
 app.use(userLoggedMiddleware);
 
-app.use('/', routes); 
+app.use('/', routes);
 app.use('/', routesUser);
-app.use('/products', routesProduct); 
+app.use('/products', routesProduct);
 
 app.use(cors());
 app.use("/api/users", APIRouterUser);
 app.use("/api/products", APIRouterProduct);
 app.use("/api/categories", APIRouterCategories);
 
-app.use((req,res, next)=>res.status(404).render("404"));
+app.use((req, res, next) => res.status(404).render("404"));
 
-app.listen(port, () => console.log("server " + port + " ok"));
+app.listen(process.env.PORT, () => console.log("server " + port + " ok"));
