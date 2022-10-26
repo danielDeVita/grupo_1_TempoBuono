@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const port = process.env.PORT || 3001;
+//const port = process.env.PORT || 3001;
+const port = process.env.IS_RAILWAY ? '0.0.0.0:3333' : 3333;
 const methodOverride = require("method-override");
 const session = require("express-session")
 const cookieParser = require("cookie-parser");
@@ -44,4 +45,5 @@ app.use("/api/categories", APIRouterCategories);
 
 app.use((req, res, next) => res.status(404).render("404"));
 
-app.listen(port, () => console.log("server " + port + " ok"));
+//app.listen(port, () => console.log("server " + port + " ok"));
+app.listen(port, () => console.log(`Server runnning on port ${port}!`));
