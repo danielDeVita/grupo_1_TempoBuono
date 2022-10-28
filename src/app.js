@@ -45,4 +45,4 @@ app.use("/api/categories", APIRouterCategories);
 
 app.use((req, res, next) => res.status(404).render("404"));
 
-app.listen(PORT, () => console.log("server " + PORT + " ok"));
+app.listen(PORT, () => console.log(`server on port ${PORT} up`));
