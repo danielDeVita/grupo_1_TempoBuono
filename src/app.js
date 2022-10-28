@@ -1,14 +1,15 @@
 const express = require("express");
 const app = express();
+require('dotenv').config();
 const path = require("path");
-//const PORT = process.env.PORT || 3001;
-const PORT = process.env.PORT || 0;
+const PORT = process.env.PORT
 const methodOverride = require("method-override");
 const session = require("express-session")
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-require('dotenv').config();
-console.log(process.env)
+
+console.log(process.env.PORT)
+console.log(PORT)
 
 const routes = require(path.join(__dirname, '.', 'routes', 'routesMain.js'));
 const routesUser = require(path.join(__dirname, '.', 'routes', 'routesUser.js'));
