@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 require('dotenv').config();
 const path = require("path");
-//const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 const methodOverride = require("method-override");
 const session = require("express-session")
 const cookieParser = require("cookie-parser");
@@ -43,4 +43,4 @@ app.use("/api/categories", APIRouterCategories);
 
 app.use((req, res, next) => res.status(404).render("404"));
 
-app.listen(process.env.PORT, () => console.log(`server up`));
+app.listen(PORT, () => console.log(`server on port ${PORT} up`));
